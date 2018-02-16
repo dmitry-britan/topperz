@@ -1,0 +1,40 @@
+extends pug/base
+
+append vars
+  - html.classList.push('page page--index')
+
+block content
+  -var breadcrumbs = [{title:'Главная', url:'index.html'}, {title:'Пицца', url:'category.html'}];
+  include pug/parts/breadcrumbs
+  main.category
+    .container
+      h1.page__title Пицца
+      .category-panel
+        .category-panel__block.category-panel__block--type
+          .category-panel__block-current
+            span.category-panel__block-current-value Классическая
+            i.category-panel__block-current-icon.icon-arrow-down-md
+          .category-panel__list
+            a(href="").category-panel__list-item Классическая
+            a(href="").category-panel__list-item Фирменная
+
+        .category-panel__block.category-panel__block--sort
+          .category-panel__block-current
+            span.category-panel__block-current-text Сортировать:
+            span.category-panel__block-current-value по умолчанию
+            i.category-panel__block-current-icon.icon-arrow-down-md
+          ul.category-panel__list
+            a(href="").category-panel__list-item.is--stock акции
+            a(href="").category-panel__list-item.is--novelty новинки
+            a(href="").category-panel__list-item.is--hit хиты продаж
+            a(href="").category-panel__list-item по популярности
+            a(href="").category-panel__list-item от дешевых к дорогим
+            a(href="").category-panel__list-item от дорогих к дешевым
+
+      include pug/parts/products-db
+      -var k=0;
+      each product, i in [products[0],products[1],products[2],products[3],products[0],products[1],products[2],products[3],products[0],products[1],products[2],products[3]]
+        -k=(k<4)?k+1:1;
+        include pug/parts/product
+  include pug/parts/seo-text
+block body-end

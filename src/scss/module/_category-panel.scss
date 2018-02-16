@@ -1,0 +1,118 @@
+.category-panel{
+	@include clearfix();
+}
+.category-panel__block{
+	position: relative;
+	min-width: 200px;
+	cursor: pointer;
+	&:hover{
+		.category-panel__list{
+			visibility: visible;
+			opacity: 1;
+			z-index: 10;
+			transform: translateY(0);
+			transition-delay: 0s, 0s, 0.3s;
+		}
+		.category-panel__current-icon{
+			transform: rotate(180deg);
+		}
+	}
+}
+.category-panel__block--type{
+	float: left;
+	@include media('<540px'){
+		float: none;
+		width: percentage(1/1);
+		margin-bottom: 20px;
+		z-index: 400;
+	}
+}
+.category-panel__block--sort{
+	float: right;
+	text-align: right;
+	@include media('<540px'){
+		float: none;
+		width: percentage(1/1);
+		margin-bottom: 20px;
+		text-align: left;
+	}
+}
+.category-panel__block-current{
+	position: relative;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: $color__base;
+	z-index: 200;
+}
+.category-panel__block-current-value{
+	display: inline-block;
+	vertical-align: middle;
+	color: $color__base;
+}
+.category-panel__block-current-text{
+	display: inline-block;
+	margin-right: 10px;
+	vertical-align: middle;
+	color: $color__darkgray;
+}
+.category-panel__block-current-icon{
+	margin-left: 10px;
+	display: inline-block;
+	vertical-align: middle;
+  transition: 0.3s all ease-in-out 0s;
+}
+.category-panel__list{
+	min-width: 200px;
+	margin: 0; 
+	padding: 20px 25px 20px 10px;
+	list-style: none;
+	
+	position: absolute;
+	visibility: hidden;
+	opacity: 0;
+	top: 100%;
+	left: 0; right: 0;
+	background-color: #fff;
+  transform: translateY(-8px);
+  transition: 0.3s all ease-in-out 0s, 0s visibility linear 0.3s;
+	z-index: -1;
+	&:after{
+		content: '';
+		position: absolute;
+		left: -10px; right: -10px;
+		bottom: 0; top: -35px;
+		z-index: -1;
+		background-color: #fff;
+		box-shadow: 0 4px 7px rgba(0, 0, 0, 0.35);
+		border: 1px solid $color__smoke;
+	}
+}
+.category-panel__list-item{
+	display: block;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 18px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: $color__base;
+	&.is--stock{
+		color: $color__primary;
+		&:hover{
+			color: $color__primary;
+		}
+	}
+	&.is--novelty{
+		color: $color__third;
+		&:hover{
+			color: $color__primary;
+		}
+	}
+	&.is--hit{
+		color: $color__secondary;
+		&:hover{
+			color: $color__primary;
+		}
+	}
+}

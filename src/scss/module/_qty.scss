@@ -1,0 +1,12 @@
+.qty{
+	@extend .product-qty;
+} 
+.qty__minus{
+	@extend .product-qty__minus;
+}
+.qty__plus{
+	@extend .product-qty__plus;
+}
+.qty__value{
+	@extend .product-qty__value;
+}

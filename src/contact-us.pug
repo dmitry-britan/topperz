@@ -1,0 +1,43 @@
+extends pug/base
+
+append vars
+  - html.classList.push('page page--contact-us')
+
+block content
+  -var breadcrumbs = [{title:'Главная', url:'index.html'}, {title:'Свяжитесь с нами', url:'contact-us.html'}];
+  include pug/parts/breadcrumbs
+  main.contact-us
+    .container
+      h1.page__title Свяжитесь с нами
+      .contact-us__title Toppers – пицца и суши
+      .contact-us__item
+        i.icon-location
+        | Казыбек би 43 уг. ул. Валиханова, ресторан «Амуре»
+      .contact-us__item
+        i.icon-phone
+        | +7 (727) 390 20 20;  +7 (701) 888 85 34
+      .contact-us__item
+        i.icon-mail
+        | info@toppers.kz
+    section.section.section--map
+      include pug/parts/map
+    .container
+      .row
+        .col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+          form(action="").form.js-form-callback
+            .form__title Форма обратной связи
+            .row
+              .col.col--6-of-12.col--s-12-of-12.col--m-12-of-12.col--l-6-of-12
+                .form__field
+                  label.form__label Имя
+                  input(type="text", name="name").form__input
+              .col.col--6-of-12.col--s-12-of-12.col--m-12-of-12.col--l-6-of-12
+                .form__field
+                  label.form__label Email
+                  input(type="text", name="email").form__input
+            .form__field
+              textarea(name="", cols="30", rows="10", placeholder="Сообщение").form__textarea.is--one-row
+            .form__action
+              button(type="submit").btn.btn--primary Отправить
+          
+block body-end

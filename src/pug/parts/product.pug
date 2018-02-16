@@ -1,0 +1,65 @@
+- productId = (i+1)?i+1:1;
+- photoId = (k)?k:i+1; 
+form(action="/order").product
+	article.product__inner
+		a(href="product.html").product__photo
+			img(src="images/product/p-"+photoId+".jpg", alt="")
+			- if ( product.tagClass != '' ) {
+				span(class="product__tag product-tag "+product.tagClass)= product.tag
+			-}
+		h2.product__title: a(href="product.html")= product.title
+		p.product__ingredients= product.details
+		// Добавки
+		.product__additives 
+			.product__additives-toggler
+				span Добавки
+				i.icon.icon-plus-red
+			// Добавки - список
+			.product__additives-details
+				i.product__additives-close.icon-close-small
+				ul.product__additives-list
+					- var additives = ["Ананасы","Шампиньоны","Маслины","Огурцы маринованные","Болгарский перец","Халапеньо","Помидоры","Сыр Моцарелла","Сыр Пармезан","Ветчина","Бекон","Папперони","Куриная грудка","Семга","Кукуруза","Лук красный","Лук репчатый"];
+					- var prices = ["90","90","100","100","120","120","120","135","145","150","150","150","150","170","180","200","200"];
+					each additive, i in additives
+						li.product__additives-item
+							span.product__additives-item-title= additive
+							span.product__additives-item-qty
+								span.product__additive-qty.js-additive-qty
+									i.icon.icon-minus-small.js-additive-qty-minus.product__additive-qty-minus
+									input(type="text", name="additive_"+i, value="0").product__additive-qty-value.js-additive-qty-value
+									i.icon.icon-plus-small.js-additive-qty-plus.product__additive-qty-plus
+							span.product__additives-item-price
+								= prices[i]
+								|  
+								span.product__additives-item-currency тнг
+				// Кнопка Применить
+				button(type="submit" formaction="/additives" formmethod="post").product__action.product__action--secondary Применить
+		// Варианты
+		.product__variants
+			.product__variants-item.product-variant
+				input(type="radio", name="diameter"+productId, id="d28"+productId, value="28"+productId, checked).product__variants-item-radio.product-variant__radio
+				label(for="d28"+productId).product__variants-item-label.product-variant__label
+					i.icon.icon-diameter.product-variant__icon
+					span.product__variants-item-value.product-variant__value 28 
+					span.product__variants-item-dimension.product-variant__dimension см
+			.product__variants-item.product-variant
+				input(type="radio", name="diameter"+productId, id="d33"+productId, value="33"+productId).product__variants-item-radio.product-variant__radio
+				label(for="d33"+productId).product__variants-item-label.product-variant__label
+					i.icon.icon-diameter.product-variant__icon
+					span.product__variants-item-value.product-variant__value 33 
+					span.product__variants-item-dimension.product-variant__dimension см
+			.product__variants-item.product-variant
+				input(type="radio", name="diameter"+productId, id="d38"+productId, value="38"+productId).product__variants-item-radio.product-variant__radio
+				label(for="d38"+productId).product__variants-item-label.product-variant__label
+					i.icon.icon-diameter.product-variant__icon
+					span.product__variants-item-value.product-variant__value 38 
+					span.product__variants-item-dimension.product-variant__dimension см
+		// Кол-во 
+		.product__qty
+			include qty
+		// Стоимость
+		.product__price
+			span.product__price-value= product.price
+			span.product__price-currency тнг
+		// Кнопка заказать
+		button(type="submit" data-modal="cartOrder").product__action Заказать

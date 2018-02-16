@@ -1,0 +1,63 @@
+/**
+ *
+ * buttons
+ *
+ **/
+.btn{
+	border:none;
+	outline: none;
+	transition: 300ms all linear;
+}
+.btn--primary{
+	display: block;
+	width: 100%;
+	max-width: 280px;
+	padding: 8px 24px;
+	background-color: $color__primary;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20px;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	color: #fff;
+	&:hover{
+		background: $color__secondary;
+		color: #fff;
+	}
+}
+.btn--sm{
+	display: block;
+	width: 100%;
+	@extend .btn--primary;
+	min-width: 180px;
+	max-width: 180px;
+}
+.btn--lg{
+	display: block;
+	width: 100%;
+	@extend .btn--primary;
+	max-width: 380px;
+}
+.btn--centered{
+	margin-right: auto;
+	margin-left: auto;
+}
+.btn--order{
+	display: inline-block;
+	width: 100%;
+	max-width: 280px;
+	padding: 8px 24px;
+	background-color: $color__primary;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20px;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	color: #fff;
+	&:hover{
+		background: $color__secondary;
+		color: #fff;
+	}
+}

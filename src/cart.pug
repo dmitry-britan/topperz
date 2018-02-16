@@ -1,0 +1,130 @@
+extends pug/base
+
+append vars
+  - html.classList.push('page page--cart')
+
+block content
+  -var breadcrumbs = [{title:'Главная', url:'index.html'}, {title:'Корзина', url:'cart.html'}];
+  include pug/parts/breadcrumbs
+  main.cart-single
+    .container
+      .cart-single__header
+        h1.cart-single__header-title Корзина
+        .cart-single__header-reset.js-cart-single-reset Очистить корзину
+      .cart-single__table
+        //- шапка таблицы
+        .cart-single__row.is--head
+          .cart-single__cell Название
+          .cart-single__cell Цена
+          .cart-single__cell Количесвто
+          .cart-single__cell Всего
+          .cart-single__cell Удалить
+        //- СТРОКА ЗАКАЗА
+        .cart-single__row
+          .cart-single__cell
+            .cart-single__product-photo
+              img(src="images/cart-single/c-1.jpg", alt="")
+            .cart-single__product-details
+              h4.cart-single__product-title 
+                a(href="").cart-single__product-title-link Дэль-анатра
+              .cart-single__product-variant.product-variant
+                i.icon.icon-diameter-md.product-variant__icon
+                span.cart-single__product-variant-value.product-variant__value 28
+                span.cart-single__product-variant-dimension.product-variant__dimension см
+              .cart-single__product-additives
+                span.cart-single__product-additives-value +2 
+                span.cart-single__product-additives-text Добавки
+          //- Цена
+          .cart-single__cell
+            .cart-single__product-price
+              .cart-single__product-price-value 1 590
+              .cart-single__product-price-currency тнг
+          //- Количесвто
+          .cart-single__cell
+            .cart-single__product-qty
+              include pug/parts/qty
+          //- Всего
+          .cart-single__cell
+            .cart-single__product-price
+              .cart-single__product-price-value 1 590
+              .cart-single__product-price-currency тнг
+          .cart-single__cell
+            .cart-single__product-remove
+              i.icon.icon-delete
+
+        //- СТРОКА ЗАКАЗА
+        .cart-single__row
+          .cart-single__cell
+            .cart-single__product-photo
+              img(src="images/cart-single/c-2.jpg", alt="")
+            .cart-single__product-details
+              h4.cart-single__product-title 
+                a(href="").cart-single__product-title-link Цезарь
+              .cart-single__product-variant.product-variant
+                i.icon.icon-diameter-md.product-variant__icon
+                span.cart-single__product-variant-value.product-variant__value 38
+                span.cart-single__product-variant-dimension.product-variant__dimension см
+          //- Цена
+          .cart-single__cell
+            .cart-single__product-price
+              .cart-single__product-price-value 2 190
+              .cart-single__product-price-currency тнг
+          //- Количесвто
+          .cart-single__cell
+            .cart-single__product-qty
+              include pug/parts/qty
+          //- Всего
+          .cart-single__cell
+            .cart-single__product-price
+              .cart-single__product-price-value 2 190
+              .cart-single__product-price-currency тнг
+          .cart-single__cell
+            .cart-single__product-remove
+              i.icon.icon-delete
+      //- ИТОГО
+      .cart-single__footer
+        .cart-single__footer-left
+          .cart-single__footer-text Итого:
+        .cart-single__footer-right
+          .cart-single__footer-total-price
+            span.cart-single__footer-total-price-value 25 080  
+            span.cart-single__footer-total-price-currency тнг
+
+            .tooltip.is--top-right
+              i.tooltip__info-icon
+              .tooltip__box
+                i.tooltip__close-icon
+                .tooltip__text 
+                  | Минимальная сумма заказа
+                  | для бесплатной доставки 
+                  span.is--big 2 000 
+                  span.is--tiny тнг
+  
+  section.section.section--secondary
+    .container
+      .promo-code
+        .promo-code__title Введите промокод
+        form(action="").form.promo-code__form.js-form-promo-code
+          .promo-code__input
+            label.form__label.promo-code__label Промокод
+            input(type="text").form__input
+          .promo-code__submit
+            button(type="submit").btn.btn--primary Применить
+
+  section.section
+    .container
+        h3.section__title.is--centered Закажите еще напитки
+        -var product = {title: '7 Up', photo: 'drinks', details: '1л', price: '490', tag: '', tagClass: ''}
+          each i in [1,2,3,4]
+            include pug/parts/product-simple
+
+  section.section
+    .container
+        h3.section__title.is--centered Добавить к заказу соусы
+        -var product = {title: 'Соус Барбекю', photo: 'sauces', details: '50 гр', price: '180', tag: '', tagClass: ''}
+          each i in [1,2,3,4]
+            include pug/parts/product-simple
+  .cart-single__action
+    .container
+      a(href="/order.html").btn.btn--order Оформить заказ
+block body-end

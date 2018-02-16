@@ -1,0 +1,86 @@
+.popup{
+	position: relative;
+}
+.popup__close{
+	position: absolute;
+	top: 16px; right: 20px;
+	width: 15px; height: 15px;
+	font-size: 18px;
+	color: $color__primary;
+	transition: all 300ms linear;
+	cursor: pointer;
+	&:after{
+		content: '';
+		@include sprite('close');
+	}
+}
+.popup__inner{
+	width: 620px;
+	padding: 35px 20px;
+	background-color: #ffffff;
+	&.is--wide{
+		width: 960px;
+		@include media('<992px'){
+			width: 540px;
+			padding: 55px 35px 35px;
+		}
+		@include media('<640px'){
+			width: 440px;
+			padding: 55px 35px 35px;
+		}
+		@include media('<480px'){
+			width: 280px;
+			padding: 55px 25px 25px;
+		}
+	}
+	@include media('<680px'){
+		width: 420px;
+		padding: 55px 30px 35px;
+	}
+	@include media('<480px'){
+		width: 270px;
+		padding: 35px 15px 25px;
+	}
+}
+.popup__header{
+	margin: 0 0 20px;
+	font-size: 24px;
+	line-height: 40px;
+	font-weight: 400;
+	text-transform: uppercase;
+	text-align: center;
+	color: #000000;
+	@include media('<600px'){
+		margin-bottom: 22px;
+		font-size: 24px;
+		line-height: 30px;
+	}
+	@include media('<480px'){
+		font-size: 18px;
+		line-height: 24px;
+	}
+}
+.popup__body{
+		&, p{
+		margin: 0;
+		padding-bottom: 20px;
+		font-size: 21px;
+		font-weight: 300;
+		line-height: 36px;
+		color: $color__base;
+		text-align: center;
+		@include media('<680px'){
+			font-size: 16px;
+			line-height: 24px;
+		}
+		@include media('<480px'){
+			font-size: 14px;
+			line-height: 20px;
+		}
+	}
+}
+.popup__footer{
+	.btn{
+		margin: 0 auto;
+	}
+}

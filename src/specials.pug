@@ -1,0 +1,21 @@
+extends pug/base
+
+append vars
+  - html.classList.push('page page--specials')
+
+block content
+  -var breadcrumbs = [{title:'Главная', url:'index.html'}, {title:'Акции', url:'specials.html'}];
+  include pug/parts/breadcrumbs
+  main.page__inner
+    .container
+      h1.page__title Акции
+      .row
+        each special in [1,2,3,4,5,6,7,8,9,10]
+          .col.col--6-of-12.col--s-12-of-12.col--m-12-of-12.col--l-6-of-12
+            .special-item
+              .special-item__date
+                .special-item__date-day= special*3
+                .special-item__date-month Декабря
+              a(href="special.html").special-item__photo
+                img(src="images/special-item.png", alt="")
+block body-end

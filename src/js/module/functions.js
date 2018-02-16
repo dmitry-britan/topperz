@@ -1,0 +1,6 @@
+// @include('function/tabs.js')
+// @include('function/showOnHover.js')
+// @include('function/change-qty.js')
+// @include('function/fancybox-elements.js')
+// @include('function/form-label.js')
+// @include('function/contact-info-toggle.js')

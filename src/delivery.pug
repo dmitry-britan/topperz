@@ -1,0 +1,25 @@
+extends pug/base
+
+append vars
+  - html.classList.push('page page--delivery')
+
+block content
+  -var breadcrumbs = [{title:'Главная', url:'index.html'}, {title:'Условия доставки', url:'delivery.html'}];
+  include pug/parts/breadcrumbs
+  main.contact-us
+    .container
+      h1.page__title Условия доставки
+      .row
+        .col.col--5-of-12.col--s-12-of-12.col--m-12-of-12.col--l-5-of-12
+          .form.js-form-delivery
+            .form__title Проверьте ваш адрес доставки
+            .form__field.mb-10
+              label.form__label Адрес
+              input(type="text", name="address", placeholder='')#address-input.form__input
+            .form__note
+              
+    section.section.section--map
+      include pug/parts/delivery-map
+  include pug/parts/seo-text
+          
+block body-end

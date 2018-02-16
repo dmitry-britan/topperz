@@ -1,0 +1,86 @@
+// FOOTER
+footer.footer
+  .footer__top
+    .container
+      .row
+        .col.col--3-of-12.col--s-12-of-12.col--m-3-of-12.col--l-3-of-12
+          nav.menu
+            h3.menu__title Информация
+            ul.menu__list
+              li.menu__item
+                a(href="about.html").menu__link О компании
+              li.menu__item
+                a(href="contact-us.html").menu__link Свяжитесь с нами
+              li.menu__item.is--empty
+              li.menu__item
+                span.menu__text График работы:
+              li.menu__item
+                span.menu__text пн – чт: 10:00 – 03:00
+              li.menu__item
+                span.menu__text Пт – Сб: 10:00 – 05:00
+              li.menu__item
+                span.menu__text Вс:           11:00 – 03:00
+        .col.col--3-of-12.col--s-12-of-12.col--m-3-of-12.col--l-3-of-12
+          nav.menu
+            h3.menu__title Контакты
+            ul.menu__list
+              li.menu__item
+                a(href="tel:+77018888534").menu__link +7 (701) 888 85 34
+              li.menu__item
+                a(href="tel:+77273902020").menu__link +7 (727) 390 20 20
+              li.menu__item.is--empty
+              li.menu__item
+                a(href="").menu__link Заказать звонок
+              li.menu__item.is--empty
+              li.menu__item
+                a(href="mailto:info@topperz.kz").menu__link info@topperz.kz
+        .col.col--3-of-12.col--s-12-of-12.col--m-3-of-12.col--l-3-of-12
+          nav.menu
+            h3.menu__title Доставка
+            ul.menu__list
+              - var deliveryMenuItems = [{title:"Условия доставки",link:"delivery.html"},{title:"Оплата",link:"payment.html"},{title:"Акции",link:"special.html"},{title:"Конфиденциальность",link:""},{title:"Возврат товара",link:""},{title:"Юридический адрес",link:""}];
+              each item in deliveryMenuItems
+                li.menu__item
+                  a(href=item.link).menu__link= item.title
+        .col.col--3-of-12.col--s-12-of-12.col--m-3-of-12.col--l-3-of-12
+          nav.menu
+            h3.menu__title Меню
+            .row
+              .col.col--4-of-12.col--s-12-of-12
+                ul.menu__list
+                  - var menuItems = ["Пицца","роллы","суши","сеты","wok","супы","салаты"];
+                  each item in menuItems
+                    li.menu__item
+                      a(href="").menu__link= item
+              .col.col--6-of-12.col--s-12-of-12
+                ul.menu__list
+                  - var menuItems = ["Закуски","детское меню","напитки","десерты","соуса","Акции","Новинки"];
+                  each item in menuItems
+                    li.menu__item
+                      a(href="").menu__link= item
+  .footer__bottom
+    .container
+      hr.footer__divider
+      .row
+        .col.col--3-of-12.col--s-12-of-12.col--m-12-of-12.col--l-3-of-12
+          .logo.in--footer
+            img(src="images/logo-small.png", alt="").logo__img
+            img(src="images/logo-footer-mob.png", alt="").logo__img--mobile
+          
+          .contact-info.is--footer
+              .contact-info__phone +7 (701) 888 85 34
+              .contact-info__phone +7 (727) 390 20 20
+              a(href="").contact-info__action 
+                i.icon.icon-whatsapp-small
+                span WhatsApp
+        .col.col--6-of-12.col--s-12-of-12.col--m-12-of-12.col--l-6-of-12
+          .social-icons.in--footer
+            .social-icons__text Следите за нами
+            a(href="").social-icons__link: i.icon.icon-facebook
+            a(href="").social-icons__link: i.icon.icon-instagram
+            a(href="").social-icons__link: i.icon.icon-vk
+        .col.col--3-of-12.col--s-12-of-12.col--m-12-of-12.col--l-3-of-12
+          .copyright.in--footer © Copyright TOPPERZ.com.ua 2017
+// /FOOTER
+
+include parts/modals

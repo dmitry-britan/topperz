@@ -1,0 +1,25 @@
+extends pug/base
+
+append vars
+  - html.classList.push('page page--index')
+
+block content
+  section.slider
+    .container
+      .slider__inner.js-slider
+        each i in [1,2,3]
+          .slider__item
+            .slider__photo
+              img(src="images/slider/s-1.jpg", alt="")
+  section.section.section--product-recomended
+    .container
+        h2.section__title.is--centered
+          span Topperz 
+          | рекомендует
+        include pug/parts/products-db
+        -var k = 0;
+        each product, i in products
+          -k=(k<4)?k+1:1;
+          include pug/parts/product
+  include pug/parts/seo-text
+block body-end

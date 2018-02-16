@@ -1,0 +1,27 @@
+.order{
+	padding: 0 0 50px;
+}
+.order__price{
+	@include clearfix();
+}
+.order__price-text{
+	float: left;
+	font-size: 21px;
+	font-weight: 400;
+	line-height: 36px;
+	color: $color__base;
+}
+.order__price-total{
+	float: right;
+}
+.order__price-total-value{
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 24px;
+	color: $color__base;
+}
+.order__price-total-currency{
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 20px;
+}

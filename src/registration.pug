@@ -1,0 +1,50 @@
+extends pug/base
+
+append vars
+  - html.classList.push('page page--registration')
+
+block content
+  -var breadcrumbs = [{title:'Главная', url:'index.html'}, {title:'Личный кабинет', url:'registration.html'}];
+  include pug/parts/breadcrumbs
+  main.registration
+    .container
+      h1.page__title Личный кабинет
+      .row
+        .col.col--6-of-12.col--s-12-of-12.col--m-12-of-12.col--l-6-of-12
+          form(action="").form.form--login.js-form-login
+            //- Вход
+            .form__title Вход
+            .form__field
+              label.form__label Email
+              input(type="text", name="email").form__input
+            .form__field
+              label.form__label Пароль
+              input(type="text", name="password").form__input
+            .form__action
+              .is--fl
+                a(href="").link Забыли пароль?
+              .is--fr
+                button(type="submit").btn.btn--primary.btn--sm Войти
+        .col.col--6-of-12.col--s-12-of-12.col--m-12-of-12.col--l-6-of-12
+          form(action="").form.form--registration.js-form-registration
+            //- Регистрация
+            .form__title Регистрация
+            .form__field
+              label.form__label Имя
+              input(type="text", name="name").form__input
+            .form__field
+              label.form__label Email
+              input(type="text", name="email").form__input
+            .form__field
+              label.form__label Телефон
+              input(type="text", name="phone").form__input
+            .form__field
+              label.form__label Пароль
+              input(type="password", name="password").form__input
+            .form__field
+              label.form__label Подтвердите пароль
+              input(type="password", name="confirm_password").form__input
+            .form__action
+              button(type="submit").btn.btn--primary Зарегистрироваться
+  include pug/parts/seo-text
+block body-end

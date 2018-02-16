@@ -1,0 +1,84 @@
+#map.map.map--delivery
+
+script(src='https://maps.googleapis.com/maps/api/js?libraries=geometry,places&key=AIzaSyCbR8xpKsCCuj-3AZ9oHMHat8vR621poH0')
+//- script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCbR8xpKsCCuj-3AZ9oHMHat8vR621poH0&callback=initMap&libraries=geometry,places')
+script.
+	var map;
+	var marker;
+	var polygon;
+	var bounds;
+	window.onload = initMap;
+	function initMap() {
+		map = new google.maps.Map(document.getElementById('map'), {
+			center: center,
+			zoom: 12,
+			scaleControl: true
+		});
+		bounds = new google.maps.LatLngBounds();
+		google.maps.event.addListenerOnce(map, 'tilesloaded', function(evt) { 
+			bounds = map.getBounds();
+		});
+			marker = new google.maps.Marker({
+				position: center
+			});
+			polygon = new google.maps.Polygon({
+			path: area,
+			geodesic: true,
+			strokeColor: '#FE5000',
+			strokeOpacity: 1.0,
+			strokeWeight: 2,
+			fillColor: '#FE5000',
+			fillOpacity: 0.35
+		});
+
+		polygon.setMap(map);
+			
+		var input = /** @type {!HTMLInputElement} */(document.getElementById('address-input'));
+		var types = document.getElementById('type-selector');
+
+		var autocomplete = new google.maps.places.Autocomplete(input);
+		autocomplete.addListener('place_changed', function() {
+			marker.setMap(null);
+			var place = autocomplete.getPlace();
+			var newBounds = new google.maps.LatLngBounds();
+			newBounds = bounds;
+			if (!place.geometry) {
+				$('.form__note').removeClass('is--contains').addClass('is--outside').text('Выберите значение из выпадающего списка');
+				return;
+			};
+			marker.setPosition(place.geometry.location);
+			marker.setMap(map);
+			newBounds.extend(place.geometry.location);
+			map.fitBounds(newBounds);
+			if (google.maps.geometry.poly.containsLocation(place.geometry.location, polygon)){
+				$('.form__note').removeClass('is--outside').addClass('is--contains').text('Адрес находится в зоне доставки.');
+			} else {
+				$('.form__note').removeClass('is--contains').addClass('is--outside').text('Адрес находится за пределами зоны доставки.');
+			};
+		});
+	}
+
+	var center = new google.maps.LatLng(43.258253, 76.945465);
+	var area= [
+		{lat: 43.338486, lng: 76.938662},
+		{lat: 43.331640, lng: 76.959891},
+		{lat: 43.328319, lng: 76.985211},
+		{lat: 43.293431, lng: 76.975766},
+		{lat: 43.288885, lng: 77.003746},
+		{lat: 43.277849, lng: 77.010784},
+		{lat: 43.266566, lng: 76.986891},
+		{lat: 43.205594, lng: 76.978208},
+		{lat: 43.205029, lng: 76.964818},
+		{lat: 43.219908, lng: 76.934262},
+		{lat: 43.206348, lng: 76.915465},
+		{lat: 43.183874, lng: 76.927577},
+		{lat: 43.177666, lng: 76.890762},
+		{lat: 43.198966, lng: 76.841739},
+		{lat: 43.241901, lng: 76.822513},
+		{lat: 43.254261, lng: 76.823200},
+		{lat: 43.293051, lng: 76.934651},
+		{lat: 43.301066, lng: 76.929501},
+		{lat: 43.301991, lng: 76.920232},
+		{lat: 43.319413, lng: 76.917807},
+		{lat: 43.338486, lng: 76.938662}
+	];

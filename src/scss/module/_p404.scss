@@ -1,0 +1,41 @@
+.p404{
+	max-width: 660px;
+	padding: 100px 0 180px;
+	margin: 0 auto;
+	text-align: center;
+	@include media('<560px'){
+		max-width: 480px;
+	}
+}
+.p404__title{
+	margin-bottom: 40px;
+	font-size: 48px;
+	font-weight: 400;
+	line-height: 36px;
+	color: $color__base;
+	span{
+		font-size: 90px;
+	}
+	@include media('<560px'){
+		margin-bottom: 20px;
+		font-size: 24px;
+		span{
+			font-size: 36px;
+		}
+	}
+}
+.p404__text{
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 24px;
+	text-transform: uppercase;
+	color: $color__darkgray;
+	a{
+		color: $color__secondary;
+		text-decoration: underline;
+		&:hover{
+			color: $color__secondary;
+			text-decoration: none;
+		}
+	}
+}

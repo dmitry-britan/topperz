@@ -1,0 +1,17 @@
+#map.map
+
+script.
+	function initMap() {
+		var topperz = {lat: 43.238253, lng: 76.945465};
+		var map = new google.maps.Map(document.getElementById('map'), {
+		zoom: 16,
+		center: topperz,
+		styles: [],
+		});
+		var marker = new google.maps.Marker({
+		position: topperz,
+		map: map,
+		icon: 'images/pointer.png'
+	});
+	}
+script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCbR8xpKsCCuj-3AZ9oHMHat8vR621poH0&callback=initMap')

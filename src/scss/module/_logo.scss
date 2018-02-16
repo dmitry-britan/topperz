@@ -1,0 +1,29 @@
+.logo{
+	display: block;
+	@include media('<992px'){
+		width: 80px;
+		overflow: hidden;
+	}
+	img{
+		max-width: inherit;
+	}
+
+	&.in--footer{
+		display: inline-block;
+		width: auto;
+		overflow: visible;
+		padding: 18px 0;
+	}
+}
+.logo__img{
+	display: block;
+	@include media('<700px'){
+		display: none;
+	}
+}
+.logo__img--mobile{
+	display: none;
+	@include media('<700px'){
+		display: block;
+	}
+}

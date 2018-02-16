@@ -1,0 +1,17 @@
+.slider{
+  position: relative;
+}
+.slider__inner{}
+.slider__item{
+  &:focus{
+    outline: none;
+  }
+}
+.slider__photo{
+  display: block;
+  width: 100%;
+  img{
+    display: block;
+    max-width: 100%;
+  }
+}

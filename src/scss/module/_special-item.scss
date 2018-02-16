@@ -1,0 +1,27 @@
+.special-item{
+	margin-bottom: 36px;
+}
+.special-item__date{
+	float: left;
+	width: 100px;
+	padding-right: 20px;
+	text-align: center;
+}
+.special-item__date-day{
+	font-size: 30px;
+	font-weight: 400;
+	color: $color__base;
+}
+.special-item__date-month{
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 18px;
+	color: $color__darkgray;
+}
+.special-item__photo{
+	display: block;
+	margin-left: 100px;
+	img{
+		display: block;
+	}
+}

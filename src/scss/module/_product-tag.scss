@@ -1,0 +1,22 @@
+.product-tag{
+	width: 120px;
+	padding: 4px;
+	background: #fff;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	border: 2px solid;
+	color: $color__primary;
+	&.is--stock{
+		color: $color__primary;
+	}
+	&.is--novelty{
+		color: $color__third;
+	}
+	&.is--hit{
+		color: $color__secondary;
+	}
+}

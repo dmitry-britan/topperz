@@ -1,0 +1,32 @@
+.menu{
+	padding: 20px 0 40px;
+}
+.menu__title{
+	margin: 0 0 20px;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 18px;
+	text-transform: uppercase;
+	color: $color__base;
+}
+.menu__list{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+.menu__item{
+	padding: 2px;
+	&.is--empty{
+		height: 24px;
+	}
+}
+.menu__text,
+.menu__link{
+	display: block;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 20px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: $color__darkgray;
+}

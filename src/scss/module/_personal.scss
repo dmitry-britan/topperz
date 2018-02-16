@@ -1,0 +1,48 @@
+.personal{
+	padding: 0 0 36px;
+}
+.personal__addresses{
+	padding-bottom: 20px;
+}
+.personal__address{
+	margin-bottom: 10px;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20px;
+	color: $color__base;
+}
+.personal__discount{
+	padding-bottom: 35px;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 18px;
+	text-transform: uppercase;
+	color: $color__base;
+}
+.personal__order{
+	width: 100%;
+	margin-bottom: 32px;
+	th{
+		width: 180px;
+		text-align: left;
+		@include media('<480px'){
+			width: 120px;
+		}
+	}
+	th,
+	td{
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 24px;
+		vertical-align: top;
+		color: $color__darkgray;
+	}
+	a{
+		text-decoration: none;
+		color: $color__secondary;
+	}
+	span{
+		font-size: 12px;
+		line-height: 20px;
+	}
+}

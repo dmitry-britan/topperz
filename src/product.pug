@@ -1,0 +1,107 @@
+extends pug/base
+
+append vars
+  - html.classList.push('page page--product')
+
+block content
+  -var breadcrumbs = [{title:'Главная', url:'index.html'}, {title:'Пицца', url:'category.html'}, {title:'Дэль-анатра', url:'product.html'}];
+  include pug/parts/breadcrumbs
+  main.product-single
+    .container
+      .product-single__photo
+        a(href="images/product/product.jpg", rel="gallery").product-single__photo-link: img(src="images/product/product.jpg", alt="")
+      .product-single__body
+        h1.product-single__title Пицца Дэль-анатра
+        .product-single__tag.product-tag.is--novelty новинка
+        .product-single__composition
+          .product-single__composition-item Соус
+          .product-single__composition-item Сыр Моцарелла
+          .product-single__composition-item Утка
+          .product-single__composition-item Кукуруза
+          .product-single__composition-item Руккола
+          .product-single__composition-item Помидор
+          
+        .product-single__variant.product-variant
+          input(type="radio", name="diameter"+productId, id="d28"+productId, value="28"+productId, checked).product-single__variant-radio.product-variant__radio
+          label(for="d28"+productId).product-single__variant-label.product-variant__label
+            .table
+              .table__row
+                .table__cell
+                  i.icon.icon-diameter.product-variant__icon
+                  span.product-single__variant-value.product-variant__value 28 
+                  span.product-single__variant-dimension.product-variant__dimension см
+                .table__cell.is--text-center
+                  span.product-single__variant-value.product-variant__value 350 
+                  span.product-single__variant-dimension.product-variant__dimension г
+                .table__cell.is--text-right
+                  span.product-single__variant-value.product-variant__value 1 590 
+                  span.product-single__variant-dimension.product-variant__dimension тнг
+
+        .product-single__variant.product-variant
+          input(type="radio", name="diameter"+productId, id="d33"+productId, value="33"+productId).product-single__variant-radio.product-variant__radio
+          label(for="d33"+productId).product-single__variant-label.product-variant__label
+            .table
+              .table__row
+                .table__cell
+                  i.icon.icon-diameter.product-variant__icon
+                  span.product-single__variant-value.product-variant__value 33 
+                  span.product-single__variant-dimension.product-variant__dimension см
+                .table__cell.is--text-center
+                  span.product-single__variant-value.product-variant__value 650 
+                  span.product-single__variant-dimension.product-variant__dimension г
+                .table__cell.is--text-right
+                  span.product-single__variant-value.product-variant__value 1 890 
+                  span.product-single__variant-dimension.product-variant__dimension тнг
+
+        .product-single__variant.product-variant
+          input(type="radio", name="diameter"+productId, id="d38"+productId, value="38"+productId).product-single__variant-radio.product-variant__radio
+          label(for="d38"+productId).product-single__variant-label.product-variant__label
+            .table
+              .table__row
+                .table__cell
+                  i.icon.icon-diameter.product-variant__icon
+                  span.product-single__variant-value.product-variant__value 38 
+                  span.product-single__variant-dimension.product-variant__dimension см
+                .table__cell.is--text-center
+                  span.product-single__variant-value.product-variant__value 950 
+                  span.product-single__variant-dimension.product-variant__dimension г
+                .table__cell.is--text-right
+                  span.product-single__variant-value.product-variant__value 2 190 
+                  span.product-single__variant-dimension.product-variant__dimension тнг
+        .product-single__qty-price
+          .product-single__qty
+            include pug/parts/qty
+          .product-single__price
+            span.product-single__price-value 1 590 
+            span.product-single__price-currency тнг
+        .product-single__action
+          a(href="").btn.btn--order Заказать
+      .product-single__ingridients
+        .product-single__ingridients-title Дополнительные ингридиенты
+        .product-single__ingridients-body
+          each set in [1,2,3]
+            each index in [1,2,3,4]
+              // product ingridient
+              .product-ingridient
+                .product-ingridient__inner
+                  .product-ingridient__photo
+                    img(src="images/ingridients/i-"+index+".png", alt="")
+                  h4.product-ingridient__title Базилик
+                  .product-ingridient__price
+                    span.product-ingridient__price-value 170 
+                    span.product-ingridient__price-currency тнг
+                  .product-ingridient__qty
+                    span.product-qty.is--collapsed.js-additive-qty
+                      i.icon.icon-minus-small.js-additive-qty-minus.product-qty__minus
+                      input(type="text", name="additive_"+i, value="0").product-qty__value.js-additive-qty-value
+                      i.icon.icon-plus-small.js-additive-qty-plus.product-qty__plus
+
+  section.section.section--product-recomended
+    .container
+        h3.section__title.is--centered
+          span Topperz 
+          | рекомендует
+        include pug/parts/products-db
+        each product, i in [products[0], products[1], products[2], products[3]]
+          include pug/parts/product
+block body-end

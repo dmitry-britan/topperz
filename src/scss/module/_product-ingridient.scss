@@ -1,0 +1,64 @@
+.product-ingridient{
+	display: inline-block;
+	margin-right: -0.24em;
+	width: percentage(1/6);
+	vertical-align: top;
+	text-align: center;
+	@include media('<768px'){
+		width: percentage(1/4);
+	}
+	@include media('<540px'){
+		width: percentage(1/3);
+	}
+	@include media('<=480px'){
+		width: percentage(1/2);
+	}
+}
+.product-ingridient__inner{
+	position: relative;
+	padding: 18px 20px;
+	margin: 0 auto;
+	max-width: 180px;
+	border: 1px solid #fff;
+	background-color: #fff;
+	transition: 300ms all linear;
+	&:hover{
+		box-shadow: 0 4px 7px rgba(0, 0, 0, 0.35);
+		border: 1px solid $color__smoke;
+		background-color: #fff;
+		z-index: 100;
+	}
+}
+.product-ingridient__photo{
+	width: 72px;
+	height: 72px;
+	line-height: 60px;
+	margin: 0 auto 20px;
+	border: 2px solid $color__silver;
+	border-radius: 36px;
+	overflow: hidden;
+	img {
+		vertical-align: middle;
+	}
+}
+.product-ingridient__title{
+	margin: 0 0 15px;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 24px;
+	color: $color__darkgray;
+}
+.product-ingridient__price{
+	margin-bottom: 5px;
+	font-weight: 400;
+	color: $color__darkgray;
+}
+.product-ingridient__price-value{
+	font-size: 18px;
+	line-height: 24px;
+}
+.product-ingridient__price-currency{
+	font-size: 12px;
+	line-height: 20px;
+}
+.product-ingridient__qty{}

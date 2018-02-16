@@ -1,0 +1,44 @@
+.product-variant{
+	position: relative;
+	line-height: 24px;
+}
+.product-variant__radio{
+	position: absolute;
+	width: 0;
+	height: 0;
+	padding: 0; margin: 0;
+	border:none; outline: none;
+	z-index: -1;
+}
+.product-variant__label{
+	line-height: 24px;
+	cursor: pointer;
+}
+.product-variant__radio:not(checked)+.product-variant__label{
+	color: $color__silver;
+}
+.product-variant__radio:checked+.product-variant__label{
+	color: $color__base;
+	.icon-diameter{
+		@include sprite('diameter');
+	}
+}
+.product-variant__icon{
+	vertical-align: middle;
+}
+.product-variant__value{
+	display: inline-block;
+	vertical-align: bottom;
+	margin-left: 4px;
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 24px;
+}
+.product-variant__dimension{
+	display: inline-block;
+	vertical-align: bottom;
+	margin-left: 2px;
+	font-size: 12px;
+	font-weight: 300;
+	line-height: 20px;
+}

@@ -1,0 +1,16 @@
+.copyright{
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 24px;
+	color: $color__silver;
+	text-align: right;
+	@include media('<992px'){
+		text-align: center;
+	}
+	&.in--footer{
+		padding: 36px 0;
+		@include media('<992px'){
+			padding: 8px 0 16px;
+		}
+	}
+}

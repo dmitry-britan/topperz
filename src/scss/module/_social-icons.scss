@@ -1,0 +1,36 @@
+.social-icons{
+	text-align: center;
+	&.in--footer{
+		padding: 36px 0;
+		@include media('<992px'){
+			padding: 8px 0 16px;
+		}
+	}
+	&.is--share{
+		padding: 36px 0;
+		text-align: left;
+	}
+}
+.social-icons__text{
+	display: inline-block;
+	vertical-align: bottom;
+	margin-right: 25px;
+	font-size: 14px;
+	line-height: 11px;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: $color__darkgray;
+	transition: all 300ms linear;
+}
+.social-icons__link{
+	display: inline-block;
+	vertical-align: bottom;
+	margin-right: 20px;
+	color: $color__silver;
+	&:last-child{
+		margin-right: 0;
+	}
+	&:hover{
+		color: $color__darkgray;
+	}
+}

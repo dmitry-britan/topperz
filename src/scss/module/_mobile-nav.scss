@@ -1,0 +1,219 @@
+$button-width: 24px;                    // The width of the button area
+$button-height: 18px;                   // The height of the button area
+$bar-thickness: 2px;                    // The thickness of the button bars
+$button-pad: 0;                      // The left/right padding between button area and bars.
+$button-bar-space: 6px;                // The spacing between button bars
+$button-transistion-duration: 0.3s;     // The transition duration
+$button-color: #ffffff;
+
+@mixin hamburger-icon {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
+    width: $button-width;
+    height: $button-height;
+    font-size: 0;
+    text-indent: -9999px;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+    cursor: pointer;    &:focus {
+      outline: none;
+    }
+
+    & span {
+      display: block;
+      position: absolute;
+      top: ($button-height / 2) - ($bar-thickness / 2);
+      left: $button-pad;
+      right: $button-pad;
+      height: $bar-thickness;
+      background: $button-color;
+    }
+
+    & span::before,
+    & span::after {
+      position: absolute;
+      display: block;
+      left: 0;
+      width: 100%;
+      height: $bar-thickness;
+      background-color: $button-color;
+      content: "";
+    }
+
+    & span::before {
+      top: -$bar-thickness - $button-bar-space;
+    }
+
+    & span::after {
+      bottom: -$bar-thickness - $button-bar-space;
+    }
+
+    & span {
+      transition: background 0s $button-transistion-duration;
+    }
+
+    & span::before,
+    & span::after {
+      transition-duration: $button-transistion-duration, $button-transistion-duration;
+      transition-delay: $button-transistion-duration, 0s;
+    }
+
+    & span::before {
+      /*! autoprefixer: off */
+      transition-property: top, transform;
+    }
+
+    & span::after {
+      /*! autoprefixer: off */
+      transition-property: bottom, transform;
+    }
+
+    /* active state, i.e. menu open */
+    &.is--active span {
+      background: none;
+    }
+
+    &.is--active span::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    &.is--active span::after {
+      bottom: 0;
+      transform: rotate(-45deg);
+    }
+
+    &.is--active span::before,
+    &.is--active span::after {
+      transition-delay: 0s, $button-transistion-duration;
+    }
+}
+
+body:after{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  background: rgba(0,0,0,0.3);
+  content: '';
+  opacity: 0;
+  transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+}
+body.is--mobile-active{
+  overflow: hidden;
+
+  &:after{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 0.5s;
+    z-index: 100;
+  }
+}
+.mobile-nav{
+  position: fixed;
+  top: 54px;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s all ease-in-out 0s, 0s visibility linear 0.3s;
+  background-color: #f5f5f5;
+  overflow-y: auto;
+  z-index: 9999;
+
+  &.is--visible{
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+    padding: 20px 0;
+    transition-delay: 0s, 0s, 0.3s;
+  }
+}
+.mobile-nav__block{
+  margin: 0 0 25px;
+  padding: 0 20px 25px;
+  border-bottom: 1px solid $color__silver;
+
+  &.is--centered{
+    text-align: center;
+  }
+}
+.mobile-nav__toggle-wrapper{
+  display: none;
+  margin-top: 6px;
+  @include media('<821px'){
+    display: block;
+    height:40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background: $color__primary;
+    text-align: center;
+  }
+  @include media('<700px'){
+    height:auto;
+    width: auto;
+    line-height: 18px;
+    border-radius: none;
+    background: $color__primary;
+  }
+}
+.mobile-nav__toggle{
+  display: inline-block;
+  vertical-align: middle;
+  @include hamburger-icon;
+}
+.mobile-nav__icon{
+  position: fixed;
+  top: 32px;
+  right: 45px;
+  cursor: pointer;
+  z-index: 10000;
+}
+.mobile-nav__toggle{
+	position: relative;
+	vertical-align: middle;
+
+  span,
+  span:after,
+  span:before{
+    background: $button-color;
+  }
+
+}
+.mobile-nav__title{
+  margin: 0 0 20px;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: $color__base;
+}
+.mobile-nav__list{
+  @extend %list;
+  position: relative;
+}
+.mobile-nav__item{
+  display: block;
+  margin-bottom: 12px;
+}
+.mobile-nav__link{
+  display: block;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 20px;
+  text-decoration: none;
+  color: $color__darkgray;
+  
+  &:hover,
+  &.is--current{
+    color: $color__primary;
+  }
+}

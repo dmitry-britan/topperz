@@ -1,0 +1,89 @@
+.icon{
+	display: inline-block;
+	vertical-align: middle;
+}
+.icon-whatsapp{
+	@include sprite('whatsapp');
+	
+	@include media('<700px'){
+		@include sprite('phone-mob');
+	}
+}
+.icon-whatsapp-small{
+	@include sprite('whatsapp-sm-white');
+}
+.icon-cart{
+	@include sprite('cart');
+	@include media('<700px'){
+		@include sprite('cart-mob');
+	}
+}
+.icon-cart-white{
+	@include sprite('cart-white');
+	@include media('<700px'){
+		@include sprite('cart-mob');
+	}
+}
+.icon-user{
+	@include sprite('user');
+}
+.icon-arrow-down{
+	@include sprite('arrow-down');
+}
+.icon-arrow-down-md{
+	@include sprite('arrow-down-md');
+}
+.icon-diameter{
+	@include sprite('diameter-light');
+}
+.icon-diameter-light{
+	@include sprite('diameter-light');
+}
+.icon-diameter-dark{
+	@include sprite('diameter');
+}
+.icon-diameter-md{
+	@include sprite('diameter-md');
+}
+.icon-plus-red{
+	@include sprite('plus-red');
+}
+.icon-minus-small{
+	@include sprite('minus-small');
+}
+.icon-plus-small{
+	@include sprite('plus-small');
+}
+.icon-minus{
+	@include sprite('minus');
+}
+.icon-plus{
+	@include sprite('plus');
+}
+.icon-close{
+	@include sprite('close');
+}
+.icon-close-small{
+	@include sprite('close-small');
+}
+.icon-facebook{
+	@include sprite('facebook');
+}
+.icon-instagram{
+	@include sprite('instagram');
+}
+.icon-vk{
+	@include sprite('vk');
+}
+.icon-delete{
+	@include sprite('delete');
+}
+.icon-location{
+	@include sprite('location');
+}
+.icon-phone{
+	@include sprite('phone');
+}
+.icon-mail{
+	@include sprite('mail');
+}

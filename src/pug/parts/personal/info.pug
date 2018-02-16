@@ -1,0 +1,32 @@
+.row
+	.col.col--5-of-12.col--s-12-of-12.col--m-12-of-12.col--l-5-of-12
+		form(action="").form.js-form-personal-info
+			.form__field
+				label.form__label Фамилия
+				input(type="text", name="surname").form__input
+			.form__field
+				label.form__label Имя
+				input(type="text", name="name").form__input
+			.form__field
+				label.form__label Отчество
+				input(type="text", name="birthday").form__input
+			.form__field.form__field--select
+				.form__select
+					.form__input.form__input--dummy.js-choose-date-toggler Дата рождения
+						input.is--hidden(type="text", name="birthday", value="Дата рождения", default)
+
+					include ../choose-birthdate
+			.form__field
+				label.form__label Телефон
+				input(type="text", name="phone").form__input
+			.form__field
+				label.form__label Дополнительный телефон
+				input(type="text", name="phone_alt").form__input
+			.form__field
+				label.form__label Email
+				input(type="text", name="email").form__input
+			.form__field
+				input(type="checkbox" name="checkbox" id="subscribe").form__checkbox
+				label(for="subscribe") Хочу получать информацию об Акциях для подписчиков
+			.form__action
+				button(type="submit").btn.btn--primary.btn--lg Сохранить

@@ -1,0 +1,61 @@
+.header{
+	@include media('<700px'){
+    background: $color__primary;
+	}
+}
+.header__inner{
+  position: relative;
+  padding-top: 12px;
+  text-align: justify;
+  &:after{
+    display: inline-block;
+    width: 100%;
+    content: '';
+  }
+	@include media('<700px'){
+    padding-top: 5px;
+    padding-bottom: 13px;
+	}
+  @include support(1, ('display: flex')) {
+    .header__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+    }
+    .header__inner:after{
+      display: none;
+    }
+  }
+}
+.header__logo{
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+}
+.header__contact-info{
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+}
+.header__user-auth{
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+	@include media('<700px'){
+		display: none;
+	}
+}
+.header__cart{
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+}
+.header__langs{
+  position: absolute;
+  top: 0; right: 15px;
+  text-align: left;
+	@include media('<700px'){
+    display: none;
+	}
+}

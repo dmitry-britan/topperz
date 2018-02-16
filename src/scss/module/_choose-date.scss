@@ -1,0 +1,76 @@
+.choose-date{
+	display: none;
+	position: absolute;
+	
+	&.is--active{
+		display: block;
+	}
+}
+.choose-date__inner{
+	width: 480px;
+	padding: 20px 15px;
+	box-shadow: 0 4px 7px rgba(0, 0, 0, 0.35);
+	border: 1px solid $color__smoke;
+	background-color: #fff;
+	@include media('<540px'){
+		width: 290px;
+		padding: 15px 10px;
+	}
+}
+.choose-date__header{
+	margin: 0;
+	text-align: center;
+}
+.choose-date__text{
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: $color__base;
+}
+.choose-date__title{
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 36px;
+	color: $color__base;
+	@include media('<540px'){
+		font-size: 20px;
+		line-height: 30px;
+	}
+}
+.choose-date__body{
+	padding: 25px 0;
+	@include clearfix();
+}
+.choose-date__action{
+	text-align: center;
+}
+.choose-date__item{
+	float: left;
+	width: percentage(1/5);
+	text-align: center;
+	&.is--one-third{
+		width: percentage(1/3);
+	}
+}
+.choose-date__item-minus,
+.choose-date__item-plus{
+	cursor: pointer;
+}
+.choose-date__item-input{
+	outline: none;
+	border: none;
+	padding: 0; margin: 20px auto;
+	font-size: 21px;
+	font-weight: 400;
+	line-height: 20px;
+	color: $color__darkgray;
+	text-align: center;
+	@include media('<540px'){
+		margin: 10px auto;
+		font-size: 16px;
+		max-width: 60px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}

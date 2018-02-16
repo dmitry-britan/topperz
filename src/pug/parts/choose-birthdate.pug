@@ -1,0 +1,24 @@
+.choose-date.js-choose-date
+	.choose-date__inner
+		.choose-date__header
+			.choose-date__text установить дату
+			.choose-date__title.js-choose-date-title Декабрь 29, 2017
+		.choose-date__body.js-choose-date
+			//- year
+			.choose-date__item.is--one-third
+				i.icon.icon-plus.choose-date__item-plus.js-choose-date-change
+				.choose-date__item-input.js-choose-date-value(data-type="year") 2017
+				i.icon.icon-minus.choose-date__item-minus.js-choose-date-change(data-incriment="minus")
+			//- month
+			.choose-date__item.is--one-third
+				i.icon.icon-plus.choose-date__item-plus.js-choose-date-change
+				.choose-date__item-input.js-choose-date-value(data-index="11" data-type="month") Декабрь
+				i.icon.icon-minus.choose-date__item-minus.js-choose-date-change(data-incriment="minus")
+			//- day
+			.choose-date__item.is--one-third
+				i.icon.icon-plus.choose-date__item-plus.js-choose-date-change
+				.choose-date__item-input.js-choose-date-value(data-type="day") 23
+				i.icon.icon-minus.choose-date__item-minus.js-choose-date-change(data-incriment="minus")
+		.choose-date__action
+		a(href="").btn.btn--primary.btn--sm.btn--centered.js-choose-date-action Установить
+

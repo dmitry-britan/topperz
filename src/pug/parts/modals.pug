@@ -1,0 +1,76 @@
+div(style='display: none;')
+	//- Thank You!
+	#thanks.popup
+		.popup__close.arcticmodal-close
+		.popup__inner
+			.popup__header Спасибо!
+			.popup__body
+				p.is--text-center
+					| Ваш заказ успешно оформлен
+					br
+					| Мы свяжемся с вами в ближайшее время
+					br
+					strong Номер вашего заказа #245-327
+			.popup__footer
+				a(href="").btn.btn--primary Спасибо
+
+	#cartOrder.popup
+		.popup__close.arcticmodal-close
+		.popup__inner
+			.cart-order
+				h4.cart-order__header 
+					span.cart-order__header-text Ваш заказ
+					span.cart-order__total-qty 12
+				.cart-order__body
+
+					//- Product
+					article.cart-order__product
+						.cart-order__product-photo
+							img(src="images/cart-order/p-1.jpg", alt="")
+						.cart-order__product-content
+							h4.cart-order__product-title 
+								a(href="").cart-order__product-title-link Дэль-анатра
+							.cart-order__product-details
+								.cart-order__product-variant.product-variant
+									i.icon.icon-diameter-md.product-variant__icon
+									span.cart-order__product-variant-value.product-variant__value 38
+									span.cart-order__product-variant-dimension.product-variant__dimension см
+								.cart-order__product-additives
+									span.cart-order__product-additives-value +2 
+									span.cart-order__product-additives-text Добавки
+								.cart-order__product-qty
+									include qty
+								.cart-order__product-price
+									.cart-order__product-price-value 1 590
+									.cart-order__product-price-currency тнг
+								.cart-order__product-remove
+									i.icon.icon-delete
+
+					//- Product
+					article.cart-order__product
+						.cart-order__product-photo
+							img(src="images/cart-order/p-2.jpg", alt="")
+						.cart-order__product-content
+							h4.cart-order__product-title 
+								a(href="").cart-order__product-title-link Цезарь
+							.cart-order__product-details
+								.cart-order__product-variant.product-variant
+									i.icon.icon-diameter-md.product-variant__icon
+									span.cart-order__product-variant-value.product-variant__value 38
+									span.cart-order__product-variant-dimension.product-variant__dimension см
+								.cart-order__product-additives
+								.cart-order__product-qty
+									include qty
+								.cart-order__product-price
+									.cart-order__product-price-value 2 910
+									.cart-order__product-price-currency тнг
+								.cart-order__product-remove
+									i.icon.icon-delete
+
+				.cart-order__footer
+					.cart-order__footer-text Итого:
+					.cart-order__footer-total-price
+							.cart-order__footer-total-price-value 25 080
+							.cart-order__footer-total-price-currency тнг
+				.cart-order__action
+					a(href="").btn.btn--order Оформить заказ

@@ -1,0 +1,42 @@
+.grid {
+	display: inline-block;
+}
+
+.grid__item {
+  width: 20em;
+  display: inline-block;
+  vertical-align: top;
+  margin: 1em 0.5em;
+  text-align: left;
+}
+
+@supports (display:flex) {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -1em 0 1em -0.5em;
+    justify-content: space-around;
+  }
+
+  .grid__item {
+    padding: 1em 0 0 0.5em;
+    flex: 1 0 20em;
+    max-width: 20em;
+    width: auto;
+    margin: initial;
+  }
+}
+
+@supports (display:grid) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+    grid-gap: 0.5em;
+    margin: initial;
+  }
+
+  .grid__item {
+    padding: initial;
+    max-width: none;
+  }
+}

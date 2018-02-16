@@ -1,0 +1,16 @@
+extends pug/base
+
+append vars
+  - html.classList.push('page page--404')
+
+block content
+  main.page__inner
+    .container
+      .p404
+        .p404__title 
+          |Ошибка 
+          span 404
+        .p404__text 
+          | Неверно набран адрес или такой страницы не существует. Необходимую информацию вы сможете найти перейдя на 
+          a(href="index.html") Главную страницу
+block body-end
