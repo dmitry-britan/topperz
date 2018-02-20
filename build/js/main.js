@@ -96,14 +96,29 @@ if ($productSinglePhoto.length) {
 // Material Effect for form elements
 //---------------------------------------------------------------------------------------
 (function() {
-	$('.form__input').focus(function() {
-		$(this).parent().find('label').addClass('is--active');
-	}).blur(function() {
-		if ($(this).val() == '') {
-			$(this).parent().find('label').removeClass('is--active');
-		}
-	});
+	var $inputs = $('.form__input');
+
+	if ($inputs.length) {
+		$inputs.each(function(index, element) {
+			if ($(element).val() !== '') {
+				$(element).parent().find('label').addClass('is--active');
+			}
+		});
+
+		$inputs.focus(function(event) {
+			var $element = $(event.currentTarget);
+
+			$element.parent().find('label').addClass('is--active');
+		}).blur(function() {
+			var $element = $(event.currentTarget);
+
+			if ($element.val() === '') {
+				$element.parent().find('label').removeClass('is--active');
+			}
+		});
+	}
 })();
+
 var $el = $('.contact-info__icon');
 
 if ($el.length) {
