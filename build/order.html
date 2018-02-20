@@ -7,7 +7,7 @@
     <title>
     </title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css?v=1519128583344">
+    <link rel="stylesheet" href="css/main.css?v=1519132080216">
   </head>
   <body>
     <header class="header">
@@ -193,9 +193,8 @@
               <div class="form__title">Дата и время доставки</div>
               <div class="form__field--select">
                 <div class="form__select">
-                  <div class="form__input form__input--dummy js-choose-date-toggler">2017–12–29   15:06
-                    <input class="is--hidden" type="text" name="delivery_date" value="2017–12–29   15:06" default>
-                  </div>
+                  <div class="form__input form__input--dummy js-choose-date-toggler">2017–12–29   15:06</div>
+                  <input class="is--hidden js-choose-date-input" type="text" name="delivery_date" value="2017–12–29   15:06">
                   <div class="choose-date js-choose-date">
                     <div class="choose-date__inner">
                       <div class="choose-date__header">
@@ -453,8 +452,8 @@
         </div>
       </div>
     </div>
-    <script src="js/vendor.js?v=1519128583346"></script>
-    <script src="js/main.js?v=1519128583346"></script>
+    <script src="js/vendor.js?v=1519132080218"></script>
+    <script src="js/main.js?v=1519132080218"></script>
     <script>
       //- Жмем на поле "Сдача с купюры"
       $('.js-order-change-toggler').on('click', function(event){
@@ -495,9 +494,8 @@
         var fullDate = getFullDate( $('.js-choose-date') );
         var fullDateString = fullDate.year + '-' + fullDate.monthIndex + '-' + fullDate.day + ' ' + fullDate.hours + ':' + fullDate.minutes;
         
-        $('.js-choose-date-toggler')
-          .text(fullDateString)
-          .find('input').val(fullDateString);
+        $('.js-choose-date-toggler').text(fullDateString);
+        $('.js-choose-date-input').val(fullDateString);
         $('.js-choose-date').toggleClass('is--active');
       });
       $('.js-choose-date-change').on('click', function(){

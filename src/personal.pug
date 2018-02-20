@@ -47,9 +47,8 @@ block body-end
       var fullDate = getFullDate( $('.js-choose-date') );
       var fullDateString = fullDate.year + '-' + fullDate.monthIndex + '-' + fullDate.day;
       
-      $('.js-choose-date-toggler')
-        .text(fullDateString)
-        .find('input').val(fullDateString);
+      $('.js-choose-date-toggler').text(fullDateString);
+      $('.js-choose-date-input').val(fullDateString);
       $('.js-choose-date').toggleClass('is--active');
     });
     $('.js-choose-date-change').on('click', function(){

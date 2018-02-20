@@ -7,7 +7,7 @@
     <title>
     </title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css?v=1519128584611">
+    <link rel="stylesheet" href="css/main.css?v=1519131971997">
   </head>
   <body>
     <header class="header">
@@ -153,9 +153,8 @@
                   </div>
                   <div class="form__field form__field--select">
                     <div class="form__select">
-                      <div class="form__input form__input--dummy js-choose-date-toggler">Дата рождения
-                        <input class="is--hidden" type="text" name="birthday" value="Дата рождения" default>
-                      </div>
+                      <div class="form__input form__input--dummy js-choose-date-toggler">Дата рождения</div>
+                      <input class="is--hidden js-choose-date-input" type="text" name="birthday" value="Дата рождения">
                       <div class="choose-date js-choose-date">
                         <div class="choose-date__inner">
                           <div class="choose-date__header">
@@ -545,8 +544,8 @@
         </div>
       </div>
     </div>
-    <script src="js/vendor.js?v=1519128584613"></script>
-    <script src="js/main.js?v=1519128584613"></script>
+    <script src="js/vendor.js?v=1519131972000"></script>
+    <script src="js/main.js?v=1519131972000"></script>
     <script>
       //- Жмем на поле даты - показываем блок выбора даты
       $('.js-choose-date-toggler').on('click', function(event){
@@ -561,9 +560,8 @@
         var fullDate = getFullDate( $('.js-choose-date') );
         var fullDateString = fullDate.year + '-' + fullDate.monthIndex + '-' + fullDate.day;
         
-        $('.js-choose-date-toggler')
-          .text(fullDateString)
-          .find('input').val(fullDateString);
+        $('.js-choose-date-toggler').text(fullDateString);
+        $('.js-choose-date-input').val(fullDateString);
         $('.js-choose-date').toggleClass('is--active');
       });
       $('.js-choose-date-change').on('click', function(){
