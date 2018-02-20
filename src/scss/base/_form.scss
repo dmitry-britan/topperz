@@ -35,6 +35,8 @@ label {
   line-height: 16px;
   color: #36332e;
   &.error {
+    position: absolute;
+    right: 0;
     display: block;
     text-align: right;
     font-size: $fs--small;
