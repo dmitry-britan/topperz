@@ -14,7 +14,7 @@ $('[data-modal]').on('click', (e) => {
 	e.preventDefault();
 	let link = $(e.currentTarget).data('modal');
 
-	if (link) {
+	if (link !== 'cartOrder') {
 		$(`#${link}`).arcticmodal();
 	}
 });

@@ -224,7 +224,7 @@ $('[data-modal]').on('click', function(e) {
 	e.preventDefault();
 	var link = $(e.currentTarget).data('modal');
 
-	if (link) {
+	if (link !== 'cartOrder') {
 		$('#' + link).arcticmodal();
 	}
 });
