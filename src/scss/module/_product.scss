@@ -32,9 +32,11 @@
 	}
 }
 .product__inner{
+	position: relative;
 	max-width: 320px;
+	min-height: 606px;
 	margin: 0 auto;
-	padding: 5px 10px 18px;
+	padding: 5px 10px 54px;
 }
 .product__photo{
 	position: relative;
@@ -107,7 +109,7 @@
 	position: absolute;
 	top: 100%;
 	left: 0; right: 0;
-	padding: 25px 9px;
+	padding: 25px 9px 54px;
 	
 	box-shadow: 0 4px 7px rgba(0, 0, 0, 0.35);
 	border: 1px solid $color__smoke;
@@ -231,7 +233,11 @@
 }
 .product__action{
 	display: block;
-	width: 100%;
+	position: absolute;
+	bottom: 18px;
+	left: 10px; right: 10px;
+	width: 90%;
+	margin: 0 auto;
 	padding: 4px;
 	background: #fff;
 	border: 2px solid $color__primary;
