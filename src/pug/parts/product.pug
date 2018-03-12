@@ -1,7 +1,7 @@
 - productId = (i+1)?i+1:1;
 - photoId = (k)?k:i+1; 
-form(action="/order").product
-	article.product__inner
+article.product
+	.product__inner
 		a(href="product.html").product__photo
 			img(src="images/product/p-"+photoId+".jpg", alt="")
 			- if ( product.tagClass != '' ) {
@@ -33,7 +33,7 @@ form(action="/order").product
 								|  
 								span.product__additives-item-currency тнг
 				// Кнопка Применить
-				button(type="submit" formaction="/additives" formmethod="post").product__action.product__action--secondary Применить
+				a(href="product.html").product__action.product__action--secondary Применить
 		// Варианты
 		.product__variants
 			.product__variants-item.product-variant
@@ -62,4 +62,4 @@ form(action="/order").product
 			span.product__price-value= product.price
 			span.product__price-currency тнг
 		// Кнопка заказать
-		button(type="submit" data-modal="cartOrder").product__action Заказать
+		a(href="product.html").product__action Заказать
