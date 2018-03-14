@@ -128,6 +128,22 @@ if ($el.length) {
 	});
 }
 
+(function() {
+	var toggler = '.product__additives-toggler';
+	var closer = '.product__additives-close';
+	var additives = '.product__additives';
+
+	if (!$(toggler).length) {
+		return false;
+	}
+
+	$(toggler + ', ' + closer).on('click', function(event) {
+		var $self = $(event.currentTarget);
+
+		$self.parents(additives).toggleClass('is--opened');
+	});
+})();
+
 //
 // Slider - on main page
 // =================================================================

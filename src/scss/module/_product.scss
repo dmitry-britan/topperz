@@ -79,7 +79,7 @@
 	margin-bottom: 5px;
 	user-select: none;
 
-	&:hover .product__additives-details{
+	&.is--opened .product__additives-details{
 		visibility: visible;
 		opacity: 1;
 		z-index: 10;
@@ -109,7 +109,7 @@
 	position: absolute;
 	top: 100%;
 	left: 0; right: 0;
-	padding: 25px 9px 54px;
+	padding: 25px 9px 10px;
 	
 	box-shadow: 0 4px 7px rgba(0, 0, 0, 0.35);
 	border: 1px solid $color__smoke;
