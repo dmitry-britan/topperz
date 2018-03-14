@@ -87,6 +87,20 @@
 		transition-delay: 0s, 0s, 0.3s;
 	}
 
+	@include media('<680px'){
+		.cart-order__product-additives & .product__additives-details{
+			transform: translateX(-800px);
+		}
+		.cart-order__product-additives 
+		&.is--opened .product__additives-details{
+			visibility: visible;
+			opacity: 1;
+			z-index: 50;
+			transform: translateY(0) translateX(-43%);
+			transition-delay: 0s, 0s, 0.3s;
+		}
+	}
+
 	@include media('<580px'){
 		.cart-single__product-additives & .product__additives-details{
 			transform: translateX(-800px);

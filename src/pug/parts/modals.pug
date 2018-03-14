@@ -36,8 +36,31 @@ div(style='display: none;')
 									span.cart-order__product-variant-value.product-variant__value 38
 									span.cart-order__product-variant-dimension.product-variant__dimension см
 								.cart-order__product-additives
-									span.cart-order__product-additives-value +2 
-									span.cart-order__product-additives-text Добавки
+									// Добавки
+									.product__additives 
+										.product__additives-toggler
+											span.cart-order__product-additives-value 
+												| +2  
+											span.cart-order__product-additives-text 
+												| Добавки
+										// Добавки - список
+										.product__additives-details
+											i.product__additives-close.icon-close-small
+											ul.product__additives-list
+												- var additives = ["Ананасы","Шампиньоны","Маслины","Огурцы маринованные","Болгарский перец","Халапеньо","Помидоры","Сыр Моцарелла","Сыр Пармезан","Ветчина","Бекон","Папперони","Куриная грудка","Семга","Кукуруза","Лук красный","Лук репчатый"];
+												- var prices = ["90","90","100","100","120","120","120","135","145","150","150","150","150","170","180","200","200"];
+												each additive, i in additives
+													li.product__additives-item
+														span.product__additives-item-title= additive
+														span.product__additives-item-qty
+															span.product__additive-qty.js-additive-qty
+																i.icon.icon-minus-small.js-additive-qty-minus.product__additive-qty-minus
+																input(type="text", name="additive_"+i, value="0").product__additive-qty-value.js-additive-qty-value
+																i.icon.icon-plus-small.js-additive-qty-plus.product__additive-qty-plus
+														span.product__additives-item-price
+															= prices[i]
+															|  
+															span.product__additives-item-currency тнг
 								.cart-order__product-qty
 									include qty
 								.cart-order__product-price
