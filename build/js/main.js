@@ -128,27 +128,25 @@ if ($el.length) {
 	});
 }
 
-(function() {
-	function additivesToggler(options) {
-		var toggler = options.toggler;
-		var closer = options.closer;
-		var additives = options.additives;
+function additivesToggler(options) {
+	var toggler = options.toggler;
+	var closer = options.closer;
+	var additives = options.additives;
 
-		$(toggler + ', ' + closer).on('click', function(event) {
-			var $self = $(event.currentTarget);
+	$(toggler + ', ' + closer).on('click', function(event) {
+		var $self = $(event.currentTarget);
 
-			$self.parents(additives).toggleClass('is--opened');
-		});
-	}
+		$self.parents(additives).toggleClass('is--opened');
+	});
+}
 
-	var additivesProductOptions = {
-		toggler: '.product__additives-toggler',
-		closer: '.product__additives-close',
-		additives: '.product__additives'
-	};
+var additivesProductOptions = {
+	toggler: '.product__additives-toggler',
+	closer: '.product__additives-close',
+	additives: '.product__additives'
+};
 
-	additivesToggler(additivesProductOptions);
-})();
+additivesToggler(additivesProductOptions);
 
 //
 // Slider - on main page
