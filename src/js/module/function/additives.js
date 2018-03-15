@@ -1,15 +1,21 @@
 (() => {
-	let toggler = '.product__additives-toggler';
-	let closer = '.product__additives-close';
-	let additives = '.product__additives';
+	function additivesToggler(options) {
+		let toggler = options.toggler;
+		let closer = options.closer;
+		let additives = options.additives;
 
-	if (!$(toggler).length) {
-		return false;
+		$(`${toggler}, ${closer}`).on('click', (event) => {
+			let $self = $(event.currentTarget);
+
+			$self.parents(additives).toggleClass('is--opened');
+		});
 	}
 
-	$(`${toggler}, ${closer}`).on('click', (event) => {
-		let $self = $(event.currentTarget);
+	let additivesProductOptions = {
+		toggler: '.product__additives-toggler',
+		closer: '.product__additives-close',
+		additives: '.product__additives',
+	};
 
-		$self.parents(additives).toggleClass('is--opened');
-	});
+	additivesToggler(additivesProductOptions);
 })();

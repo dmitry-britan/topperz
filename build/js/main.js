@@ -129,19 +129,25 @@ if ($el.length) {
 }
 
 (function() {
-	var toggler = '.product__additives-toggler';
-	var closer = '.product__additives-close';
-	var additives = '.product__additives';
+	function additivesToggler(options) {
+		var toggler = options.toggler;
+		var closer = options.closer;
+		var additives = options.additives;
 
-	if (!$(toggler).length) {
-		return false;
+		$(toggler + ', ' + closer).on('click', function(event) {
+			var $self = $(event.currentTarget);
+
+			$self.parents(additives).toggleClass('is--opened');
+		});
 	}
 
-	$(toggler + ', ' + closer).on('click', function(event) {
-		var $self = $(event.currentTarget);
+	var additivesProductOptions = {
+		toggler: '.product__additives-toggler',
+		closer: '.product__additives-close',
+		additives: '.product__additives'
+	};
 
-		$self.parents(additives).toggleClass('is--opened');
-	});
+	additivesToggler(additivesProductOptions);
 })();
 
 //
