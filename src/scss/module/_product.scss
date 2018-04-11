@@ -34,9 +34,8 @@
 .product__inner{
 	position: relative;
 	max-width: 320px;
-	min-height: 606px;
 	margin: 0 auto;
-	padding: 5px 10px 54px;
+	padding: 5px 10px 20px;
 }
 .product__photo{
 	position: relative;
@@ -66,7 +65,7 @@
 	}
 }
 .product__ingredients{
-	min-height: 72px;
+	min-height: 96px;
 	margin: 0 0 10px;
 	font-size: 16px;
 	font-weight: 300;
@@ -262,10 +261,8 @@
 	margin-left: 3px;
 }
 .product__action{
+	clear: both;
 	display: block;
-	position: absolute;
-	bottom: 18px;
-	left: 10px; right: 10px;
 	margin: 0 auto;
 	padding: 4px;
 	background: #fff;
