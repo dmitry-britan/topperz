@@ -7,7 +7,7 @@
     <title>
     </title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css?v=1523457948618">
+    <link rel="stylesheet" href="css/main.css?v=1523532210575">
   </head>
   <body>
     <header class="header">
@@ -149,7 +149,7 @@
               <div class="form__title">Куда везем</div>
               <div class="form__field">
                 <label class="form__label">Улица</label>
-                <input class="form__input" type="text" name="street">
+                <input class="form__input" type="text" name="street" id="street">
               </div>
               <div class="row">
                 <div class="col col--6-of-12 col--s-12-of-12 col--m-12-of-12 col--l-6-of-12">
@@ -498,9 +498,46 @@
         </div>
       </div>
     </div>
-    <script src="js/vendor.js?v=1523457948621"></script>
-    <script src="js/main.js?v=1523457948621"></script>
+    <script src="js/vendor.js?v=1523532210582"></script>
+    <script src="js/main.js?v=1523532210582"></script>
     <script>
+      //- Выпадающий список
+      var addressList = [
+        "ActionScript",
+        "AppleScript",
+        "Asp",
+        "BASIC",
+        "C",
+        "C++",
+        "Clojure",
+        "COBOL",
+        "ColdFusion",
+        "Erlang",
+        "Fortran",
+        "Groovy",
+        "Haskell",
+        "Java",
+        "JavaScript",
+        "Lisp",
+        "Perl",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Scala",
+        "Scheme"
+      ];
+      $("#street").autoComplete({
+        minChars: 2,
+        source: function(term, suggest){
+            term = term.toLowerCase();
+            var choices = addressList;
+            var matches = [];
+            for (i=0; i<choices.length; i++)
+                if (~choices[i].toLowerCase().indexOf(term)) matches.push(choices[i]);
+            suggest(matches);
+          }
+      });
+      
       //- Жмем на поле "Сдача с купюры"
       $('.js-order-change-toggler').on('click', function(event){
         event.preventDefault();

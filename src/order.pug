@@ -25,7 +25,7 @@ block content
             .form__title Куда везем
             .form__field
               label.form__label Улица
-              input(type="text", name="street").form__input
+              input(type="text", name="street")#street.form__input
             .row
               .col.col--6-of-12.col--s-12-of-12.col--m-12-of-12.col--l-6-of-12
                 .form__field
@@ -115,6 +115,43 @@ block content
               
 block body-end
   script.
+    //- Выпадающий список
+    var addressList = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+    ];
+    $("#street").autoComplete({
+      minChars: 2,
+      source: function(term, suggest){
+          term = term.toLowerCase();
+          var choices = addressList;
+          var matches = [];
+          for (i=0; i<choices.length; i++)
+              if (~choices[i].toLowerCase().indexOf(term)) matches.push(choices[i]);
+          suggest(matches);
+        }
+    });
+
     //- Жмем на поле "Сдача с купюры"
     $('.js-order-change-toggler').on('click', function(event){
       event.preventDefault();

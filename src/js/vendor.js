@@ -3,3 +3,4 @@
 // @include('vendor/arcticModal.js')
 // @include('vendor/fancyBox.js')
 // @include('vendor/jqueryvalidation.js')
+// @include('vendor/autoComplete.js')
