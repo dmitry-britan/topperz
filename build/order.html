@@ -7,7 +7,7 @@
     <title>
     </title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css?v=1523532210575">
+    <link rel="stylesheet" href="css/main.css?v=1523981619997">
   </head>
   <body>
     <header class="header">
@@ -193,8 +193,8 @@
               <div class="form__title">Дата и время доставки</div>
               <div class="form__field--select">
                 <div class="form__select">
-                  <div class="form__input form__input--dummy js-choose-date-toggler">2017–12–29   15:06</div>
-                  <input class="is--hidden js-choose-date-input" type="text" name="delivery_date" value="2017–12–29   15:06">
+                  <div class="form__input form__input--dummy js-choose-date-toggler">2018–12–29   15:06</div>
+                  <input class="is--hidden js-choose-date-input" type="text" name="delivery_date" value="2018–12–29   15:06">
                   <div class="choose-date js-choose-date">
                     <div class="choose-date__inner">
                       <div class="choose-date__header">
@@ -274,7 +274,7 @@
               </div>
               <div class="form__divider"></div>
               <div class="form__action">
-                <button class="btn btn--primary btn--lg" type="submit" data-modal="thanks">Оплатить</button>
+                <button class="btn btn--primary btn--lg" type="submit" data-modal="thanks">Отправить заказ</button>
               </div>
             </form>
           </div>
@@ -498,9 +498,17 @@
         </div>
       </div>
     </div>
-    <script src="js/vendor.js?v=1523532210582"></script>
-    <script src="js/main.js?v=1523532210582"></script>
+    <script src="js/vendor.js?v=1523981620001"></script>
+    <script src="js/main.js?v=1523981620001"></script>
     <script>
+      // Переключения текстовки в зависимости от выбора варианта оплаты
+      $('#payment_method_1').on('click', function(){
+        $(this).parents('.form').find('button[type="submit"]').text('Отправить заказ');
+      });
+      $('#payment_method_2').on('click', function(){
+        $(this).parents('.form').find('button[type="submit"]').text('Оплатить');
+      });
+      
       //- Выпадающий список
       var addressList = [
         "ActionScript",

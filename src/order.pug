@@ -56,8 +56,8 @@ block content
             .form__title Дата и время доставки
             .form__field--select
               .form__select
-                .form__input.form__input--dummy.js-choose-date-toggler 2017–12–29   15:06
-                input.is--hidden.js-choose-date-input(type="text", name="delivery_date", value="2017–12–29   15:06")
+                .form__input.form__input--dummy.js-choose-date-toggler 2018–12–29   15:06
+                input.is--hidden.js-choose-date-input(type="text", name="delivery_date", value="2018–12–29   15:06")
 
                 include pug/parts/choose-date
             .form__divider
@@ -111,10 +111,18 @@ block content
             .form__divider
             //- Сумма к оплате
             .form__action
-              button(type="submit", data-modal="thanks").btn.btn--primary.btn--lg Оплатить
+              button(type="submit", data-modal="thanks").btn.btn--primary.btn--lg Отправить заказ
               
 block body-end
   script.
+    // Переключения текстовки в зависимости от выбора варианта оплаты
+    $('#payment_method_1').on('click', function(){
+      $(this).parents('.form').find('button[type="submit"]').text('Отправить заказ');
+    });
+    $('#payment_method_2').on('click', function(){
+      $(this).parents('.form').find('button[type="submit"]').text('Оплатить');
+    });
+
     //- Выпадающий список
     var addressList = [
       "ActionScript",
