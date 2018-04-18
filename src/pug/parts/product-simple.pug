@@ -3,7 +3,7 @@
 		a(href="product.html").product__photo
 			img(src="images/product/"+ product.photo+".png", alt="")
 		h2.product__title: a(href="product.html")= product.title
-		p.product__ingredients= product.details
+		p.product__variants= product.details
 		// Кол-во 
 		.product__qty
 			include qty

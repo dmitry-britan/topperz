@@ -4,10 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
+    <!-- Chrome, Firefox OS and Opera-->
+    <meta name="theme-color" content="#e4002b">
+    <!-- Windows Phone-->
+    <meta name="msapplication-navbutton-color" content="#e4002b">
+    <!-- iOS Safari-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#e4002b">
     <title>
     </title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css?v=1523980111201">
+    <link rel="stylesheet" href="css/main.css?v=1524045516069">
   </head>
   <body>
     <header class="header">
@@ -18,8 +24,7 @@
         <!-- MENU-->
         <nav class="mobile-nav">
           <div class="mobile-nav__inner">
-            <div class="mobile-nav__block is--centered">
-              <div class="inline"><a class="mobile-nav__link" href="/registration.html">Войти</a></div>
+            <div class="mobile-nav__block is--align-right">
               <div class="langs is--mobile"><a class="langs__item" href="">Kz</a><a class="langs__item is--current" href="">Ru</a><a class="langs__item" href="">En</a></div>
             </div>
             <div class="mobile-nav__block">
@@ -43,6 +48,7 @@
             <div class="mobile-nav__block">
               <h4 class="mobile-nav__title">Личный кабинет</h4>
               <ul class="mobile-nav__list">
+                <li class="mobile-nav__item"><a class="mobile-nav__link" href="/personal.html">Войти</a></li>
                 <li class="mobile-nav__item"><a class="mobile-nav__link" href="/personal.html">Личные данные</a></li>
                 <li class="mobile-nav__item"><a class="mobile-nav__link" href="/personal.html">История заказов</a></li>
                 <li class="mobile-nav__item"><a class="mobile-nav__link" href="/personal.html">Адреса</a></li>
@@ -590,8 +596,8 @@
         </div>
       </div>
     </div>
-    <script src="js/vendor.js?v=1523980111208"></script>
-    <script src="js/main.js?v=1523980111208"></script>
+    <script src="js/vendor.js?v=1524045516072"></script>
+    <script src="js/main.js?v=1524045516073"></script>
     <script>
       //- Жмем на поле даты - показываем блок выбора даты
       $('.js-choose-date-toggler').on('click', function(event){

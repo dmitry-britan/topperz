@@ -158,6 +158,13 @@ html(class=html.classList)&attributes(html.attrs)
 				meta(name="msapplication-square310x310logo" content=meta.msapplicationSquare310x310logo)
 			if meta.msapplicationNotification
 				meta(name="msapplication-notification" content=meta.msapplicationNotification)
+						
+			// Chrome, Firefox OS and Opera
+			meta(name='theme-color', content='#e4002b')
+			// Windows Phone
+			meta(name='msapplication-navbutton-color', content='#e4002b')
+			// iOS Safari
+			meta(name='apple-mobile-web-app-status-bar-style', content='#e4002b')
 		title
 			= title
 		block links

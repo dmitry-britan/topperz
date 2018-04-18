@@ -30,12 +30,15 @@
 .category-panel__block--sort{
 	float: right;
 	text-align: right;
-	@include media('<540px'){
-		float: none;
-		width: percentage(1/1);
-		margin-bottom: 20px;
-		text-align: left;
+	@include media('<700px'){
+		display: none;
 	}
+	// @include media('<540px'){
+	// 	float: none;
+	// 	width: percentage(1/1);
+	// 	margin-bottom: 20px;
+	// 	text-align: left;
+	// }
 }
 .category-panel__block-current{
 	position: relative;

@@ -11,6 +11,10 @@
 	font-weight: 300;
 	line-height: 20px;
 	color: $color__darkgray;
+	@include media('<700px'){
+		font-size: 12px;
+		line-height: 16px;
+	}
 
 	&:first-child{
     padding-left: 0;

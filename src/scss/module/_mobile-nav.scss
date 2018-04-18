@@ -118,7 +118,7 @@ body.is--mobile-active{
 .mobile-nav{
   position: fixed;
   top: 54px;
-  left: 0;
+  left: 0; right: 0;
   width: 100%;
   height: 0%;
   opacity: 0;
@@ -143,6 +143,9 @@ body.is--mobile-active{
 
   &.is--centered{
     text-align: center;
+  }
+  &.is--align-right{
+    text-align: right;
   }
 }
 .mobile-nav__toggle-wrapper{

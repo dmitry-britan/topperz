@@ -29,6 +29,10 @@
 	}
 	@include media('<640px'){
 		width: percentage(1/1);
+
+		&:after{
+			display: none;
+		}
 	}
 }
 .product__inner{
@@ -36,6 +40,13 @@
 	max-width: 320px;
 	margin: 0 auto;
 	padding: 5px 10px 20px;
+	@include media('<640px'){
+		padding: 0;
+		margin-bottom: 50px;
+	}
+	@include media('<=480px'){
+		max-width: 100%;
+	}
 }
 .product__photo{
 	position: relative;
@@ -72,6 +83,9 @@
 	line-height: 24px;
 	color: $color__darkgray;
 	text-align: center;
+	@include media('<640px'){
+		min-height: 0;
+	}
 }
 .product__additives{
 	position: relative;
@@ -197,6 +211,7 @@
 .product__variants{
 	@include clearfix();
 	margin-bottom: 25px;
+	text-align: center;
 }
 .product__additive-qty{
 	display: flex;
