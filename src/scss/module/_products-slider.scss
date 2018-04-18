@@ -1,0 +1,25 @@
+.products-slider{}
+.products-slider__inner{
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -20px;
+	@include media('<640px'){
+		display: block;
+		margin: 0;
+	}
+}
+.products-slider__item{
+	margin: 0 auto;
+	padding-left: 20px;
+	@include media('<1175px'){
+		width: percentage(1/2);
+	}
+	@include media('<640px'){
+		width: percentage(1/1);
+		padding: 0;
+	}
+
+	.product{
+		width: 100%;
+	}
+}

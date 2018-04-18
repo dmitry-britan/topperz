@@ -161,16 +161,22 @@ block content
   section.section
     .container
         h3.section__title.is--centered Закажите еще напитки
-        -var product = {title: '7 Up', photo: 'drinks', details: '1л', price: '490', tag: '', tagClass: ''}
-          each i in [1,2,3,4]
-            include pug/parts/product-simple
+        .products-slider
+          .products-slider__inner.js-products-slider
+            -var product = {title: '7 Up', photo: 'drinks', details: '1л', price: '490', tag: '', tagClass: ''}
+              each i in [1,2,3,4]
+                .products-slider__item
+                  include pug/parts/product-simple
 
   section.section
     .container
         h3.section__title.is--centered Добавить к заказу соусы
-        -var product = {title: 'Соус Барбекю', photo: 'sauces', details: '50 гр', price: '180', tag: '', tagClass: ''}
-          each i in [1,2,3,4]
-            include pug/parts/product-simple
+        .products-slider
+          .products-slider__inner.js-products-slider
+            -var product = {title: 'Соус Барбекю', photo: 'sauces', details: '50 гр', price: '180', tag: '', tagClass: ''}
+              each i in [1,2,3,4]
+                .products-slider__item
+                  include pug/parts/product-simple
   .cart-single__action
     .container
       a(href="/order.html").btn.btn--order Оформить заказ
