@@ -22,8 +22,14 @@ block content
         //- СТРОКА ЗАКАЗА
         .cart-single__row
           .cart-single__cell
+            h4.cart-single__product-title.is--mobile-only
+              a(href="").cart-single__product-title-link Дэль-анатра
             .cart-single__product-photo
               img(src="images/cart-single/c-1.jpg", alt="")
+              .cart-single__product-variant.product-variant.is--mobile-only
+                i.icon.icon-diameter-md-white.product-variant__icon
+                span.cart-single__product-variant-value.product-variant__value 28
+                span.cart-single__product-variant-dimension.product-variant__dimension см
             .cart-single__product-details
               h4.cart-single__product-title 
                 a(href="").cart-single__product-title-link Дэль-анатра
@@ -57,6 +63,12 @@ block content
                             = prices[i]
                             |  
                             span.product__additives-item-currency тнг
+         
+              .cart-single__product-qty.is--mobile-only
+                include pug/parts/qty
+              .cart-single__product-price.is--mobile-only
+                .cart-single__product-price-value 1 590
+                .cart-single__product-price-currency тнг
           //- Цена
           .cart-single__cell
             .cart-single__product-price
@@ -78,8 +90,14 @@ block content
         //- СТРОКА ЗАКАЗА
         .cart-single__row
           .cart-single__cell
+            h4.cart-single__product-title.is--mobile-only
+              a(href="").cart-single__product-title-link Цезарь
             .cart-single__product-photo
               img(src="images/cart-single/c-2.jpg", alt="")
+              .cart-single__product-variant.product-variant.is--mobile-only
+                i.icon.icon-diameter-md-white.product-variant__icon
+                span.cart-single__product-variant-value.product-variant__value 38
+                span.cart-single__product-variant-dimension.product-variant__dimension см
             .cart-single__product-details
               h4.cart-single__product-title 
                 a(href="").cart-single__product-title-link Цезарь
@@ -87,6 +105,12 @@ block content
                 i.icon.icon-diameter-md.product-variant__icon
                 span.cart-single__product-variant-value.product-variant__value 38
                 span.cart-single__product-variant-dimension.product-variant__dimension см
+                
+              .cart-single__product-qty.is--mobile-only
+                include pug/parts/qty
+              .cart-single__product-price.is--mobile-only
+                .cart-single__product-price-value 1 590
+                .cart-single__product-price-currency тнг
           //- Цена
           .cart-single__cell
             .cart-single__product-price

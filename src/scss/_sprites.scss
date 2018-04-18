@@ -7,7 +7,7 @@ $sprites: (
 			height: 8,
 			image: "sprites.png",
 			total_width: 138,
-			total_height: 110,
+			total_height: 130,
 		),
 		retina: (
 			x: 80,
@@ -16,27 +16,27 @@ $sprites: (
 			height: 16,
 			image: "sprites@2x.png",
 			total_width: 276,
-			total_height: 220,
+			total_height: 260,
 		),
 	),
 	"arrow-down-white": (
 		normal: (
 			x: 124,
-			y: 102,
+			y: 98,
 			width: 14,
 			height: 8,
 			image: "sprites.png",
 			total_width: 138,
-			total_height: 110,
+			total_height: 130,
 		),
 		retina: (
 			x: 248,
-			y: 204,
+			y: 196,
 			width: 28,
 			height: 16,
 			image: "sprites@2x.png",
 			total_width: 276,
-			total_height: 220,
+			total_height: 260,
 		),
 	),
 	"arrow-down": (
@@ -47,7 +47,7 @@ $sprites: (
 			height: 10,
 			image: "sprites.png",
 			total_width: 138,
-			total_height: 110,
+			total_height: 130,
 		),
 		retina: (
 			x: 40,
@@ -56,7 +56,7 @@ $sprites: (
 			height: 20,
 			image: "sprites@2x.png",
 			total_width: 276,
-			total_height: 220,
+			total_height: 260,
 		),
 	),
 	"cart-mob": (
@@ -67,7 +67,7 @@ $sprites: (
 			height: 24,
 			image: "sprites.png",
 			total_width: 138,
-			total_height: 110,
+			total_height: 130,
 		),
 		retina: (
 			x: 160,
@@ -76,7 +76,7 @@ $sprites: (
 			height: 48,
 			image: "sprites@2x.png",
 			total_width: 276,
-			total_height: 220,
+			total_height: 260,
 		),
 	),
 	"cart-white": (
@@ -87,7 +87,7 @@ $sprites: (
 			height: 38,
 			image: "sprites.png",
 			total_width: 138,
-			total_height: 110,
+			total_height: 130,
 		),
 		retina: (
 			x: 0,
@@ -96,7 +96,7 @@ $sprites: (
 			height: 76,
 			image: "sprites@2x.png",
 			total_width: 276,
-			total_height: 220,
+			total_height: 260,
 		),
 	),
 	"cart": (
@@ -107,7 +107,7 @@ $sprites: (
 			height: 38,
 			image: "sprites.png",
 			total_width: 138,
-			total_height: 110,
+			total_height: 130,
 		),
 		retina: (
 			x: 80,
@@ -116,30 +116,10 @@ $sprites: (
 			height: 76,
 			image: "sprites@2x.png",
 			total_width: 276,
-			total_height: 220,
+			total_height: 260,
 		),
 	),
 	"close-small": (
-		normal: (
-			x: 66,
-			y: 99,
-			width: 8,
-			height: 8,
-			image: "sprites.png",
-			total_width: 138,
-			total_height: 110,
-		),
-		retina: (
-			x: 132,
-			y: 198,
-			width: 16,
-			height: 16,
-			image: "sprites@2x.png",
-			total_width: 276,
-			total_height: 220,
-		),
-	),
-	"close-tiny": (
 		normal: (
 			x: 56,
 			y: 99,
@@ -147,7 +127,7 @@ $sprites: (
 			height: 8,
 			image: "sprites.png",
 			total_width: 138,
-			total_height: 110,
+			total_height: 130,
 		),
 		retina: (
 			x: 112,
@@ -156,7 +136,27 @@ $sprites: (
 			height: 16,
 			image: "sprites@2x.png",
 			total_width: 276,
-			total_height: 220,
+			total_height: 260,
+		),
+	),
+	"close-tiny": (
+		normal: (
+			x: 66,
+			y: 99,
+			width: 8,
+			height: 8,
+			image: "sprites.png",
+			total_width: 138,
+			total_height: 130,
+		),
+		retina: (
+			x: 132,
+			y: 198,
+			width: 16,
+			height: 16,
+			image: "sprites@2x.png",
+			total_width: 276,
+			total_height: 260,
 		),
 	),
 	"close": (
@@ -167,7 +167,7 @@ $sprites: (
 			height: 18,
 			image: "sprites.png",
 			total_width: 138,
-			total_height: 110,
+			total_height: 130,
 		),
 		retina: (
 			x: 0,
@@ -176,7 +176,7 @@ $sprites: (
 			height: 36,
 			image: "sprites@2x.png",
 			total_width: 276,
-			total_height: 220,
+			total_height: 260,
 		),
 	),
 	"delete": (
@@ -187,7 +187,7 @@ $sprites: (
 			height: 18,
 			image: "sprites.png",
 			total_width: 138,
-			total_height: 110,
+			total_height: 130,
 		),
 		retina: (
 			x: 40,
@@ -196,7 +196,7 @@ $sprites: (
 			height: 36,
 			image: "sprites@2x.png",
 			total_width: 276,
-			total_height: 220,
+			total_height: 260,
 		),
 	),
 	"diameter-light": (
@@ -207,7 +207,7 @@ $sprites: (
 			height: 16,
 			image: "sprites.png",
 			total_width: 138,
-			total_height: 110,
+			total_height: 130,
 		),
 		retina: (
 			x: 212,
@@ -216,10 +216,10 @@ $sprites: (
 			height: 32,
 			image: "sprites@2x.png",
 			total_width: 276,
-			total_height: 220,
+			total_height: 260,
 		),
 	),
-	"diameter-md": (
+	"diameter-md-white": (
 		normal: (
 			x: 124,
 			y: 48,
@@ -227,7 +227,7 @@ $sprites: (
 			height: 14,
 			image: "sprites.png",
 			total_width: 138,
-			total_height: 110,
+			total_height: 130,
 		),
 		retina: (
 			x: 248,
@@ -236,50 +236,30 @@ $sprites: (
 			height: 28,
 			image: "sprites@2x.png",
 			total_width: 276,
-			total_height: 220,
+			total_height: 260,
 		),
 	),
-	"diameter": (
-		normal: (
-			x: 106,
-			y: 0,
-			width: 16,
-			height: 16,
-			image: "sprites.png",
-			total_width: 138,
-			total_height: 110,
-		),
-		retina: (
-			x: 212,
-			y: 0,
-			width: 32,
-			height: 32,
-			image: "sprites@2x.png",
-			total_width: 276,
-			total_height: 220,
-		),
-	),
-	"facebook": (
+	"diameter-md": (
 		normal: (
 			x: 124,
-			y: 82,
-			width: 9,
-			height: 18,
+			y: 32,
+			width: 14,
+			height: 14,
 			image: "sprites.png",
 			total_width: 138,
-			total_height: 110,
+			total_height: 130,
 		),
 		retina: (
 			x: 248,
-			y: 164,
-			width: 18,
-			height: 36,
+			y: 64,
+			width: 28,
+			height: 28,
 			image: "sprites@2x.png",
 			total_width: 276,
-			total_height: 220,
+			total_height: 260,
 		),
 	),
-	"info": (
+	"diameter": (
 		normal: (
 			x: 106,
 			y: 18,
@@ -287,7 +267,7 @@ $sprites: (
 			height: 16,
 			image: "sprites.png",
 			total_width: 138,
-			total_height: 110,
+			total_height: 130,
 		),
 		retina: (
 			x: 212,
@@ -296,7 +276,47 @@ $sprites: (
 			height: 32,
 			image: "sprites@2x.png",
 			total_width: 276,
-			total_height: 220,
+			total_height: 260,
+		),
+	),
+	"facebook": (
+		normal: (
+			x: 0,
+			y: 112,
+			width: 9,
+			height: 18,
+			image: "sprites.png",
+			total_width: 138,
+			total_height: 130,
+		),
+		retina: (
+			x: 0,
+			y: 224,
+			width: 18,
+			height: 36,
+			image: "sprites@2x.png",
+			total_width: 276,
+			total_height: 260,
+		),
+	),
+	"info": (
+		normal: (
+			x: 106,
+			y: 0,
+			width: 16,
+			height: 16,
+			image: "sprites.png",
+			total_width: 138,
+			total_height: 130,
+		),
+		retina: (
+			x: 212,
+			y: 0,
+			width: 32,
+			height: 32,
+			image: "sprites@2x.png",
+			total_width: 276,
+			total_height: 260,
 		),
 	),
 	"instagram": (
@@ -307,7 +327,7 @@ $sprites: (
 			height: 18,
 			image: "sprites.png",
 			total_width: 138,
-			total_height: 110,
+			total_height: 130,
 		),
 		retina: (
 			x: 80,
@@ -316,27 +336,27 @@ $sprites: (
 			height: 36,
 			image: "sprites@2x.png",
 			total_width: 276,
-			total_height: 220,
+			total_height: 260,
 		),
 	),
 	"location": (
 		normal: (
 			x: 124,
-			y: 64,
+			y: 80,
 			width: 12,
 			height: 16,
 			image: "sprites.png",
 			total_width: 138,
-			total_height: 110,
+			total_height: 130,
 		),
 		retina: (
 			x: 248,
-			y: 128,
+			y: 160,
 			width: 24,
 			height: 32,
 			image: "sprites@2x.png",
 			total_width: 276,
-			total_height: 220,
+			total_height: 260,
 		),
 	),
 	"mail": (
@@ -347,7 +367,7 @@ $sprites: (
 			height: 11,
 			image: "sprites.png",
 			total_width: 138,
-			total_height: 110,
+			total_height: 130,
 		),
 		retina: (
 			x: 0,
@@ -356,7 +376,7 @@ $sprites: (
 			height: 22,
 			image: "sprites@2x.png",
 			total_width: 276,
-			total_height: 220,
+			total_height: 260,
 		),
 	),
 	"minus-small": (
@@ -367,7 +387,7 @@ $sprites: (
 			height: 14,
 			image: "sprites.png",
 			total_width: 138,
-			total_height: 110,
+			total_height: 130,
 		),
 		retina: (
 			x: 248,
@@ -376,7 +396,7 @@ $sprites: (
 			height: 28,
 			image: "sprites@2x.png",
 			total_width: 276,
-			total_height: 220,
+			total_height: 260,
 		),
 	),
 	"minus": (
@@ -387,7 +407,7 @@ $sprites: (
 			height: 18,
 			image: "sprites.png",
 			total_width: 138,
-			total_height: 110,
+			total_height: 130,
 		),
 		retina: (
 			x: 120,
@@ -396,7 +416,7 @@ $sprites: (
 			height: 36,
 			image: "sprites@2x.png",
 			total_width: 276,
-			total_height: 220,
+			total_height: 260,
 		),
 	),
 	"phone-mob": (
@@ -407,7 +427,7 @@ $sprites: (
 			height: 24,
 			image: "sprites.png",
 			total_width: 138,
-			total_height: 110,
+			total_height: 130,
 		),
 		retina: (
 			x: 160,
@@ -416,7 +436,7 @@ $sprites: (
 			height: 48,
 			image: "sprites@2x.png",
 			total_width: 276,
-			total_height: 220,
+			total_height: 260,
 		),
 	),
 	"phone": (
@@ -427,7 +447,7 @@ $sprites: (
 			height: 16,
 			image: "sprites.png",
 			total_width: 138,
-			total_height: 110,
+			total_height: 130,
 		),
 		retina: (
 			x: 212,
@@ -436,7 +456,7 @@ $sprites: (
 			height: 32,
 			image: "sprites@2x.png",
 			total_width: 276,
-			total_height: 220,
+			total_height: 260,
 		),
 	),
 	"plus-red": (
@@ -447,7 +467,7 @@ $sprites: (
 			height: 14,
 			image: "sprites.png",
 			total_width: 138,
-			total_height: 110,
+			total_height: 130,
 		),
 		retina: (
 			x: 248,
@@ -456,27 +476,27 @@ $sprites: (
 			height: 28,
 			image: "sprites@2x.png",
 			total_width: 276,
-			total_height: 220,
+			total_height: 260,
 		),
 	),
 	"plus-small": (
 		normal: (
 			x: 124,
-			y: 32,
+			y: 64,
 			width: 14,
 			height: 14,
 			image: "sprites.png",
 			total_width: 138,
-			total_height: 110,
+			total_height: 130,
 		),
 		retina: (
 			x: 248,
-			y: 64,
+			y: 128,
 			width: 28,
 			height: 28,
 			image: "sprites@2x.png",
 			total_width: 276,
-			total_height: 220,
+			total_height: 260,
 		),
 	),
 	"plus": (
@@ -487,7 +507,7 @@ $sprites: (
 			height: 18,
 			image: "sprites.png",
 			total_width: 138,
-			total_height: 110,
+			total_height: 130,
 		),
 		retina: (
 			x: 160,
@@ -496,7 +516,7 @@ $sprites: (
 			height: 36,
 			image: "sprites@2x.png",
 			total_width: 276,
-			total_height: 220,
+			total_height: 260,
 		),
 	),
 	"user": (
@@ -507,7 +527,7 @@ $sprites: (
 			height: 37,
 			image: "sprites.png",
 			total_width: 138,
-			total_height: 110,
+			total_height: 130,
 		),
 		retina: (
 			x: 0,
@@ -516,7 +536,7 @@ $sprites: (
 			height: 74,
 			image: "sprites@2x.png",
 			total_width: 276,
-			total_height: 220,
+			total_height: 260,
 		),
 	),
 	"vk": (
@@ -527,7 +547,7 @@ $sprites: (
 			height: 18,
 			image: "sprites.png",
 			total_width: 138,
-			total_height: 110,
+			total_height: 130,
 		),
 		retina: (
 			x: 212,
@@ -536,7 +556,7 @@ $sprites: (
 			height: 36,
 			image: "sprites@2x.png",
 			total_width: 276,
-			total_height: 220,
+			total_height: 260,
 		),
 	),
 	"whatsapp-sm-white": (
@@ -547,7 +567,7 @@ $sprites: (
 			height: 18,
 			image: "sprites.png",
 			total_width: 138,
-			total_height: 110,
+			total_height: 130,
 		),
 		retina: (
 			x: 160,
@@ -556,7 +576,7 @@ $sprites: (
 			height: 36,
 			image: "sprites@2x.png",
 			total_width: 276,
-			total_height: 220,
+			total_height: 260,
 		),
 	),
 	"whatsapp": (
@@ -567,7 +587,7 @@ $sprites: (
 			height: 36,
 			image: "sprites.png",
 			total_width: 138,
-			total_height: 110,
+			total_height: 130,
 		),
 		retina: (
 			x: 78,
@@ -576,7 +596,7 @@ $sprites: (
 			height: 72,
 			image: "sprites@2x.png",
 			total_width: 276,
-			total_height: 220,
+			total_height: 260,
 		),
 	),
 );

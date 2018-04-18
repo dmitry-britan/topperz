@@ -45,6 +45,9 @@
 .icon-diameter-md{
 	@include sprite('diameter-md');
 }
+.icon-diameter-md-white{
+	@include sprite('diameter-md-white');
+}
 .icon-plus-red{
 	@include sprite('plus-red');
 }

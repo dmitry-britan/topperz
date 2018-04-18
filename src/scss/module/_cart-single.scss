@@ -37,6 +37,7 @@
   width: 100%;
 }
 .cart-single__row{
+  position: relative;
   display: table-row;
   @include media('<920px'){
     display: block;
@@ -64,40 +65,69 @@
   vertical-align: middle;
   padding: 10px 0 25px;
   border-bottom: 1px solid $color__smoke;
+  width: 160px;
+  @include media('<1150px'){
+    width: 120px;
+  }
   @include media('<920px'){
     display: block;
     text-align: center;
   }
+  @include media('<=600px'){
+    padding: 10px 0 0 0;
+  }
   &:first-child{
     width: 460px;
+    @include media('<1150px'){
+      width: 360px;
+    }
     @include media('<920px'){
       display: block;
       width: 100%;
       text-align: center;
     }
   }
+  &:nth-of-type(2),
+  &:nth-of-type(3),
+  &:nth-of-type(4){
+    @include media('<=600px'){
+      display: none;
+    }
+  }
   
   @include support(1, ('display: flex')) {
     .cart-single__cell {
       display: flex;
+      width: 160px;
       align-items: center;
       border-bottom: none;
       flex-wrap: wrap;
+      justify-content: center;
+      @include media('<1150px'){
+        width: 120px;
+      }
       &:first-child{
-        flex-basis: 460px;
+        width: 460px;
         flex-shrink: 0;
+        justify-content: flex-start;
+        @include media('<1150px'){
+          width: 360px;
+        }
         @include media('<920px'){
           display: flex;
           width: 100%;
-          flex-basis: percentage(1/1);
-          text-align: left;
+          width: percentage(1/1);
+          text-align: center;
         }
-        @include media('<560px'){
+        @include media('<480px'){
           justify-content: center;
         }
       }
+      &:last-child{
+        justify-content: flex-end;
+      }
       
-      @include media('<560px'){
+      @include media('<480px'){
         width: 100%;
         flex-basis: percentage(1/1);
         justify-content: center;
@@ -107,6 +137,10 @@
   }
   &:last-child{
     text-align: center;
+    width: 100px;
+    @include media('<=600px'){
+      padding: 0;
+    }
   }
 
   .is--head &{
@@ -117,6 +151,7 @@
     color: $color__silver;
     &:last-child{
       text-align: center;
+      width: 100px;
     }
   }
 }
@@ -184,11 +219,12 @@
 }
 
 .cart-single__product-photo{
+  position: relative;
   display: table-cell;
   vertical-align: middle;
-  width: 160px;
+  width: 180px;
   img{
-    max-width: 160px;
+    max-width: 180px;
   }
   @include media('<920px'){
     display: inline-block;
@@ -196,57 +232,70 @@
   }
   @include media('<640px'){
     display: block;
-    width: 100%;
+    float: left;
+    width: 180px;
   }
   @include support(1, ('display: flex')) {
-    .cart-single__product-photo {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      flex-basis: 160px;
-      flex-shrink: 0;
-      @include media('<560px'){
-        flex-basis: percentage(1/1);
-        justify-content: center;
-      }
-    }
+    // .cart-single__product-photo {
+    //   display: flex;
+    //   align-items: center;
+    //   flex-wrap: wrap;
+    //   flex-basis: 160px;
+    //   flex-shrink: 0;
+    //   @include media('<480px'){
+    //     flex-basis: percentage(1/1);
+    //     justify-content: center;
+    //   }
+    // }
   }
 }
 .cart-single__product-details{
   display: table-cell;
   vertical-align: middle;
+  padding-left: 35px;
+  width: calc(100% - 180px);
   @include media('<920px'){
     display: inline-block;
-    text-align: center;
-    padding-left: 35px;
+    text-align: left;
   }
   @include media('<640px'){
+    float: left;
     display: block;
-    padding-left: 0;
-    width: 100%;
+    padding-left: 10px;
+    text-align: left;
   }
   @include support(1, ('display: flex')) {
-    .cart-single__product-details {
-      display: flex;
-      padding-left: 35px;
-      align-items: center;
-      flex-wrap: wrap;
-      flex-basis: 300px;
-      flex-shrink: 0;
-      text-align: left;
-      @include media('<560px'){
-        padding-left: 0;
-        flex-basis: percentage(1/1);
-        justify-content: center;
-        text-align: center;
-      }
-    }
+    // .cart-single__product-details {
+    //   display: flex;
+    //   padding-left: 35px;
+    //   align-items: center;
+    //   flex-wrap: wrap;
+    //   flex-basis: 300px;
+    //   flex-shrink: 0;
+    //   text-align: left;
+    //   @include media('<480px'){
+    //     padding-left: 0;
+    //     flex-basis: percentage(1/1);
+    //     justify-content: center;
+    //     text-align: center;
+    //   }
+    // }
   }
 }
 .cart-single__product-title{
   display: block;
   width: 100%;
   margin: 0 0 10px;
+  @include media('<=600px'){
+    display: none;
+  }
+  &.is--mobile-only{
+    display: none;
+    text-align: left;
+    @include media('<=600px'){
+      display: block;
+    }
+  }
 }
 .cart-single__product-title-link{
   font-size: 21px;
@@ -260,6 +309,23 @@
   min-width: 70px;
   vertical-align: middle;
   color: $color__base;
+  @include media('<=600px'){
+    display: none;
+  }
+  &.is--mobile-only{
+    display: none;
+    @include media('<=600px'){
+      display: block;
+      position: absolute;
+      bottom: 0; left: 0;
+      padding: 5px 10px;
+      background-color: #e4002b;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 24px;
+      color: #ffffff;
+    }
+  }
 }
 .cart-single__product-variant-value{
   display: inline-block;
@@ -296,14 +362,33 @@
 .cart-single__product-qty{
   float: none;
   padding-left: 0;
-  min-width: 120px;
+  @include media('<=600px'){
+    display: none;
+  }
+  &.is--mobile-only{
+    display: none;
+    @include media('<=600px'){
+      display: block;
+      margin-left: 15px;
+      margin-bottom: 15px;
+    }
+  }
 }
 .cart-single__product-qty-value{}
 .cart-single__product-price{
-  min-width: 120px;
   font-weight: 400;
   line-height: 24px;
   color: $color__darkgray;
+  @include media('<=600px'){
+    display: none;
+  }
+  &.is--mobile-only{
+    display: none;
+    @include media('<=600px'){
+      display: block;
+      margin-left: 15px;
+    }
+  }
 }
 .cart-single__product-price-value{
   display: inline-block;
@@ -317,4 +402,8 @@
 }
 .cart-single__product-remove{
   cursor: pointer;
+  @include media('<920px'){
+    position: absolute;
+    right: 10px; top: 10px;
+  }
 }
