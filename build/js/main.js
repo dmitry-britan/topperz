@@ -136,7 +136,12 @@ function additivesToggler(options) {
 	$(toggler + ', ' + closer).on('click', function(event) {
 		var $self = $(event.currentTarget);
 
-		$self.parents(additives).toggleClass('is--opened');
+		if ($self.parents(additives).hasClass('is--opened')) {
+			$(additives).removeClass('is--opened');
+		} else {
+			$(additives).removeClass('is--opened');
+			$self.parents(additives).toggleClass('is--opened');
+		}
 	});
 }
 

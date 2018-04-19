@@ -27,5 +27,8 @@
 		@include media('<640px'){
 			max-width: 100%;
 		}
+		@include media('<=480px'){
+			margin-right: auto;
+		}
 	}
 }
