@@ -22,4 +22,10 @@
 	.product{
 		width: 100%;
 	}
+	.product__photo img{
+		max-width: 250px;
+		@include media('<640px'){
+			max-width: 100%;
+		}
+	}
 }
