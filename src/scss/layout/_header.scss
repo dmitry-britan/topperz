@@ -5,7 +5,11 @@
     .is--fixed-nav & {
       margin-bottom: 49px;
     }
-	}
+  }
+  .contact-info-active & {
+    position: relative;
+    z-index: 900;
+  }
 }
 .header__inner{
   position: relative;

@@ -119,14 +119,26 @@ if ($productSinglePhoto.length) {
 	}
 })();
 
-var $el = $('.contact-info__icon');
+(function() {
+	var $el = $('.contact-info__icon');
 
-if ($el.length) {
-	$el.on('click', function(event) {
-		event.preventDefault();
-		$(event.currentTarget).parent().toggleClass('is--active');
-	});
-}
+	if ($el.length) {
+		var $body = $('body');
+
+		$body.on('click', function(event) {
+			var targetClassName = event.target.className.toString();
+
+			if (targetClassName.indexOf('contact-info-active') !== -1) {
+				$el.trigger('click');
+			}
+		});
+		$el.on('click', function(event) {
+			event.preventDefault();
+			$(event.currentTarget).parent().toggleClass('is--active');
+			$body.toggleClass('contact-info-active');
+		});
+	}
+})();
 
 function additivesToggler(options) {
 	var toggler = options.toggler;
