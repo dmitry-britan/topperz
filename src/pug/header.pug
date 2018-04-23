@@ -4,12 +4,13 @@ header.header
 		.header__logo
 			a(href="index.html").logo
 				img(src="images/logo.png", alt="").logo__img
-				img(src="images/logo-mob.png", alt="").logo__img--mobile
+				+svg("logo-mobile").logo__img--mobile
 
 		.header__contact-info
 			.contact-info
 				.contact-info__icon
 					i.icon.icon-whatsapp
+					+svg("phone")
 				.contact-info__content
 					.contact-info__worktime 
 						| доставим с 10
@@ -56,6 +57,7 @@ header.header
 			a(href="cart.html").cart
 				span.cart__icon
 					i.icon.icon-cart
+					+svg("shopping-cart")
 				span.cart__details
 					span.cart__details-text Корзина 
 					span.cart__details-qty (12)

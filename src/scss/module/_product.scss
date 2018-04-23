@@ -42,7 +42,7 @@
 	padding: 5px 10px 20px;
 	@include media('<640px'){
 		padding: 0;
-		margin-bottom: 50px;
+		margin-bottom: 10px;
 	}
 	@include media('<=480px'){
 		max-width: 100%;
@@ -56,6 +56,9 @@
 	height: 300px;
 	margin-bottom: 5px;
 	text-align: center;
+	@include media('<640px'){
+		height: auto;
+	}
 	img {
 		display: block;
 		max-width: 100%;
@@ -66,6 +69,9 @@
 .product__title{
 	margin: 0 0 15px;
 	text-align: center;
+	@include media('<640px'){
+		margin-bottom: 8px;
+	}
 	a{
 		display: block;
 		font-size: 21px;
@@ -212,6 +218,9 @@
 	@include clearfix();
 	margin-bottom: 25px;
 	text-align: center;
+	@include media('<640px'){
+		margin-bottom: 10px;
+	}
 }
 .product__additive-qty{
 	display: flex;

@@ -5,6 +5,19 @@
 	display: inline-block;
 	margin-right: 8px;
 	vertical-align: middle;
+	svg{
+		display: none;
+		width: 24px; height: 24px;
+		fill: #fff;
+	}
+	@include media('<700px'){
+		svg{
+			display: block;
+		}
+		.icon {
+			display: none;
+		}
+	}
 }
 .cart__details{
 	display: inline-block;

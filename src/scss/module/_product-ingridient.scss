@@ -22,6 +22,9 @@
 	border: 1px solid #fff;
 	background-color: #fff;
 	transition: 300ms all linear;
+	@include media('<768px'){
+		padding-bottom: 0;
+	}
 	&:hover{
 		box-shadow: 0 4px 7px rgba(0, 0, 0, 0.35);
 		border: 1px solid $color__smoke;
@@ -37,6 +40,9 @@
 	border: 2px solid $color__silver;
 	border-radius: 36px;
 	overflow: hidden;
+	@include media('<768px'){
+		margin-bottom: 8px;
+	}
 	img {
 		vertical-align: middle;
 	}
@@ -47,6 +53,9 @@
 	font-weight: 300;
 	line-height: 24px;
 	color: $color__darkgray;
+	@include media('<768px'){
+		margin-bottom: 0;
+	}
 }
 .product-ingridient__price{
 	margin-bottom: 5px;

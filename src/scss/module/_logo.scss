@@ -25,5 +25,12 @@
 	display: none;
 	@include media('<700px'){
 		display: block;
+		width: 36px; height: 36px;
+	}
+}
+.logo__img--footer{
+	display: none;
+	@include media('<992px'){
+		display: block;
 	}
 }
