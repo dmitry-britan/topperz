@@ -134,6 +134,9 @@ textarea {
   position: relative;
   width: 100%;
   margin-bottom: 30px;
+  @include media('<768px'){
+    margin-bottom: 10px;
+  }
   &.is--required {
     &:after {
       content: '';

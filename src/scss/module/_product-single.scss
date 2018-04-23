@@ -54,6 +54,11 @@
 	line-height: 24px;
 	color: $color__darkgray;
 	text-align: center;
+
+	@include media('<768px'){
+		font-size: 14px;
+		line-height: 16px;
+	}
 }
 .product-single__variant{
 	margin-bottom: 10px;

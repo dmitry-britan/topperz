@@ -79,6 +79,9 @@
 		line-height: 24px;
 		text-decoration: none;
 		color: $color__base;
+		@include media('<768px'){
+			font-size: 18px;
+		}
 	}
 }
 .product__ingredients{
@@ -89,6 +92,9 @@
 	line-height: 24px;
 	color: $color__darkgray;
 	text-align: center;
+	@include media('<768px'){
+		line-height: 16px;
+	}
 	@include media('<640px'){
 		min-height: 0;
 	}

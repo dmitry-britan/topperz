@@ -17,6 +17,11 @@
 	line-height: 36px;
 	text-transform: uppercase;
 	color: $color__base;
+	@include media('<768px'){
+		margin-bottom: 12px;
+		font-size: 18px;
+		line-height: 24px;
+	}
 	span{
 		color: $color__primary;
 	}

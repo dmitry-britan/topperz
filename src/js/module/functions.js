@@ -5,3 +5,4 @@
 // @include('function/form-label.js')
 // @include('function/contact-info-toggle.js')
 // @include('function/additives.js')
+// @include('function/fixedNav.js')

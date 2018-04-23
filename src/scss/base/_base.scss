@@ -9,9 +9,6 @@ html {
 }
 body{
   font-family: 'Roboto', sans-serif;
-  @include media('<700px'){
-    padding-top: 54px;
-  }
 }
 h1, h2, h3, h4, h5, h6, strong {
   font-weight: 500;
@@ -22,6 +19,10 @@ p{
   font-weight: 300;
   line-height: 24px;
   color: $color__darkgray;
+  @include media('<768px'){
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
 img{
   max-width: 100%;

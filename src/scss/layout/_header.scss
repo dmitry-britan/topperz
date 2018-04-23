@@ -1,10 +1,10 @@
 .header{
 	@include media('<700px'){
-    position: fixed;
-    top: 0; left: 0; right: 0;
     width: 100%;
     background: $color__primary;
-    z-index: 900;
+    .is--fixed-nav & {
+      margin-bottom: 49px;
+    }
 	}
 }
 .header__inner{
@@ -54,6 +54,9 @@
   display: inline-block;
   vertical-align: middle;
   text-align: left;
+	@include media('<700px'){
+    min-width: 54px;
+	}
 }
 .header__langs{
   position: absolute;
