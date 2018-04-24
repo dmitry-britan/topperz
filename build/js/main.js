@@ -141,6 +141,7 @@ if ($productSinglePhoto.length) {
 })();
 
 function additivesToggler(options) {
+	var product = options.product;
 	var toggler = options.toggler;
 	var closer = options.closer;
 	var additives = options.additives;
@@ -149,15 +150,19 @@ function additivesToggler(options) {
 		var $self = $(event.currentTarget);
 
 		if ($self.parents(additives).hasClass('is--opened')) {
+			$(product).removeClass('is--additives-opened');
 			$(additives).removeClass('is--opened');
 		} else {
+			$(product).removeClass('is--additives-opened');
 			$(additives).removeClass('is--opened');
+			$self.parents(product).toggleClass('is--additives-opened');
 			$self.parents(additives).toggleClass('is--opened');
 		}
 	});
 }
 
 var additivesProductOptions = {
+	product: '.product',
 	toggler: '.product__additives-toggler',
 	closer: '.product__additives-close',
 	additives: '.product__additives'
