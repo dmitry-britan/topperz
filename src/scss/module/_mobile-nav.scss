@@ -95,7 +95,7 @@ $button-color: #ffffff;
 
 .mobile-nav{
   position: fixed;
-  top: 54px;
+  top: 0;
   left: 0; right: 0;
   width: 100%;
   height: 0%;
@@ -129,14 +129,21 @@ $button-color: #ffffff;
 .mobile-nav__toggle-wrapper{
   display: none;
   margin-top: 6px;
+  &.is--close-only{
+    position: absolute;
+    top: 10px; left: 15px;
+  }
   @include media('<821px'){
-    display: block;
-    height:40px;
-    width: 40px;
-    line-height: 40px;
-    border-radius: 50%;
-    background: $color__primary;
-    text-align: center;
+    &,
+    &.is--close-only{
+      display: block;
+      height:40px;
+      width: 40px;
+      line-height: 40px;
+      border-radius: 50%;
+      background: $color__primary;
+      text-align: center;
+    }
   }
   @include media('<700px'){
     height:auto;
