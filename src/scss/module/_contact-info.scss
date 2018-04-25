@@ -97,9 +97,7 @@
 			right: 0;
 			max-width: 320px;
 			margin: 0 auto;
-			padding-left: 71px;
-			padding-top: 17px;
-			
+			padding: 17px 40px 0 71px;
 			visibility: visible;
 			opacity: 1;
 			transition-delay: 0s, 0s, 0.3s;
@@ -119,9 +117,10 @@
 	font-weight: 500;
 	text-transform: uppercase;
 	color: $color__base;
-	@include media('<821px'){
+	@include media('<700px'){
 		font-size: 12px;
 		line-height: 18px;
+		text-align: center;
 	}
 	sup{
 		font-size: 8px;
@@ -188,7 +187,7 @@
 	}
 	@include media('<700px'){
 		max-width: 320px;
-		padding: 5px 25px 18px 71px;
+		padding: 5px 40px 18px 71px;
 		background: #FFF;
 	}
 }
@@ -208,16 +207,27 @@
 	line-height: 20px;
 	text-transform: uppercase;
 	color: $color__darkgray;
+	@include media('<700px'){
+		text-align: center;
+	}
 }
 .contact-info__schedule-list{
 	margin: 0 0 8px;
 	padding: 0;
 	list-style: none;
+	@include media('<700px'){
+		max-width: 200px;
+	}
 }
 .contact-info__schedule-item{
 	padding: 0 0 4px;
+	display: flex;
+	justify-content: space-between;
 }
-.contact-info__schedule-date{}
+.contact-info__schedule-date{
+	display: inline-block;
+	min-width: 60px;
+}
 .contact-info__schedule-time{}
 .contact-info__action{
 	display: block;
