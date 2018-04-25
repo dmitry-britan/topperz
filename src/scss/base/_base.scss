@@ -21,6 +21,7 @@ body:after{
   opacity: 0;
   transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
 }
+body.is--loader-active,
 body.is--mobile-active{
   overflow: hidden;
 
@@ -30,6 +31,12 @@ body.is--mobile-active{
     opacity: 1;
     transition: opacity 0.5s;
     z-index: 100;
+  }
+}
+body.is--loader-active{
+  &:after{
+    background: url(../images/loader.gif) center center no-repeat rgba(0,0,0,.75);
+    z-index: 700;
   }
 }
 body.contact-info-active{

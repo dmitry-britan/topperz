@@ -205,6 +205,14 @@ additivesToggler(additivesProductOptions);
 	});
 })();
 
+function loaderOn() {
+	$('body').addClass('is--loader-active');
+}
+
+function loaderOff() {
+	$('body').removeClass('is--loader-active');
+}
+
 //
 // Slider - on main page
 // =================================================================

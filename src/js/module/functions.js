@@ -6,3 +6,4 @@
 // @include('function/contact-info-toggle.js')
 // @include('function/additives.js')
 // @include('function/fixedNav.js')
+// @include('function/loader.js')
