@@ -24,16 +24,16 @@
     padding-top: 5px;
     padding-bottom: 13px;
 	}
-  @include support(1, ('display: flex')) {
-    .header__inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      text-align: left;
-    }
-    .header__inner:after{
-      display: none;
-    }
+}
+@include support(1, ('display: flex')) {
+  .header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+  .header__inner:after{
+    display: none;
   }
 }
 .header__logo{

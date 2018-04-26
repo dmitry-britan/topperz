@@ -9,6 +9,7 @@
 	}
 }
 .products-slider__item{
+	width: 25%;
 	margin: 0 auto;
 	padding-left: 20px;
 	@include media('<1175px'){
@@ -22,10 +23,22 @@
 	.product{
 		width: 100%;
 	}
+	.product__inner{
+		overflow: hidden;
+		padding-bottom: 15px;
+	}
+	.product__photo{
+		height: auto;
+	}
 	.product__photo img{
-		max-width: 250px;
-		@include media('<640px'){
-			max-width: 100%;
-		}
+		max-width: 100%;
+	}
+	.product__qty{
+		float: none;
+		padding: 0;
+	}
+	.product__price{
+		float: none;
+		padding: 0;
 	}
 }

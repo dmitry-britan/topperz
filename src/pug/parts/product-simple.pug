@@ -1,15 +1,17 @@
 .product
 	article.product__inner
-		a(href="product.html").product__photo
-			img(src="images/product/"+ product.photo+".png", alt="")
-		h2.product__title: a(href="product.html")= product.title
-		p.product__variants= product.details
-		// Кол-во 
-		.product__qty
-			include qty
-		// Стоимость
-		.product__price
-			span.product__price-value= product.price
-			span.product__price-currency тнг
-		// Кнопка заказать
-		a(href="product.html").product__action Заказать
+		h2.product__title.is--tl: a(href="product.html")= product.title
+		.product__left
+			a(href="product.html").product__photo
+				img(src="images/product/"+ product.photo+".png", alt="")
+			p.product__variants= product.details
+		.product__right
+			// Кол-во 
+			.product__qty
+				include qty
+			// Стоимость
+			.product__price
+				span.product__price-value= product.price
+				span.product__price-currency тнг
+			// Кнопка заказать
+			a(href="product.html").product__action Заказать

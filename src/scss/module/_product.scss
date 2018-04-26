@@ -51,6 +51,30 @@
 		max-width: 100%;
 	}
 }
+.product__left{
+	position: relative;
+	float: left;
+	width: 120px;
+
+	.product__variants{
+		position: absolute;
+		display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 5px 10px;
+    background-color: #e4002b;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    color: #fff;
+	}
+}
+.product__right{
+	float: left;
+	width: calc(100% - 120px);
+	padding-left: 20px;
+}
 .product__photo{
 	position: relative;
 	display: block;
@@ -72,6 +96,9 @@
 .product__title{
 	margin: 0 0 15px;
 	text-align: center;
+	&.is--tl{
+		text-align: left;
+	}
 	@include media('<640px'){
 		margin-bottom: 8px;
 	}
