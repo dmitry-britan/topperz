@@ -67,7 +67,7 @@
     font-size: 16px;
     font-weight: 300;
     line-height: 24px;
-    color: #fff;
+		color: #fff;
 	}
 }
 .product__right{
@@ -299,6 +299,10 @@
 	float: left;
 	width: percentage(1/3);
 	text-align: center;
+
+	.is--special & {
+		width: 100%;
+	}
 }
 .product__qty{
 	float: left;

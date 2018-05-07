@@ -33,35 +33,67 @@
 .icon-arrow-down-md{
 	@include sprite('arrow-down-md');
 }
-.icon-diameter{
-	@include sprite('diameter-light');
-}
+.icon-diameter,
 .icon-diameter-light{
 	@include sprite('diameter-light');
+	@include media('<992px'){
+		width: 16px; height: 16px;
+		background: url('../images/icons/diameter-grey.svg') 0 0 no-repeat;
+	}
 }
 .icon-diameter-dark{
 	@include sprite('diameter');
+	@include media('<992px'){
+		width: 16px; height: 16px;
+		background: url('../images/icons/diameter.svg') 0 0 no-repeat;
+	}
 }
 .icon-diameter-md{
 	@include sprite('diameter-md');
+	@include media('<992px'){
+		width: 14px; height: 14px;
+		background: url('../images/icons/diameter.svg') 0 0 no-repeat;
+	}
 }
 .icon-diameter-md-white{
 	@include sprite('diameter-md-white');
+	@include media('<992px'){
+		width: 14px; height: 14px;
+		background: url('../images/icons/diameter-md-white.svg') 0 0 no-repeat;
+	}
 }
 .icon-plus-red{
 	@include sprite('plus-red');
+	@include media('<992px'){
+		width: 14px; height: 14px;
+		background: url('../images/icons/plus-red.svg') 0 0 no-repeat;
+	}
 }
 .icon-minus-small{
 	@include sprite('minus-small');
+	@include media('<992px'){
+		width: 14px; height: 14px;
+		background: url('../images/icons/minus-grey.svg') 0 0 no-repeat;
+	}
 }
 .icon-plus-small{
 	@include sprite('plus-small');
+	@include media('<992px'){
+		width: 14px; height: 14px;
+		background: url('../images/icons/plus-grey.svg') 0 0 no-repeat;
+	}
 }
 .icon-minus{
 	@include sprite('minus');
+	@include media('<992px'){
+		width: 18px; height: 18px;
+		background: url('../images/icons/minus.svg') 0 0 no-repeat;
+	}
 }
 .icon-plus{
-	@include sprite('plus');
+	// @include sprite('plus');
+	width: 18px; height: 18px;
+	background: url('../images/icons/plus.svg') 0 0 no-repeat;
 }
 .icon-close{
 	@include sprite('close');

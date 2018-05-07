@@ -4,7 +4,7 @@
 		.product__left
 			a(href="product.html").product__photo
 				img(src="images/product/"+ product.photo+".png", alt="")
-			p.product__variants= product.details
+			p.product__variants.is--special= product.details
 		.product__right
 			// Кол-во 
 			.product__qty
