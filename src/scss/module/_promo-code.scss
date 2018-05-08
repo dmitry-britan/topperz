@@ -10,6 +10,9 @@
 	font-weight: 400;
 	line-height: 36px;
 	color: $color__base;
+	@include media('<540px'){
+		text-align: center;
+	}
 }
 .promo-code__form{
 	@include clearfix();
@@ -34,5 +37,9 @@
 		float: none;
 		width: 100%;
 		margin-bottom: 15px;
+
+		.btn {
+			margin: 0 auto;
+		}
 	}
 }
