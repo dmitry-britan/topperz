@@ -313,6 +313,9 @@
   font-weight: 300;
   line-height: 24px;
   color: $color__darkgray;
+  @include media('<=480px') {
+    min-width: 100px;
+  }
 }
 .cart-single__product-additives-value{
   font-size: 14px;
