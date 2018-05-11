@@ -13,7 +13,7 @@
     <title>
     </title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css?v=1525760443534">
+    <link rel="stylesheet" href="css/main.css?v=1526036954118">
   </head>
   <body>
     <header class="header">
@@ -86,17 +86,23 @@
         <div class="header__contact-info">
           <div class="contact-info">
             <div class="contact-info__icon"><i class="icon icon-whatsapp"></i>
-              <svg>
-                <use xlink:href="/images/sprites.svg#phone"></use>
-              </svg>
+              <div class="is--mobile-only">
+                <svg>
+                  <use xlink:href="/images/sprites.svg#phone"></use>
+                </svg>
+              </div>
+              <div class="is--mobile-only">
+                <svg class="contact-info__icon-arrow-down">
+                  <use xlink:href="/images/sprites.svg#down-arrow"></use>
+                </svg>
+              </div>
             </div>
             <div class="contact-info__content">
               <div class="contact-info__worktime">
                  доставим с 10<sup>00</sup> до 03<sup>00</sup></div>
-              <div class="contact-info__phone">
-                 +7 (701) 888 85 34<i class="contact-info__toggler icon icon-arrow-down"></i></div>
+              <div class="contact-info__phone"><a class="contact-info__phone-link" href="tel:+77018888534">+7 (701) 888 85 34</a><i class="contact-info__toggler icon icon-arrow-down"></i></div>
               <div class="contact-info__details">
-                <div class="contact-info__phone">+7 (727) 390 20 20</div>
+                <div class="contact-info__phone"><a class="contact-info__phone-link" href="tel:+77273902020">+7 (727) 390 20 20</a></div>
                 <nav class="contact-info__schedule">
                   <h4 class="contact-info__schedule-title">График работы:</h4>
                   <ul class="contact-info__schedule-list">
@@ -979,7 +985,7 @@
         </div>
       </div>
     </div>
-    <script src="js/vendor.js?v=1525760443535"></script>
-    <script src="js/main.js?v=1525760443535"></script>
+    <script src="js/vendor.js?v=1526036954120"></script>
+    <script src="js/main.js?v=1526036954121"></script>
   </body>
 </html>

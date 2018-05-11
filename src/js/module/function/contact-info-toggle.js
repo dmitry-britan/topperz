@@ -1,20 +1,27 @@
 (() => {
 	let $el = $('.contact-info__icon');
+	let limit = 992;
 
 	if ($el.length) {
+		let $html = $('html');
 		let $body = $('body');
 
-		$body.on('click', (event) => {
-			let targetClassName = event.target.className.toString();
+		$body.on('click touchend', (event) => {
+			if ($(window).width() < limit) {
+				let targetClassName = event.target.className.toString();
 
-			if (targetClassName.indexOf('contact-info-active') !== -1) {
-				$el.trigger('click');
+				if (targetClassName.indexOf('contact-info-active') !== -1) {
+					$el.trigger('click');
+				}
 			}
 		});
-		$el.on('click', (event) => {
+		$el.on('click touchend', (event) => {
 			event.preventDefault();
-			$(event.currentTarget).parent().toggleClass('is--active');
-			$body.toggleClass('contact-info-active');
+			if ($(window).width() < limit) {
+				$(event.currentTarget).parent().toggleClass('is--active');
+				$html.toggleClass('contact-info-active');
+				$body.toggleClass('contact-info-active');
+			}
 		});
 	}
 })();

@@ -121,21 +121,28 @@ if ($productSinglePhoto.length) {
 
 (function() {
 	var $el = $('.contact-info__icon');
+	var limit = 992;
 
 	if ($el.length) {
+		var $html = $('html');
 		var $body = $('body');
 
-		$body.on('click', function(event) {
-			var targetClassName = event.target.className.toString();
+		$body.on('click touchend', function(event) {
+			if ($(window).width() < limit) {
+				var targetClassName = event.target.className.toString();
 
-			if (targetClassName.indexOf('contact-info-active') !== -1) {
-				$el.trigger('click');
+				if (targetClassName.indexOf('contact-info-active') !== -1) {
+					$el.trigger('click');
+				}
 			}
 		});
-		$el.on('click', function(event) {
+		$el.on('click touchend', function(event) {
 			event.preventDefault();
-			$(event.currentTarget).parent().toggleClass('is--active');
-			$body.toggleClass('contact-info-active');
+			if ($(window).width() < limit) {
+				$(event.currentTarget).parent().toggleClass('is--active');
+				$html.toggleClass('contact-info-active');
+				$body.toggleClass('contact-info-active');
+			}
 		});
 	}
 })();

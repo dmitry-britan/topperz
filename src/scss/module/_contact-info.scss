@@ -4,6 +4,7 @@
 	background-color: #fff;
 	@include media('<700px'){
 		position: static;
+		padding: 0;
 		background-color: transparent;
 	}
 	&:hover,
@@ -34,23 +35,14 @@
 	margin-right: 10px;
 	vertical-align: middle;
 	@include media('<700px'){
-		&:after{
-			content: '';
-			@include sprite('arrow-down-white');
-			position: absolute;
-			right: -20px; top: 8px;
-			transition: transform 300ms linear;
-			transform: translateY(0);
-		}
+		display: flex;
+		align-items: center;
 		&:before{
 			content: '';
 			transition: transform 300ms linear 300ms;
 			transform: translateY(10px);
 		}
 		
-		.is--active &:after{
-			transform: translateY(8px);
-		}
 		.is--active &:before{
 			content: '';
 			position: absolute;
@@ -59,22 +51,37 @@
 			background: #fff;
 			transform: translateY(0) rotate(45deg);
 			bottom: -27px;
-			left: 31px;
+			left: 30px;
 			z-index: 370;
 		}
 		.icon-whatsapp{
 			display: none;
 		}
 	}
-	svg{
-		display: none;
+	svg {
 		width: 24px;
 		height: 24px;
-		color: #fff;
 		fill: #fff;
+		transform: translateY(5px);
+	}
+	.is--mobile-only{
+		display: none;
 		@include media('<700px'){
-			display: block;
+			display: inline-block;
+			vertical-align: middle;
 		}
+	}
+}
+.is--mobile-only .contact-info__icon-arrow-down{
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 5px;
+	width: 14px; height: 14px;
+	transition: transform 300ms linear;
+	transform: translateY(0);
+
+	.is--active &{
+		transform: translateY(8px);
 	}
 }
 .contact-info__content{
@@ -127,14 +134,19 @@
 	}
 }
 .contact-info__phone{
-	position: relative;
 	display: block;
+	position: relative;
+	z-index: 800;
+}
+.contact-info__phone-link{
+	position: relative;
+	z-index: 200;
 	font-size: 24px;
 	font-weight: 500;
 	line-height: 30px;
+	text-decoration: none;
 	text-transform: uppercase;
 	color: $color__base;
-	z-index: 100;
 	@include media('<1060px', '>=821px'){
 		font-size: 20px;
 		line-height: 24px;
@@ -181,6 +193,11 @@
 		z-index: -1;
 		box-shadow: 0 4px 7px rgba(0, 0, 0, 0.35);
 		border: 1px solid $color__smoke;
+	}
+	@include media('<992px', '>700px'){
+		.contact-info-active &:after{
+			top: -38px;
+		}
 	}
 	@include media('<821px'){
 		padding: 5px 25px 18px 71px;

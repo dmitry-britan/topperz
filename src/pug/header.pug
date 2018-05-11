@@ -10,18 +10,22 @@ header.header
 			.contact-info
 				.contact-info__icon
 					i.icon.icon-whatsapp
-					+svg("phone")
+					.is--mobile-only
+						+svg("phone")
+					.is--mobile-only
+						+svg("down-arrow").contact-info__icon-arrow-down
 				.contact-info__content
 					.contact-info__worktime 
 						| доставим с 10
 						sup 00
 						|  до 03
 						sup 00
-					.contact-info__phone 
-						| +7 (701) 888 85 34
+					.contact-info__phone
+						a(href="tel:+77018888534").contact-info__phone-link +7 (701) 888 85 34
 						i.contact-info__toggler.icon.icon-arrow-down
 					.contact-info__details
-						.contact-info__phone +7 (727) 390 20 20
+						.contact-info__phone
+							a(href="tel:+77273902020").contact-info__phone-link +7 (727) 390 20 20
 						nav.contact-info__schedule
 							h4.contact-info__schedule-title График работы:
 							ul.contact-info__schedule-list

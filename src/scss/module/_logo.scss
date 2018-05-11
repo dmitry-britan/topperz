@@ -13,6 +13,11 @@
 		width: auto;
 		overflow: visible;
 		padding: 18px 0;
+		.logo__img{
+			@include media('<992px'){
+				display: none;
+			}
+		}
 	}
 }
 .logo__img{

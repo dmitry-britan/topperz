@@ -91,9 +91,11 @@
 	}
 }
 .icon-plus{
-	// @include sprite('plus');
-	width: 18px; height: 18px;
-	background: url('../images/icons/plus.svg') 0 0 no-repeat;
+	@include sprite('plus');
+	@include media('<992px'){
+		width: 18px; height: 18px;
+		background: url('../images/icons/plus.svg') 0 0 no-repeat;
+	}
 }
 .icon-close{
 	@include sprite('close');
