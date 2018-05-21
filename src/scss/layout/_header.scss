@@ -1,5 +1,12 @@
 .header{
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 920;
+
 	@include media('<700px'){
+    position: static;
     width: 100%;
     background: $color__primary;
     .is--fixed-nav & {
