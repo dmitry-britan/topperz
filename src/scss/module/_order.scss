@@ -4,6 +4,11 @@
 .order__column{
 	padding-right: 40px;
 }
+.order__msg {
+	font-size: 14px;
+	line-height: 16px;
+	color: darken($color__silver, 35%);
+}
 .order__price{
 	@include clearfix();
 }
@@ -14,7 +19,9 @@
 	line-height: 36px;
 	color: $color__base;
 }
-.order__price-total{}
+.order__price-total{
+	margin-bottom: 40px;
+}
 .order__price-total-value{
 	font-size: 28px;
 	font-weight: 700;

@@ -9,26 +9,26 @@ block content
   main.order
     .container
       h1.page__title Оформление заказа
-      form(action="").form
+      form(action="").form.js-form-checkout
         .row
           .col.col--4-of-12.col--s-12-of-12.col--m-4-of-12.col--l-4-of-12
             .order__column
               //- Кому доставить
               .form__title Кому доставить
-              .form__field
+              .form__field.is--required
                 label.form__label Имя
                 input(type="text", name="name").form__input
-              .form__field
+              .form__field.is--required
                 label.form__label Телефон
                 input(type="text", name="phone").form__input
               //- Куда везем
               .form__title Куда везем
-              .form__field
+              .form__field.is--required
                 label.form__label Улица
                 input(type="text", name="street")#street.form__input
               .row
                 .col.col--6-of-12.col--s-12-of-12.col--m-12-of-12.col--l-6-of-12
-                  .form__field
+                  .form__field.is--required
                     label.form__label Дом
                     input(type="text", name="house").form__input
                 .col.col--6-of-12.col--s-12-of-12.col--m-12-of-12.col--l-6-of-12
@@ -110,10 +110,12 @@ block content
               .order__price-total
                 span.order__price-total-value 25 080 
                 span.order__price-total-currency тнг
+            .order__msg
+              | * Поля, отмеченные звёздочкой, #[br]обязательны к заполнению
             .form__divider
             //- Сумма к оплате
             .form__action
-              button(type="submit", data-modal="thanks").btn.btn--primary.btn--lg Отправить заказ
+              button(type="submit").btn.btn--primary.btn--lg Отправить заказ
               
 block body-end
   script.

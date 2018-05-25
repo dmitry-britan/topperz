@@ -15,7 +15,7 @@
 	cursor: pointer;
 }
 .product-variant__radio:not(checked)+.product-variant__label{
-	color: $color__silver;
+	color: darken($color__silver, 25%);
 }
 .product-variant__radio:checked+.product-variant__label{
 	color: $color__base;

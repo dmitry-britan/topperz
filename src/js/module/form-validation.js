@@ -1,7 +1,1 @@
-// @include('validate/loginForm.js')
-// @include('validate/askForm.js')
-// @include('validate/questionForm.js')
-// @include('validate/answerForm.js')
-// @include('validate/callbackForm.js')
-// @include('validate/registrationForm.js')
-// @include('validate/profileDataForm.js')
+// @include('validate/checkoutForm.js')

@@ -3,3 +3,4 @@
 // @include('module/mobile-menu.js')
 // @include('module/popup.js')
 // @include('module/fancybox.js')
+// @include('module/form-validation.js')
