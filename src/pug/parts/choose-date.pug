@@ -1,34 +1,32 @@
 .choose-date.js-choose-date
 	.choose-date__inner
 		.choose-date__header
-			.choose-date__text установить дату и время
-			.choose-date__title.js-choose-date-title Пт, Декабрь 29, 2017 15:06
+			.choose-date__title Дата
+			.choose-date__title Время
 		.choose-date__body.js-choose-date
-			//- year
-			.choose-date__item
-				i.icon.icon-plus.choose-date__item-plus.js-choose-date-change
-				.choose-date__item-input.js-choose-date-value(data-type="year") 2017
-				i.icon.icon-minus.choose-date__item-minus.js-choose-date-change(data-incriment="minus")
-			//- month
-			.choose-date__item
-				i.icon.icon-plus.choose-date__item-plus.js-choose-date-change
-				.choose-date__item-input.js-choose-date-value(data-index="11" data-type="month") Декабрь
-				i.icon.icon-minus.choose-date__item-minus.js-choose-date-change(data-incriment="minus")
-			//- day
-			.choose-date__item
-				i.icon.icon-plus.choose-date__item-plus.js-choose-date-change
-				.choose-date__item-input.js-choose-date-value(data-type="day") 23
-				i.icon.icon-minus.choose-date__item-minus.js-choose-date-change(data-incriment="minus")
-			//- hours
-			.choose-date__item
-				i.icon.icon-plus.choose-date__item-plus.js-choose-date-change
-				.choose-date__item-input.js-choose-date-value(data-type="hours") 12
-				i.icon.icon-minus.choose-date__item-minus.js-choose-date-change(data-incriment="minus")
-			//- minutes
-			.choose-date__item
-				i.icon.icon-plus.choose-date__item-plus.js-choose-date-change
-				.choose-date__item-input.js-choose-date-value(data-type="minutes") 53
-				i.icon.icon-minus.choose-date__item-minus.js-choose-date-change(data-incriment="minus")
+			.choose-date__column
+				//- day
+				.choose-date__item
+					i.icon.icon-plus.choose-date__item-plus.js-choose-date-change
+					.choose-date__item-input.js-choose-date-value(data-type="day") 23
+					i.icon.icon-minus.choose-date__item-minus.js-choose-date-change(data-incriment="minus")
+				//- month
+				.choose-date__item
+					i.icon.icon-plus.choose-date__item-plus.js-choose-date-change
+					.choose-date__item-input.js-choose-date-value(data-index="11" data-type="month") Декабрь
+					i.icon.icon-minus.choose-date__item-minus.js-choose-date-change(data-incriment="minus")
+
+			.choose-date__column
+				//- hours
+				.choose-date__item
+					i.icon.icon-plus.choose-date__item-plus.js-choose-date-change
+					.choose-date__item-input.js-choose-date-value(data-type="hours") 12
+					i.icon.icon-minus.choose-date__item-minus.js-choose-date-change(data-incriment="minus")
+				//- minutes
+				.choose-date__item
+					i.icon.icon-plus.choose-date__item-plus.js-choose-date-change
+					.choose-date__item-input.js-choose-date-value(data-type="minutes") 53
+					i.icon.icon-minus.choose-date__item-minus.js-choose-date-change(data-incriment="minus")
 		.choose-date__action
 		a(href="").btn.btn--primary.btn--sm.btn--centered.js-choose-date-action Установить
 

@@ -1,27 +1,28 @@
 .order{
 	padding: 0 0 50px;
 }
+.order__column{
+	padding-right: 40px;
+}
 .order__price{
 	@include clearfix();
 }
 .order__price-text{
-	float: left;
+	margin-bottom: 12px;
 	font-size: 21px;
 	font-weight: 400;
 	line-height: 36px;
 	color: $color__base;
 }
-.order__price-total{
-	float: right;
-}
+.order__price-total{}
 .order__price-total-value{
-	font-size: 24px;
-	font-weight: 400;
-	line-height: 24px;
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 28px;
 	color: $color__base;
 }
 .order__price-total-currency{
 	font-size: 12px;
-	font-weight: 400;
+	font-weight: 600;
 	line-height: 20px;
 }
