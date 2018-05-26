@@ -7,7 +7,7 @@ article.product
 			- if ( product.tagClass != '' ) {
 				span(class="product__tag product-tag "+product.tagClass)= product.tag
 			-}
-		h2.product__title: a(href="product.html")= product.title
+		span.product__title: a(href="product.html")= product.title
 		p.product__ingredients= product.details
 		// Добавки
 		.product__additives 

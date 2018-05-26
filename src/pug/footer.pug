@@ -5,7 +5,7 @@ footer.footer
       .row
         .col.col--3-of-12.col--s-12-of-12.col--m-3-of-12.col--l-3-of-12
           nav.menu
-            h3.menu__title Информация
+            span.menu__title Информация
             ul.menu__list
               li.menu__item
                 a(href="about.html").menu__link О компании
@@ -22,7 +22,7 @@ footer.footer
                 span.menu__text Вс:           11:00 – 03:00
         .col.col--3-of-12.col--s-12-of-12.col--m-3-of-12.col--l-3-of-12
           nav.menu
-            h3.menu__title Контакты
+            span.menu__title Контакты
             ul.menu__list
               li.menu__item
                 a(href="tel:+77018888534").menu__link +7 (701) 888 85 34
@@ -36,7 +36,7 @@ footer.footer
                 a(href="mailto:info@topperz.kz").menu__link info@topperz.kz
         .col.col--3-of-12.col--s-12-of-12.col--m-3-of-12.col--l-3-of-12
           nav.menu
-            h3.menu__title Доставка
+            span.menu__title Доставка
             ul.menu__list
               - var deliveryMenuItems = [{title:"Условия доставки",link:"delivery.html"},{title:"Оплата",link:"payment.html"},{title:"Акции",link:"special.html"},{title:"Конфиденциальность",link:""},{title:"Возврат товара",link:""},{title:"Юридический адрес",link:""}];
               each item in deliveryMenuItems
@@ -44,7 +44,7 @@ footer.footer
                   a(href=item.link).menu__link= item.title
         .col.col--3-of-12.col--s-12-of-12.col--m-3-of-12.col--l-3-of-12
           nav.menu
-            h3.menu__title Меню
+            span.menu__title Меню
             .row
               .col.col--4-of-12.col--s-12-of-12
                 ul.menu__list
