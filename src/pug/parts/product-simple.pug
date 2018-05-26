@@ -1,17 +1,17 @@
-.product
+.product(itemprop="itemListElement" itemscope itemtype="http://schema.org/Product")
 	article.product__inner
-		span.product__title.is--tl: a(href="product.html")= product.title
+		span.product__title.is--tl(itemprop="name"): a(href="product.html")= product.title
 		.product__left
-			a(href="product.html").product__photo
-				img(src="images/product/"+ product.photo+".png", alt="")
-			p.product__variants.is--special= product.details
+			a(href="product.html" itemprop="url").product__photo
+				img(src="images/product/"+ product.photo+".png", alt="" itemprop="image")
+			p.product__variants.is--special(itemprop="description")= product.details
 		.product__right
 			// Кол-во 
 			.product__qty
 				include qty
 			// Стоимость
-			.product__price
-				span.product__price-value= product.price
-				span.product__price-currency тнг
+			.product__price(itemprop="offers" itemscope itemtype="http://schema.org/Offer")
+				span.product__price-value(itemprop="price" content="1000.00")= product.price
+				span.product__price-currency(itemprop="priceCurrency" content="USD") тнг
 			// Кнопка заказать
 			a(href="product.html").product__action Заказать

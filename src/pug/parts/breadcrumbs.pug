@@ -1,4 +1,7 @@
 nav.breadcrumbs
 	.container
-		each item in breadcrumbs
-			a(href=item.url).breadcrumbs__item= item.title
+		ul.breadcrumbs__list(itemscope itemtype="http://schema.org/BreadcrumbList")
+			each item in breadcrumbs
+				li.breadcrumbs__item(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+					a(href=item.url itemprop="item").breadcrumbs__link
+						span(itemprop="name")= item.title

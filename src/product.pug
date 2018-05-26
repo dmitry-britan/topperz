@@ -6,14 +6,14 @@ append vars
 block content
   -var breadcrumbs = [{title:'Главная', url:'index.html'}, {title:'Пицца', url:'category.html'}, {title:'Дэль-анатра', url:'product.html'}];
   include pug/parts/breadcrumbs
-  main.product-single
+  main.product-single(itemscope itemtype="http://schema.org/Product")
     .container
       .product-single__photo
-        a(href="images/product/product.jpg", rel="gallery").product-single__photo-link: img(src="images/product/product.jpg", alt="")
+        a(href="images/product/product.jpg", rel="gallery" itemprop="url").product-single__photo-link: img(src="images/product/product.jpg", alt="" itemprop="image")
       .product-single__body
-        h1.product-single__title Пицца Дэль-анатра
+        h1.product-single__title(itemprop="name") Пицца Дэль-анатра
         .product-single__tag.product-tag.is--novelty новинка
-        .product-single__composition
+        .product-single__composition(itemprop="description")
           .product-single__composition-item Соус
           .product-single__composition-item Сыр Моцарелла
           .product-single__composition-item Утка
@@ -71,9 +71,9 @@ block content
         .product-single__qty-price
           .product-single__qty
             include pug/parts/qty
-          .product-single__price
-            span.product-single__price-value 1 590 
-            span.product-single__price-currency тнг
+          .product-single__price(itemprop="offers" itemscope itemtype="http://schema.org/Offer")
+            span.product-single__price-value(itemprop="price" content="1000.00") 1 590 
+            span.product-single__price-currency(itemprop="priceCurrency" content="USD") тнг
         .product-single__action
           a(href="").btn.btn--order Заказать
       .product-single__ingridients
@@ -97,11 +97,11 @@ block content
                       i.icon.icon-plus-small.js-additive-qty-plus.product-qty__plus
 
   section.section.section--product-recomended
-    .container
+    .container(itemscope itemtype="http://schema.org/ItemList")
         span.section__title.is--centered
           span Topperz 
           | рекомендует
         include pug/parts/products-db
         each product, i in [products[0], products[1], products[2], products[3]]
-          include pug/parts/product
+          include pug/parts/productListElement
 block body-end

@@ -1,14 +1,14 @@
 - productId = (i+1)?i+1:1;
 - photoId = (k)?k:i+1; 
-article.product
+article.product(itemprop="itemListElement" itemscope itemtype="http://schema.org/Product")
 	.product__inner
-		a(href="product.html").product__photo
-			img(src="images/product/p-"+photoId+".jpg", alt="")
+		a(href="product.html"  itemprop="url").product__photo
+			img(src="images/product/p-"+photoId+".jpg", alt="" itemprop="image")
 			- if ( product.tagClass != '' ) {
 				span(class="product__tag product-tag "+product.tagClass)= product.tag
 			-}
-		span.product__title: a(href="product.html")= product.title
-		p.product__ingredients= product.details
+		span.product__title: a(href="product.html" itemprop="name")= product.title
+		p.product__ingredients(itemprop="description")= product.details
 		// Добавки
 		.product__additives 
 			.product__additives-toggler
@@ -56,8 +56,8 @@ article.product
 		.product__qty
 			include qty
 		// Стоимость
-		.product__price
-			span.product__price-value= product.price
-			span.product__price-currency тнг
+		.product__price(itemprop="offers" itemscope itemtype="http://schema.org/Offer")
+			span.product__price-value(itemprop="price" content="1000.00")= product.price
+			span.product__price-currency(itemprop="priceCurrency" content="USD") тнг
 		// Кнопка заказать
 		a(href="product.html").product__action Заказать

@@ -6,7 +6,8 @@ append vars
 block content
   -var breadcrumbs = [{title:'Главная', url:'index.html'}, {title:'Пицца', url:'category.html'}];
   include pug/parts/breadcrumbs
-  main.category
+  main.category(itemscope itemtype="http://schema.org/ItemList")
+    link(itemprop="url" href="ССЫЛКА__НА__КАТЕГОРИЮ http://multivarki.ru?filters%5Bprice%5D%5BLTE%5D=39600")
     .container
       h1.page__title Пицца
       .category-panel
@@ -35,6 +36,6 @@ block content
       -var k=0;
       each product, i in [products[0],products[1],products[2],products[3],products[0],products[1],products[2],products[3],products[0],products[1],products[2],products[3]]
         -k=(k<4)?k+1:1;
-        include pug/parts/product
+        include pug/parts/productListElement
   include pug/parts/seo-text
 block body-end

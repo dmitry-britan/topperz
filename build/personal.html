@@ -13,7 +13,7 @@
     <title>
     </title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css?v=1527328287412">
+    <link rel="stylesheet" href="css/main.css?v=1527332178328">
   </head>
   <body>
     <header class="header">
@@ -147,7 +147,11 @@
       </div>
     </menu>
     <nav class="breadcrumbs">
-      <div class="container"><a class="breadcrumbs__item" href="index.html">Главная</a><a class="breadcrumbs__item" href="personal.html">Личный кабинет</a>
+      <div class="container">
+        <ul class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="breadcrumbs__link" href="index.html" itemprop="item"><span itemprop="name">Главная</span></a></li>
+          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="breadcrumbs__link" href="personal.html" itemprop="item"><span itemprop="name">Личный кабинет</span></a></li>
+        </ul>
       </div>
     </nav>
     <main class="personal">
@@ -607,8 +611,8 @@
         </div>
       </div>
     </div>
-    <script src="js/vendor.js?v=1527328287412"></script>
-    <script src="js/main.js?v=1527328287412"></script>
+    <script src="js/vendor.js?v=1527332178329"></script>
+    <script src="js/main.js?v=1527332178329"></script>
     <script>
       //- Жмем на поле даты - показываем блок выбора даты
       $('.js-choose-date-toggler').on('click', function(event){

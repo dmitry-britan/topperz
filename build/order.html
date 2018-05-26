@@ -13,7 +13,7 @@
     <title>
     </title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css?v=1527328285271">
+    <link rel="stylesheet" href="css/main.css?v=1527332176363">
   </head>
   <body>
     <header class="header">
@@ -147,7 +147,12 @@
       </div>
     </menu>
     <nav class="breadcrumbs">
-      <div class="container"><a class="breadcrumbs__item" href="index.html">Главная</a><a class="breadcrumbs__item" href="cart.html">Корзина</a><a class="breadcrumbs__item" href="order.html">Оформление заказа</a>
+      <div class="container">
+        <ul class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="breadcrumbs__link" href="index.html" itemprop="item"><span itemprop="name">Главная</span></a></li>
+          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="breadcrumbs__link" href="cart.html" itemprop="item"><span itemprop="name">Корзина</span></a></li>
+          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="breadcrumbs__link" href="order.html" itemprop="item"><span itemprop="name">Оформление заказа</span></a></li>
+        </ul>
       </div>
     </nav>
     <main class="order">
@@ -521,8 +526,8 @@
         </div>
       </div>
     </div>
-    <script src="js/vendor.js?v=1527328285271"></script>
-    <script src="js/main.js?v=1527328285271"></script>
+    <script src="js/vendor.js?v=1527332176364"></script>
+    <script src="js/main.js?v=1527332176364"></script>
     <script>
       // Переключения текстовки в зависимости от выбора варианта оплаты
       $('#payment_method_1').on('click', function(){

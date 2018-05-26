@@ -6,19 +6,25 @@ append vars
 block content
   -var breadcrumbs = [{title:'Главная', url:'index.html'}, {title:'Свяжитесь с нами', url:'contact-us.html'}];
   include pug/parts/breadcrumbs
-  main.contact-us
+  main.contact-us(itemscope itemtype="http://schema.org/Organization")
     .container
       h1.page__title Свяжитесь с нами
-      .contact-us__title Toppers – пицца и суши
-      .contact-us__item
-        i.icon-location
-        | Казыбек би 43 уг. ул. Валиханова, ресторан «Амуре»
-      .contact-us__item
-        i.icon-phone
-        | +7 (727) 390 20 20;  +7 (701) 888 85 34
-      .contact-us__item
-        i.icon-mail
-        | info@toppers.kz
+      .contact-us__title(itemprop="name") Toppers – пицца и суши
+      div(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
+        .contact-us__item
+          i.icon-location
+          span(itemprop="streetAddress") Казыбек би 43 уг. ул. Валиханова, ресторан «Амуре»
+        .contact-us__item
+          i.icon-phone
+          a(href="tel:+77273902020")
+            span(itemprop="telephone") +7 (727) 390 20 20;
+          |  
+          a(href="tel:+77018888534")
+            span(itemprop="telephone") +7 (701) 888 85 34
+        .contact-us__item
+          i.icon-mail
+          a(href="mailto:info@toppers.kz")
+            span(itemprop="email") info@toppers.kz
     section.section.section--map
       include pug/parts/map
     .container

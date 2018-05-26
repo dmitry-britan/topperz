@@ -13,7 +13,7 @@
     <title>
     </title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css?v=1527328288497">
+    <link rel="stylesheet" href="css/main.css?v=1527336122808">
   </head>
   <body>
     <header class="header">
@@ -147,16 +147,21 @@
       </div>
     </menu>
     <nav class="breadcrumbs">
-      <div class="container"><a class="breadcrumbs__item" href="index.html">Главная</a><a class="breadcrumbs__item" href="category.html">Пицца</a><a class="breadcrumbs__item" href="product.html">Дэль-анатра</a>
+      <div class="container">
+        <ul class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="breadcrumbs__link" href="index.html" itemprop="item"><span itemprop="name">Главная</span></a></li>
+          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="breadcrumbs__link" href="category.html" itemprop="item"><span itemprop="name">Пицца</span></a></li>
+          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="breadcrumbs__link" href="product.html" itemprop="item"><span itemprop="name">Дэль-анатра</span></a></li>
+        </ul>
       </div>
     </nav>
-    <main class="product-single">
+    <main class="product-single" itemscope itemtype="http://schema.org/Product">
       <div class="container">
-        <div class="product-single__photo"><a class="product-single__photo-link" href="images/product/product.jpg" rel="gallery"><img src="images/product/product.jpg" alt=""></a></div>
+        <div class="product-single__photo"><a class="product-single__photo-link" href="images/product/product.jpg" rel="gallery" itemprop="url"><img src="images/product/product.jpg" alt="" itemprop="image"></a></div>
         <div class="product-single__body">
-          <h1 class="product-single__title">Пицца Дэль-анатра</h1>
+          <h1 class="product-single__title" itemprop="name">Пицца Дэль-анатра</h1>
           <div class="product-single__tag product-tag is--novelty">новинка</div>
-          <div class="product-single__composition">
+          <div class="product-single__composition" itemprop="description">
             <div class="product-single__composition-item">Соус</div>
             <div class="product-single__composition-item">Сыр Моцарелла</div>
             <div class="product-single__composition-item">Утка</div>
@@ -206,7 +211,7 @@
                 <input class="product-qty__value js-qty-value" type="text" name="product_qty" value="1" disabled><i class="product-qty__plus icon icon-plus js-qty-plus"></i>
               </div>
             </div>
-            <div class="product-single__price"><span class="product-single__price-value">1 590 </span><span class="product-single__price-currency">тнг</span></div>
+            <div class="product-single__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span class="product-single__price-value" itemprop="price" content="1000.00">1 590 </span><span class="product-single__price-currency" itemprop="priceCurrency" content="USD">тнг</span></div>
           </div>
           <div class="product-single__action"><a class="btn btn--order" href="">Заказать</a></div>
         </div>
@@ -326,10 +331,10 @@
       </div>
     </main>
     <section class="section section--product-recomended">
-      <div class="container"><span class="section__title is--centered"><span>Topperz </span>рекомендует</span>
-        <article class="product">
-          <div class="product__inner"><a class="product__photo" href="product.html"><img src="images/product/p-1.jpg" alt=""></a><span class="product__title"><a href="product.html">Дэль-анатра</a></span>
-            <p class="product__ingredients">Соус, сыр моцарелла, утка, кукуруза, руккола, помидоры</p>
+      <div class="container" itemscope itemtype="http://schema.org/ItemList"><span class="section__title is--centered"><span>Topperz </span>рекомендует</span>
+        <article class="product" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+          <div class="product__inner"><a class="product__photo" href="product.html" itemprop="url"><img src="images/product/p-1.jpg" alt="" itemprop="image"></a><span class="product__title"><a href="product.html" itemprop="name">Дэль-анатра</a></span>
+            <p class="product__ingredients" itemprop="description">Соус, сыр моцарелла, утка, кукуруза, руккола, помидоры</p>
             <!-- Добавки-->
             <div class="product__additives"> 
               <div class="product__additives-toggler"><span>Добавки</span><i class="icon icon-plus-red"></i></div>
@@ -375,17 +380,17 @@
             </div>
             <!-- Варианты-->
             <div class="product__variants">
-              <div class="product__variants-item product-variant">
+              <div class="product__variants-item product-variant" itemscope itemtype="http://schema.org/ProductModel" itemid="#model">
                 <input class="product__variants-item-radio product-variant__radio" type="radio" name="diameter1" id="d281" value="281" checked>
-                <label class="product__variants-item-label product-variant__label" for="d281"><i class="icon icon-diameter product-variant__icon"></i><span class="product__variants-item-value product-variant__value">28 </span><span class="product__variants-item-dimension product-variant__dimension">см</span></label>
+                <label class="product__variants-item-label product-variant__label" for="d281" itemprop="name"><i class="icon icon-diameter product-variant__icon"></i><span class="product__variants-item-value product-variant__value">28 </span><span class="product__variants-item-dimension product-variant__dimension">см</span></label>
               </div>
-              <div class="product__variants-item product-variant">
+              <div class="product__variants-item product-variant" itemscope itemtype="http://schema.org/ProductModel" itemid="#model">
                 <input class="product__variants-item-radio product-variant__radio" type="radio" name="diameter1" id="d331" value="331">
-                <label class="product__variants-item-label product-variant__label" for="d331"><i class="icon icon-diameter product-variant__icon"></i><span class="product__variants-item-value product-variant__value">33 </span><span class="product__variants-item-dimension product-variant__dimension">см</span></label>
+                <label class="product__variants-item-label product-variant__label" for="d331" itemprop="name"><i class="icon icon-diameter product-variant__icon"></i><span class="product__variants-item-value product-variant__value">33 </span><span class="product__variants-item-dimension product-variant__dimension">см</span></label>
               </div>
-              <div class="product__variants-item product-variant">
+              <div class="product__variants-item product-variant" itemscope itemtype="http://schema.org/ProductModel" itemid="#model">
                 <input class="product__variants-item-radio product-variant__radio" type="radio" name="diameter1" id="d381" value="381">
-                <label class="product__variants-item-label product-variant__label" for="d381"><i class="icon icon-diameter product-variant__icon"></i><span class="product__variants-item-value product-variant__value">38 </span><span class="product__variants-item-dimension product-variant__dimension">см</span></label>
+                <label class="product__variants-item-label product-variant__label" for="d381" itemprop="name"><i class="icon icon-diameter product-variant__icon"></i><span class="product__variants-item-value product-variant__value">38 </span><span class="product__variants-item-dimension product-variant__dimension">см</span></label>
               </div>
             </div>
             <!-- Кол-во -->
@@ -395,13 +400,13 @@
               </div>
             </div>
             <!-- Стоимость-->
-            <div class="product__price"><span class="product__price-value">1 590</span><span class="product__price-currency">тнг</span></div>
+            <div class="product__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span class="product__price-value" itemprop="price" content="1000.00">1 590</span><span class="product__price-currency" itemprop="priceCurrency" content="USD">тнг</span></div>
             <!-- Кнопка заказать--><a class="product__action" href="product.html">Заказать</a>
           </div>
         </article>
-        <article class="product">
-          <div class="product__inner"><a class="product__photo" href="product.html"><img src="images/product/p-2.jpg" alt=""></a><span class="product__title"><a href="product.html">Топпер</a></span>
-            <p class="product__ingredients">Соус, сыр моцарелла, грибы, утка, говядина, ветчина, перец, помидоры</p>
+        <article class="product" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+          <div class="product__inner"><a class="product__photo" href="product.html" itemprop="url"><img src="images/product/p-2.jpg" alt="" itemprop="image"></a><span class="product__title"><a href="product.html" itemprop="name">Топпер</a></span>
+            <p class="product__ingredients" itemprop="description">Соус, сыр моцарелла, грибы, утка, говядина, ветчина, перец, помидоры</p>
             <!-- Добавки-->
             <div class="product__additives"> 
               <div class="product__additives-toggler"><span>Добавки</span><i class="icon icon-plus-red"></i></div>
@@ -447,17 +452,17 @@
             </div>
             <!-- Варианты-->
             <div class="product__variants">
-              <div class="product__variants-item product-variant">
+              <div class="product__variants-item product-variant" itemscope itemtype="http://schema.org/ProductModel" itemid="#model">
                 <input class="product__variants-item-radio product-variant__radio" type="radio" name="diameter2" id="d282" value="282" checked>
-                <label class="product__variants-item-label product-variant__label" for="d282"><i class="icon icon-diameter product-variant__icon"></i><span class="product__variants-item-value product-variant__value">28 </span><span class="product__variants-item-dimension product-variant__dimension">см</span></label>
+                <label class="product__variants-item-label product-variant__label" for="d282" itemprop="name"><i class="icon icon-diameter product-variant__icon"></i><span class="product__variants-item-value product-variant__value">28 </span><span class="product__variants-item-dimension product-variant__dimension">см</span></label>
               </div>
-              <div class="product__variants-item product-variant">
+              <div class="product__variants-item product-variant" itemscope itemtype="http://schema.org/ProductModel" itemid="#model">
                 <input class="product__variants-item-radio product-variant__radio" type="radio" name="diameter2" id="d332" value="332">
-                <label class="product__variants-item-label product-variant__label" for="d332"><i class="icon icon-diameter product-variant__icon"></i><span class="product__variants-item-value product-variant__value">33 </span><span class="product__variants-item-dimension product-variant__dimension">см</span></label>
+                <label class="product__variants-item-label product-variant__label" for="d332" itemprop="name"><i class="icon icon-diameter product-variant__icon"></i><span class="product__variants-item-value product-variant__value">33 </span><span class="product__variants-item-dimension product-variant__dimension">см</span></label>
               </div>
-              <div class="product__variants-item product-variant">
+              <div class="product__variants-item product-variant" itemscope itemtype="http://schema.org/ProductModel" itemid="#model">
                 <input class="product__variants-item-radio product-variant__radio" type="radio" name="diameter2" id="d382" value="382">
-                <label class="product__variants-item-label product-variant__label" for="d382"><i class="icon icon-diameter product-variant__icon"></i><span class="product__variants-item-value product-variant__value">38 </span><span class="product__variants-item-dimension product-variant__dimension">см</span></label>
+                <label class="product__variants-item-label product-variant__label" for="d382" itemprop="name"><i class="icon icon-diameter product-variant__icon"></i><span class="product__variants-item-value product-variant__value">38 </span><span class="product__variants-item-dimension product-variant__dimension">см</span></label>
               </div>
             </div>
             <!-- Кол-во -->
@@ -467,13 +472,13 @@
               </div>
             </div>
             <!-- Стоимость-->
-            <div class="product__price"><span class="product__price-value">2 390</span><span class="product__price-currency">тнг</span></div>
+            <div class="product__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span class="product__price-value" itemprop="price" content="1000.00">2 390</span><span class="product__price-currency" itemprop="priceCurrency" content="USD">тнг</span></div>
             <!-- Кнопка заказать--><a class="product__action" href="product.html">Заказать</a>
           </div>
         </article>
-        <article class="product">
-          <div class="product__inner"><a class="product__photo" href="product.html"><img src="images/product/p-3.jpg" alt=""><span class="product__tag product-tag is--stock">акция</span></a><span class="product__title"><a href="product.html">Цезарь</a></span>
-            <p class="product__ingredients">Соус, сыр моцарелла, курица BBQ, салат айсберг, соус цезарь, пармезан</p>
+        <article class="product" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+          <div class="product__inner"><a class="product__photo" href="product.html" itemprop="url"><img src="images/product/p-3.jpg" alt="" itemprop="image"><span class="product__tag product-tag is--stock">акция</span></a><span class="product__title"><a href="product.html" itemprop="name">Цезарь</a></span>
+            <p class="product__ingredients" itemprop="description">Соус, сыр моцарелла, курица BBQ, салат айсберг, соус цезарь, пармезан</p>
             <!-- Добавки-->
             <div class="product__additives"> 
               <div class="product__additives-toggler"><span>Добавки</span><i class="icon icon-plus-red"></i></div>
@@ -519,17 +524,17 @@
             </div>
             <!-- Варианты-->
             <div class="product__variants">
-              <div class="product__variants-item product-variant">
+              <div class="product__variants-item product-variant" itemscope itemtype="http://schema.org/ProductModel" itemid="#model">
                 <input class="product__variants-item-radio product-variant__radio" type="radio" name="diameter3" id="d283" value="283" checked>
-                <label class="product__variants-item-label product-variant__label" for="d283"><i class="icon icon-diameter product-variant__icon"></i><span class="product__variants-item-value product-variant__value">28 </span><span class="product__variants-item-dimension product-variant__dimension">см</span></label>
+                <label class="product__variants-item-label product-variant__label" for="d283" itemprop="name"><i class="icon icon-diameter product-variant__icon"></i><span class="product__variants-item-value product-variant__value">28 </span><span class="product__variants-item-dimension product-variant__dimension">см</span></label>
               </div>
-              <div class="product__variants-item product-variant">
+              <div class="product__variants-item product-variant" itemscope itemtype="http://schema.org/ProductModel" itemid="#model">
                 <input class="product__variants-item-radio product-variant__radio" type="radio" name="diameter3" id="d333" value="333">
-                <label class="product__variants-item-label product-variant__label" for="d333"><i class="icon icon-diameter product-variant__icon"></i><span class="product__variants-item-value product-variant__value">33 </span><span class="product__variants-item-dimension product-variant__dimension">см</span></label>
+                <label class="product__variants-item-label product-variant__label" for="d333" itemprop="name"><i class="icon icon-diameter product-variant__icon"></i><span class="product__variants-item-value product-variant__value">33 </span><span class="product__variants-item-dimension product-variant__dimension">см</span></label>
               </div>
-              <div class="product__variants-item product-variant">
+              <div class="product__variants-item product-variant" itemscope itemtype="http://schema.org/ProductModel" itemid="#model">
                 <input class="product__variants-item-radio product-variant__radio" type="radio" name="diameter3" id="d383" value="383">
-                <label class="product__variants-item-label product-variant__label" for="d383"><i class="icon icon-diameter product-variant__icon"></i><span class="product__variants-item-value product-variant__value">38 </span><span class="product__variants-item-dimension product-variant__dimension">см</span></label>
+                <label class="product__variants-item-label product-variant__label" for="d383" itemprop="name"><i class="icon icon-diameter product-variant__icon"></i><span class="product__variants-item-value product-variant__value">38 </span><span class="product__variants-item-dimension product-variant__dimension">см</span></label>
               </div>
             </div>
             <!-- Кол-во -->
@@ -539,13 +544,13 @@
               </div>
             </div>
             <!-- Стоимость-->
-            <div class="product__price"><span class="product__price-value">2 190</span><span class="product__price-currency">тнг</span></div>
+            <div class="product__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span class="product__price-value" itemprop="price" content="1000.00">2 190</span><span class="product__price-currency" itemprop="priceCurrency" content="USD">тнг</span></div>
             <!-- Кнопка заказать--><a class="product__action" href="product.html">Заказать</a>
           </div>
         </article>
-        <article class="product">
-          <div class="product__inner"><a class="product__photo" href="product.html"><img src="images/product/p-4.jpg" alt=""><span class="product__tag product-tag is--novelty">новинка</span></a><span class="product__title"><a href="product.html">Вегетарианская</a></span>
-            <p class="product__ingredients">Соус, сыр моцарелла, помидоры, брокколи, цукини, перец, грибы</p>
+        <article class="product" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+          <div class="product__inner"><a class="product__photo" href="product.html" itemprop="url"><img src="images/product/p-4.jpg" alt="" itemprop="image"><span class="product__tag product-tag is--novelty">новинка</span></a><span class="product__title"><a href="product.html" itemprop="name">Вегетарианская</a></span>
+            <p class="product__ingredients" itemprop="description">Соус, сыр моцарелла, помидоры, брокколи, цукини, перец, грибы</p>
             <!-- Добавки-->
             <div class="product__additives"> 
               <div class="product__additives-toggler"><span>Добавки</span><i class="icon icon-plus-red"></i></div>
@@ -591,17 +596,17 @@
             </div>
             <!-- Варианты-->
             <div class="product__variants">
-              <div class="product__variants-item product-variant">
+              <div class="product__variants-item product-variant" itemscope itemtype="http://schema.org/ProductModel" itemid="#model">
                 <input class="product__variants-item-radio product-variant__radio" type="radio" name="diameter4" id="d284" value="284" checked>
-                <label class="product__variants-item-label product-variant__label" for="d284"><i class="icon icon-diameter product-variant__icon"></i><span class="product__variants-item-value product-variant__value">28 </span><span class="product__variants-item-dimension product-variant__dimension">см</span></label>
+                <label class="product__variants-item-label product-variant__label" for="d284" itemprop="name"><i class="icon icon-diameter product-variant__icon"></i><span class="product__variants-item-value product-variant__value">28 </span><span class="product__variants-item-dimension product-variant__dimension">см</span></label>
               </div>
-              <div class="product__variants-item product-variant">
+              <div class="product__variants-item product-variant" itemscope itemtype="http://schema.org/ProductModel" itemid="#model">
                 <input class="product__variants-item-radio product-variant__radio" type="radio" name="diameter4" id="d334" value="334">
-                <label class="product__variants-item-label product-variant__label" for="d334"><i class="icon icon-diameter product-variant__icon"></i><span class="product__variants-item-value product-variant__value">33 </span><span class="product__variants-item-dimension product-variant__dimension">см</span></label>
+                <label class="product__variants-item-label product-variant__label" for="d334" itemprop="name"><i class="icon icon-diameter product-variant__icon"></i><span class="product__variants-item-value product-variant__value">33 </span><span class="product__variants-item-dimension product-variant__dimension">см</span></label>
               </div>
-              <div class="product__variants-item product-variant">
+              <div class="product__variants-item product-variant" itemscope itemtype="http://schema.org/ProductModel" itemid="#model">
                 <input class="product__variants-item-radio product-variant__radio" type="radio" name="diameter4" id="d384" value="384">
-                <label class="product__variants-item-label product-variant__label" for="d384"><i class="icon icon-diameter product-variant__icon"></i><span class="product__variants-item-value product-variant__value">38 </span><span class="product__variants-item-dimension product-variant__dimension">см</span></label>
+                <label class="product__variants-item-label product-variant__label" for="d384" itemprop="name"><i class="icon icon-diameter product-variant__icon"></i><span class="product__variants-item-value product-variant__value">38 </span><span class="product__variants-item-dimension product-variant__dimension">см</span></label>
               </div>
             </div>
             <!-- Кол-во -->
@@ -611,7 +616,7 @@
               </div>
             </div>
             <!-- Стоимость-->
-            <div class="product__price"><span class="product__price-value">1 690</span><span class="product__price-currency">тнг</span></div>
+            <div class="product__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span class="product__price-value" itemprop="price" content="1000.00">1 690</span><span class="product__price-currency" itemprop="priceCurrency" content="USD">тнг</span></div>
             <!-- Кнопка заказать--><a class="product__action" href="product.html">Заказать</a>
           </div>
         </article>
@@ -831,7 +836,7 @@
         </div>
       </div>
     </div>
-    <script src="js/vendor.js?v=1527328288511"></script>
-    <script src="js/main.js?v=1527328288511"></script>
+    <script src="js/vendor.js?v=1527336122809"></script>
+    <script src="js/main.js?v=1527336122809"></script>
   </body>
 </html>

@@ -159,7 +159,7 @@ block content
             button(type="submit").btn.btn--primary Применить
 
   section.section
-    .container
+    .container(itemscope itemtype="http://schema.org/ItemList")
         span.section__title.is--centered Закажите еще напитки
         .products-slider
           .products-slider__inner.js-products-slider
@@ -169,7 +169,7 @@ block content
                   include pug/parts/product-simple
 
   section.section
-    .container
+    .container(itemscope itemtype="http://schema.org/ItemList")
         span.section__title.is--centered Добавить к заказу соусы
         .products-slider
           .products-slider__inner.js-products-slider

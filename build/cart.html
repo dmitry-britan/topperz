@@ -13,7 +13,7 @@
     <title>
     </title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css?v=1527328278148">
+    <link rel="stylesheet" href="css/main.css?v=1527335531836">
   </head>
   <body>
     <header class="header">
@@ -147,7 +147,11 @@
       </div>
     </menu>
     <nav class="breadcrumbs">
-      <div class="container"><a class="breadcrumbs__item" href="index.html">Главная</a><a class="breadcrumbs__item" href="cart.html">Корзина</a>
+      <div class="container">
+        <ul class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="breadcrumbs__link" href="index.html" itemprop="item"><span itemprop="name">Главная</span></a></li>
+          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="breadcrumbs__link" href="cart.html" itemprop="item"><span itemprop="name">Корзина</span></a></li>
+        </ul>
       </div>
     </nav>
     <main class="cart-single">
@@ -330,14 +334,14 @@
       </div>
     </section>
     <section class="section">
-      <div class="container"><span class="section__title is--centered">Закажите еще напитки</span>
+      <div class="container" itemscope itemtype="http://schema.org/ItemList"><span class="section__title is--centered">Закажите еще напитки</span>
         <div class="products-slider">
           <div class="products-slider__inner js-products-slider">
             <div class="products-slider__item">
-              <div class="product">
-                <article class="product__inner"><span class="product__title is--tl"><a href="product.html">7 Up</a></span>
-                  <div class="product__left"><a class="product__photo" href="product.html"><img src="images/product/drinks.png" alt=""></a>
-                    <p class="product__variants is--special">1л</p>
+              <div class="product" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+                <article class="product__inner"><span class="product__title is--tl" itemprop="name"><a href="product.html">7 Up</a></span>
+                  <div class="product__left"><a class="product__photo" href="product.html" itemprop="url"><img src="images/product/drinks.png" alt="" itemprop="image"></a>
+                    <p class="product__variants is--special" itemprop="description">1л</p>
                   </div>
                   <div class="product__right">
                     <!-- Кол-во -->
@@ -347,17 +351,17 @@
                       </div>
                     </div>
                     <!-- Стоимость-->
-                    <div class="product__price"><span class="product__price-value">490</span><span class="product__price-currency">тнг</span></div>
+                    <div class="product__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span class="product__price-value" itemprop="price" content="1000.00">490</span><span class="product__price-currency" itemprop="priceCurrency" content="USD">тнг</span></div>
                     <!-- Кнопка заказать--><a class="product__action" href="product.html">Заказать</a>
                   </div>
                 </article>
               </div>
             </div>
             <div class="products-slider__item">
-              <div class="product">
-                <article class="product__inner"><span class="product__title is--tl"><a href="product.html">7 Up</a></span>
-                  <div class="product__left"><a class="product__photo" href="product.html"><img src="images/product/drinks.png" alt=""></a>
-                    <p class="product__variants is--special">1л</p>
+              <div class="product" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+                <article class="product__inner"><span class="product__title is--tl" itemprop="name"><a href="product.html">7 Up</a></span>
+                  <div class="product__left"><a class="product__photo" href="product.html" itemprop="url"><img src="images/product/drinks.png" alt="" itemprop="image"></a>
+                    <p class="product__variants is--special" itemprop="description">1л</p>
                   </div>
                   <div class="product__right">
                     <!-- Кол-во -->
@@ -367,17 +371,17 @@
                       </div>
                     </div>
                     <!-- Стоимость-->
-                    <div class="product__price"><span class="product__price-value">490</span><span class="product__price-currency">тнг</span></div>
+                    <div class="product__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span class="product__price-value" itemprop="price" content="1000.00">490</span><span class="product__price-currency" itemprop="priceCurrency" content="USD">тнг</span></div>
                     <!-- Кнопка заказать--><a class="product__action" href="product.html">Заказать</a>
                   </div>
                 </article>
               </div>
             </div>
             <div class="products-slider__item">
-              <div class="product">
-                <article class="product__inner"><span class="product__title is--tl"><a href="product.html">7 Up</a></span>
-                  <div class="product__left"><a class="product__photo" href="product.html"><img src="images/product/drinks.png" alt=""></a>
-                    <p class="product__variants is--special">1л</p>
+              <div class="product" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+                <article class="product__inner"><span class="product__title is--tl" itemprop="name"><a href="product.html">7 Up</a></span>
+                  <div class="product__left"><a class="product__photo" href="product.html" itemprop="url"><img src="images/product/drinks.png" alt="" itemprop="image"></a>
+                    <p class="product__variants is--special" itemprop="description">1л</p>
                   </div>
                   <div class="product__right">
                     <!-- Кол-во -->
@@ -387,17 +391,17 @@
                       </div>
                     </div>
                     <!-- Стоимость-->
-                    <div class="product__price"><span class="product__price-value">490</span><span class="product__price-currency">тнг</span></div>
+                    <div class="product__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span class="product__price-value" itemprop="price" content="1000.00">490</span><span class="product__price-currency" itemprop="priceCurrency" content="USD">тнг</span></div>
                     <!-- Кнопка заказать--><a class="product__action" href="product.html">Заказать</a>
                   </div>
                 </article>
               </div>
             </div>
             <div class="products-slider__item">
-              <div class="product">
-                <article class="product__inner"><span class="product__title is--tl"><a href="product.html">7 Up</a></span>
-                  <div class="product__left"><a class="product__photo" href="product.html"><img src="images/product/drinks.png" alt=""></a>
-                    <p class="product__variants is--special">1л</p>
+              <div class="product" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+                <article class="product__inner"><span class="product__title is--tl" itemprop="name"><a href="product.html">7 Up</a></span>
+                  <div class="product__left"><a class="product__photo" href="product.html" itemprop="url"><img src="images/product/drinks.png" alt="" itemprop="image"></a>
+                    <p class="product__variants is--special" itemprop="description">1л</p>
                   </div>
                   <div class="product__right">
                     <!-- Кол-во -->
@@ -407,7 +411,7 @@
                       </div>
                     </div>
                     <!-- Стоимость-->
-                    <div class="product__price"><span class="product__price-value">490</span><span class="product__price-currency">тнг</span></div>
+                    <div class="product__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span class="product__price-value" itemprop="price" content="1000.00">490</span><span class="product__price-currency" itemprop="priceCurrency" content="USD">тнг</span></div>
                     <!-- Кнопка заказать--><a class="product__action" href="product.html">Заказать</a>
                   </div>
                 </article>
@@ -418,14 +422,14 @@
       </div>
     </section>
     <section class="section">
-      <div class="container"><span class="section__title is--centered">Добавить к заказу соусы</span>
+      <div class="container" itemscope itemtype="http://schema.org/ItemList"><span class="section__title is--centered">Добавить к заказу соусы</span>
         <div class="products-slider">
           <div class="products-slider__inner js-products-slider">
             <div class="products-slider__item">
-              <div class="product">
-                <article class="product__inner"><span class="product__title is--tl"><a href="product.html">Соус Барбекю</a></span>
-                  <div class="product__left"><a class="product__photo" href="product.html"><img src="images/product/sauces.png" alt=""></a>
-                    <p class="product__variants is--special">50 гр</p>
+              <div class="product" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+                <article class="product__inner"><span class="product__title is--tl" itemprop="name"><a href="product.html">Соус Барбекю</a></span>
+                  <div class="product__left"><a class="product__photo" href="product.html" itemprop="url"><img src="images/product/sauces.png" alt="" itemprop="image"></a>
+                    <p class="product__variants is--special" itemprop="description">50 гр</p>
                   </div>
                   <div class="product__right">
                     <!-- Кол-во -->
@@ -435,17 +439,17 @@
                       </div>
                     </div>
                     <!-- Стоимость-->
-                    <div class="product__price"><span class="product__price-value">180</span><span class="product__price-currency">тнг</span></div>
+                    <div class="product__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span class="product__price-value" itemprop="price" content="1000.00">180</span><span class="product__price-currency" itemprop="priceCurrency" content="USD">тнг</span></div>
                     <!-- Кнопка заказать--><a class="product__action" href="product.html">Заказать</a>
                   </div>
                 </article>
               </div>
             </div>
             <div class="products-slider__item">
-              <div class="product">
-                <article class="product__inner"><span class="product__title is--tl"><a href="product.html">Соус Барбекю</a></span>
-                  <div class="product__left"><a class="product__photo" href="product.html"><img src="images/product/sauces.png" alt=""></a>
-                    <p class="product__variants is--special">50 гр</p>
+              <div class="product" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+                <article class="product__inner"><span class="product__title is--tl" itemprop="name"><a href="product.html">Соус Барбекю</a></span>
+                  <div class="product__left"><a class="product__photo" href="product.html" itemprop="url"><img src="images/product/sauces.png" alt="" itemprop="image"></a>
+                    <p class="product__variants is--special" itemprop="description">50 гр</p>
                   </div>
                   <div class="product__right">
                     <!-- Кол-во -->
@@ -455,17 +459,17 @@
                       </div>
                     </div>
                     <!-- Стоимость-->
-                    <div class="product__price"><span class="product__price-value">180</span><span class="product__price-currency">тнг</span></div>
+                    <div class="product__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span class="product__price-value" itemprop="price" content="1000.00">180</span><span class="product__price-currency" itemprop="priceCurrency" content="USD">тнг</span></div>
                     <!-- Кнопка заказать--><a class="product__action" href="product.html">Заказать</a>
                   </div>
                 </article>
               </div>
             </div>
             <div class="products-slider__item">
-              <div class="product">
-                <article class="product__inner"><span class="product__title is--tl"><a href="product.html">Соус Барбекю</a></span>
-                  <div class="product__left"><a class="product__photo" href="product.html"><img src="images/product/sauces.png" alt=""></a>
-                    <p class="product__variants is--special">50 гр</p>
+              <div class="product" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+                <article class="product__inner"><span class="product__title is--tl" itemprop="name"><a href="product.html">Соус Барбекю</a></span>
+                  <div class="product__left"><a class="product__photo" href="product.html" itemprop="url"><img src="images/product/sauces.png" alt="" itemprop="image"></a>
+                    <p class="product__variants is--special" itemprop="description">50 гр</p>
                   </div>
                   <div class="product__right">
                     <!-- Кол-во -->
@@ -475,17 +479,17 @@
                       </div>
                     </div>
                     <!-- Стоимость-->
-                    <div class="product__price"><span class="product__price-value">180</span><span class="product__price-currency">тнг</span></div>
+                    <div class="product__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span class="product__price-value" itemprop="price" content="1000.00">180</span><span class="product__price-currency" itemprop="priceCurrency" content="USD">тнг</span></div>
                     <!-- Кнопка заказать--><a class="product__action" href="product.html">Заказать</a>
                   </div>
                 </article>
               </div>
             </div>
             <div class="products-slider__item">
-              <div class="product">
-                <article class="product__inner"><span class="product__title is--tl"><a href="product.html">Соус Барбекю</a></span>
-                  <div class="product__left"><a class="product__photo" href="product.html"><img src="images/product/sauces.png" alt=""></a>
-                    <p class="product__variants is--special">50 гр</p>
+              <div class="product" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+                <article class="product__inner"><span class="product__title is--tl" itemprop="name"><a href="product.html">Соус Барбекю</a></span>
+                  <div class="product__left"><a class="product__photo" href="product.html" itemprop="url"><img src="images/product/sauces.png" alt="" itemprop="image"></a>
+                    <p class="product__variants is--special" itemprop="description">50 гр</p>
                   </div>
                   <div class="product__right">
                     <!-- Кол-во -->
@@ -495,7 +499,7 @@
                       </div>
                     </div>
                     <!-- Стоимость-->
-                    <div class="product__price"><span class="product__price-value">180</span><span class="product__price-currency">тнг</span></div>
+                    <div class="product__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span class="product__price-value" itemprop="price" content="1000.00">180</span><span class="product__price-currency" itemprop="priceCurrency" content="USD">тнг</span></div>
                     <!-- Кнопка заказать--><a class="product__action" href="product.html">Заказать</a>
                   </div>
                 </article>
@@ -722,7 +726,7 @@
         </div>
       </div>
     </div>
-    <script src="js/vendor.js?v=1527328278149"></script>
-    <script src="js/main.js?v=1527328278149"></script>
+    <script src="js/vendor.js?v=1527335531837"></script>
+    <script src="js/main.js?v=1527335531837"></script>
   </body>
 </html>
