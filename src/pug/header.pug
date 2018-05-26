@@ -15,11 +15,13 @@ header.header
 					.is--mobile-only
 						+svg("down-arrow").contact-info__icon-arrow-down
 				.contact-info__content
-					.contact-info__worktime 
-						| с 10
-						sup 00
-						|  до 03
-						sup 00
+					.contact-info__header
+						.contact-info__worktime 
+							| с 10
+							sup 00
+							|  до 03
+							sup 00
+						.contact-info__callback-link заказать звонок
 					.contact-info__phone
 						a(href="tel:+77018888534").contact-info__phone-link +7 (701) 888 85 34
 						i.contact-info__toggler.icon.icon-arrow-down
@@ -38,9 +40,24 @@ header.header
 								li.contact-info__schedule-item
 									span.contact-info__schedule-date Вс:
 									span.contact-info__schedule-time 11:00 – 03:00
-						a(href="").contact-info__action 
-							i.icon.icon-whatsapp-small
-							span WhatsApp
+						form.form.send-request.js-form-send-request
+							.send-request__inner
+								.send-request__body.is--hidden.js-form-send-request-body
+									.form__field
+										label.form__label Имя
+										input(type="text", name="name").form__input
+									.form__field
+										label.form__label Телефон
+										input(type="text", name="phone").form__input
+								.send-request__action
+									a(href="").send-request__action-btn.send-request__action-toggler.js-form-send-request-toggler
+										span Заказать звонок
+									button.send-request__action-btn.send-request__action-send.is--hidden.js-form-send-request-btn(type="submit")
+										span Отправить
+									a(href="").send-request__action-btn.send-request__action-app 
+										i.icon.icon-whatsapp-small
+										span WhatsApp
+
 
 		.header__user-auth
 			.user-auth

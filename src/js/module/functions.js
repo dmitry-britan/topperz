@@ -9,3 +9,4 @@
 // @include('function/loader.js')
 // @include('function/productToCart.js')
 // @include('function/productSingleToCart.js')
+// @include('function/formSendRequest.js')

@@ -295,6 +295,20 @@ function loaderOff() {
 	});
 })();
 
+(function() {
+	var $formSendRequest = $('.js-form-send-request');
+	var $formSendRequestBody = $('.js-form-send-request-body');
+	var $formSendRequestBtn = $('.js-form-send-request-btn');
+	var $formSendRequestToggler = $('.js-form-send-request-toggler');
+
+	$formSendRequestToggler.on('click', function(event) {
+		event.preventDefault();
+		$(event.currentTarget).fadeOut(0);
+		$formSendRequestBtn.removeClass('is--hidden');
+		$formSendRequestBody.removeClass('is--hidden');
+	});
+})();
+
 //
 // Slider - on main page
 // =================================================================
@@ -451,9 +465,6 @@ var validateFormCheckout = {
 		phone: {
 			required: true,
 			phone: true
-		},
-		comment: {
-			required: true
 		}
 	},
 	messages: {
@@ -469,9 +480,6 @@ var validateFormCheckout = {
 		phone: {
 			phone: 'Введите корректный номер телефона',
 			required: 'Введите Ваш номер телефона'
-		},
-		comment: {
-			required: 'Введите Ваше сообщение'
 		}
 	},
 	focusCleanup: true,
@@ -480,3 +488,32 @@ var validateFormCheckout = {
 
 // CHECKOUT FORM
 $('.js-form-checkout').validate(validateFormCheckout);
+
+//
+// Валидация формы "Оформления заказа"
+// =================================================================
+var validateFormSendRequest = {
+	rules: {
+		name: {
+			required: true
+		},
+		phone: {
+			required: true,
+			phone: true
+		}
+	},
+	messages: {
+		name: {
+			required: 'Введите Ваше имя'
+		},
+		phone: {
+			phone: 'Введите корректный номер телефона',
+			required: 'Введите Ваш номер телефона'
+		}
+	},
+	focusCleanup: true,
+	focusInvalid: false
+};
+
+// SendRequest FORM
+$('.js-form-send-request').validate(validateFormSendRequest);

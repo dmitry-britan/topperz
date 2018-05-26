@@ -13,7 +13,7 @@
     <title>
     </title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css?v=1527332175003">
+    <link rel="stylesheet" href="css/main.css?v=1527363021068">
   </head>
   <body>
     <header class="header">
@@ -94,8 +94,11 @@
               </div>
             </div>
             <div class="contact-info__content">
-              <div class="contact-info__worktime">
-                 с 10<sup>00</sup> до 03<sup>00</sup></div>
+              <div class="contact-info__header">
+                <div class="contact-info__worktime">
+                   с 10<sup>00</sup> до 03<sup>00</sup></div>
+                <div class="contact-info__callback-link">заказать звонок</div>
+              </div>
               <div class="contact-info__phone"><a class="contact-info__phone-link" href="tel:+77018888534">+7 (701) 888 85 34</a><i class="contact-info__toggler icon icon-arrow-down"></i></div>
               <div class="contact-info__details">
                 <div class="contact-info__phone"><a class="contact-info__phone-link" href="tel:+77273902020">+7 (727) 390 20 20</a></div>
@@ -105,7 +108,24 @@
                     <li class="contact-info__schedule-item"><span class="contact-info__schedule-date">Пт – Сб:</span><span class="contact-info__schedule-time">10:00 – 05:00</span></li>
                     <li class="contact-info__schedule-item"><span class="contact-info__schedule-date">Вс:</span><span class="contact-info__schedule-time">11:00 – 03:00</span></li>
                   </ul>
-                </nav><a class="contact-info__action" href=""> <i class="icon icon-whatsapp-small"></i><span>WhatsApp</span></a>
+                </nav>
+                <form class="form send-request js-form-send-request">
+                  <div class="send-request__inner">
+                    <div class="send-request__body is--hidden js-form-send-request-body">
+                      <div class="form__field">
+                        <label class="form__label">Имя</label>
+                        <input class="form__input" type="text" name="name">
+                      </div>
+                      <div class="form__field">
+                        <label class="form__label">Телефон</label>
+                        <input class="form__input" type="text" name="phone">
+                      </div>
+                    </div>
+                    <div class="send-request__action"><a class="send-request__action-btn send-request__action-toggler js-form-send-request-toggler" href=""><span>Заказать звонок</span></a>
+                      <button class="send-request__action-btn send-request__action-send is--hidden js-form-send-request-btn" type="submit"><span>Отправить</span></button><a class="send-request__action-btn send-request__action-app" href=""> <i class="icon icon-whatsapp-small"></i><span>WhatsApp</span></a>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -377,7 +397,7 @@
         </div>
       </div>
     </div>
-    <script src="js/vendor.js?v=1527332175004"></script>
-    <script src="js/main.js?v=1527332175004"></script>
+    <script src="js/vendor.js?v=1527363021069"></script>
+    <script src="js/main.js?v=1527363021069"></script>
   </body>
 </html>

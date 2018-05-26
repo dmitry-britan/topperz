@@ -1,15 +1,9 @@
 //
 // Валидация формы "Оформления заказа"
 // =================================================================
-let validateFormCheckout = {
+let validateFormSendRequest = {
 	rules: {
 		name: {
-			required: true,
-		},
-		street: {
-			required: true,
-		},
-		house: {
 			required: true,
 		},
 		phone: {
@@ -21,12 +15,6 @@ let validateFormCheckout = {
 		name: {
 			required: 'Введите Ваше имя',
 		},
-		street: {
-			required: 'Введите название улицы',
-		},
-		house: {
-			required: 'Введите номер дома',
-		},
 		phone: {
 			phone: 'Введите корректный номер телефона',
 			required: 'Введите Ваш номер телефона',
@@ -36,5 +24,5 @@ let validateFormCheckout = {
 	focusInvalid: false,
 };
 
-// CHECKOUT FORM
-$('.js-form-checkout').validate(validateFormCheckout);
+// SendRequest FORM
+$('.js-form-send-request').validate(validateFormSendRequest);
