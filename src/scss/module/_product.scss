@@ -21,6 +21,55 @@
 			z-index: -1;
 		}
 	}
+	&.is--cloned {
+		border-radius: 50%;
+		border: 3px solid $color__primary;
+		overflow: hidden;
+		background: #fff;
+		transition: top, left, transform, opacity 400ms;
+		z-index: 9000;
+		.product__inner {
+			position: relative;
+			height: 100%;
+			padding: 0;
+		}
+		.product__left {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: auto;
+			transform: translate(-50%, -50%);
+		}
+		.product__photo {
+			height: auto;
+			max-height: 100%;
+		}
+		.product__title {
+			position: absolute;
+			top: 50%;
+			left: 0; right: 0;
+			padding: 5px 0;
+			transform: translateY(-50%);
+			background: rgba(#fff, .75);
+			text-align: center;
+			z-index: 10;
+		}
+
+		.product__ingredients,
+		.product__additives,
+		.product__right,
+		.product__variants,
+		.product__qty,
+		.product__tag,
+		.product__action {
+			display: none;
+		}
+		.product__price {
+			float: none;
+			margin: 0 auto 15px;
+			text-align: center;
+		}
+	}
 	@include media('<1160px'){
 		width: percentage(1/3);
 	}

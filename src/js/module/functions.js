@@ -7,3 +7,4 @@
 // @include('function/additives.js')
 // @include('function/fixedNav.js')
 // @include('function/loader.js')
+// @include('function/productToCart.js')
