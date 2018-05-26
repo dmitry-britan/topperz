@@ -258,6 +258,43 @@ function loaderOff() {
 	});
 })();
 
+(function() {
+	var $productBtn = $('.product-single__action a');
+	var $window = $(window);
+
+	$productBtn.on('click', function(event) {
+		if ($window.width() > 700) {
+			var $that = $(event.currentTarget);
+			var $currentProductPhoto = $that.parents('.product-single').find('.product-single__photo-link');
+			var $cloneProductPhoto = $currentProductPhoto.clone();
+			var dW = $currentProductPhoto.width() - 480;
+			var dH = $currentProductPhoto.height() - 480;
+			var startX = $currentProductPhoto.offset().left + dW / 2;
+			var startY = $currentProductPhoto.offset().top + dH / 2;
+
+			var $cart = $('.header__cart');
+			var cartPosition = $cart.offset();
+
+			$cloneProductPhoto.addClass('is--cloned').css({
+				position: 'absolute',
+				left: startX,
+				top: startY
+			});
+
+			$('body').append($cloneProductPhoto);
+			$cloneProductPhoto.animate({
+				left: cartPosition.left,
+				top: cartPosition.top,
+				opacity: 0,
+				width: '60px',
+				height: '60px'
+			}, 400, 'linear', function() {
+				$cloneProductPhoto.remove();
+			});
+		}
+	});
+})();
+
 //
 // Slider - on main page
 // =================================================================

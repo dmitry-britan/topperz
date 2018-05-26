@@ -8,3 +8,4 @@
 // @include('function/fixedNav.js')
 // @include('function/loader.js')
 // @include('function/productToCart.js')
+// @include('function/productSingleToCart.js')

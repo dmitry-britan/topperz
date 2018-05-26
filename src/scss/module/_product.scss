@@ -61,13 +61,9 @@
 		.product__variants,
 		.product__qty,
 		.product__tag,
+		.product__price,
 		.product__action {
 			display: none;
-		}
-		.product__price {
-			float: none;
-			margin: 0 auto 15px;
-			text-align: center;
 		}
 	}
 	@include media('<1160px'){
