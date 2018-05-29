@@ -296,16 +296,16 @@ function loaderOff() {
 })();
 
 (function() {
-	var $formSendRequest = $('.js-form-send-request');
 	var $formSendRequestBody = $('.js-form-send-request-body');
 	var $formSendRequestBtn = $('.js-form-send-request-btn');
+	var $formSendRequestTogglers = $('.js-form-send-request-toggler, .js-form-send-request-toggler-link');
 	var $formSendRequestToggler = $('.js-form-send-request-toggler');
 
-	$formSendRequestToggler.on('click', function(event) {
+	$formSendRequestTogglers.on('click', function(event) {
 		event.preventDefault();
-		$(event.currentTarget).fadeOut(0);
-		$formSendRequestBtn.removeClass('is--hidden');
-		$formSendRequestBody.removeClass('is--hidden');
+		$formSendRequestToggler.fadeToggle(0);
+		$formSendRequestBtn.toggleClass('is--hidden');
+		$formSendRequestBody.toggleClass('is--hidden');
 	});
 })();
 

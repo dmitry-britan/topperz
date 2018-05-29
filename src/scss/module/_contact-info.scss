@@ -35,11 +35,14 @@
 	justify-content: space-between;
 }
 .contact-info__callback-link{
+	position: relative;
 	border-bottom: 1px dashed $color__primary;
 	text-decoration: none;
 	font-size: 12px;
 	font-weight: 500;
 	color: $color__primary;
+	z-index: 700;
+	cursor: pointer;
 }
 .contact-info__icon{
 	position: relative;

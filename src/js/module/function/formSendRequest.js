@@ -1,14 +1,14 @@
 (() => {
-	let $formSendRequest = $('.js-form-send-request');
 	let $formSendRequestBody = $('.js-form-send-request-body');
 	let $formSendRequestBtn = $('.js-form-send-request-btn');
+	let $formSendRequestTogglers = $('.js-form-send-request-toggler, .js-form-send-request-toggler-link');
 	let $formSendRequestToggler = $('.js-form-send-request-toggler');
 
-	$formSendRequestToggler.on('click', (event) => {
+	$formSendRequestTogglers.on('click', (event) => {
 		event.preventDefault();
-		$(event.currentTarget).fadeOut(0);
-		$formSendRequestBtn.removeClass('is--hidden');
-		$formSendRequestBody.removeClass('is--hidden');
+		$formSendRequestToggler.fadeToggle(0);
+		$formSendRequestBtn.toggleClass('is--hidden');
+		$formSendRequestBody.toggleClass('is--hidden');
 	});
 })();
 
