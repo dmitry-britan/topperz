@@ -94,8 +94,8 @@ block content
             .form__title Сдача с купюры
             .form__field--select
               .form__select
+                input.is--hidden(type="text", name="order_change", value="Без сдачи", default)
                 .form__input.form__input--dummy.js-order-change-toggler Без сдачи
-                  input.is--hidden(type="text", name="order_change", value="Без сдачи", default)
 
                 include pug/parts/order-change
             .form__divider
@@ -182,7 +182,7 @@ block body-end
       $(this).addClass('is--active');
       //- возвращаем выбранное значение и закрываем блок выбора
       $('.js-order-change-toggler')
-        .text(changeValue)
+        .text(changeValue).parent()
         .find('input').val(changeValue);
       $('.js-order-change').toggleClass('is--active');
     });

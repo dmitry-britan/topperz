@@ -13,7 +13,7 @@
     <title>
     </title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css?v=1527589489994">
+    <link rel="stylesheet" href="css/main.css?v=1529744734527">
   </head>
   <body>
     <header class="header">
@@ -299,9 +299,8 @@
               <div class="form__title">Сдача с купюры</div>
               <div class="form__field--select">
                 <div class="form__select">
-                  <div class="form__input form__input--dummy js-order-change-toggler">Без сдачи
-                    <input class="is--hidden" type="text" name="order_change" value="Без сдачи" default>
-                  </div>
+                  <input class="is--hidden" type="text" name="order_change" value="Без сдачи" default>
+                  <div class="form__input form__input--dummy js-order-change-toggler">Без сдачи</div>
                   <div class="order-change js-order-change">
                     <div class="order-change__inner">
                       <div class="order-change__item is--active js-order-change-item" data-value="без сдачи">без сдачи</div>
@@ -546,8 +545,8 @@
         </div>
       </div>
     </div>
-    <script src="js/vendor.js?v=1527589489995"></script>
-    <script src="js/main.js?v=1527589489995"></script>
+    <script src="js/vendor.js?v=1529744734528"></script>
+    <script src="js/main.js?v=1529744734528"></script>
     <script>
       // Переключения текстовки в зависимости от выбора варианта оплаты
       $('#payment_method_1').on('click', function(){
@@ -612,7 +611,7 @@
         $(this).addClass('is--active');
         //- возвращаем выбранное значение и закрываем блок выбора
         $('.js-order-change-toggler')
-          .text(changeValue)
+          .text(changeValue).parent()
           .find('input').val(changeValue);
         $('.js-order-change').toggleClass('is--active');
       });
